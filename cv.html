@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | Sheng-Kai Chen 陳嵊凱</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="nav__brand">Kyle Chen</a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="experience.html">Experience</a>
+      <a href="cv.html">CV</a>
+    </nav>
+    <label class="toggle-wrapper">
+      <input class="toggle-switch" id="themeToggle" type="checkbox" />
+      <span class="toggle-slider"></span>
+    </label>
+  </header>
+
+  <main class="page">
+    <section class="section" style="width: 100%; text-align: center;">
+      <div class="section__header" style="text-align: center;">
+        <p class="eyebrow">CV</p>
+        <h1>Get the full story</h1>
+      </div>
+      <p class="body" style="text-align: center; margin: 0 auto;">View my comprehensive curriculum vitae for detailed information about my education, research, publications, and professional experience.</p>
+      <div class="hero__actions" style="margin-top:18px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a class="btn btn--primary" href="Reference/CV_EN.pdf" target="_blank" rel="noreferrer">View CV (English)</a>
+        <a class="btn btn--primary" href="Reference/CV_CN.pdf" target="_blank" rel="noreferrer">View CV (Chinese)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© Designed by Kyle Chen  All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    updateToggleButton();
+    
+    function updateToggleButton() {
+      const currentTheme = html.getAttribute('data-theme');
+      themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateToggleButton();
+    });
+  </script>
+</body>
+</html>
