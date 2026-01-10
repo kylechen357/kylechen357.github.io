@@ -745,7 +745,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 96px; /* sit left of the toggle */
+    right: 120px; /* sit left of the toggle */
   }
 
   .nav__links {
@@ -779,7 +779,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 32px;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -917,7 +917,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 28px;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -943,7 +943,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 96px; /* sits left of toggle */
+    right: 120px; /* sits left of toggle */
   }
 
   .hero-simple {
