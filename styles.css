@@ -750,7 +750,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 72px;
+    right: 84px;
     z-index: 13;
   }
 
@@ -804,7 +804,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 6px;
+    right: 16px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 13;
@@ -964,7 +964,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 4px;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -991,7 +991,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 62px;
+    right: 70px;
     z-index: 13;
   }
 
