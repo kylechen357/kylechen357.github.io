@@ -10,6 +10,8 @@
   --accent-2: #f4bf72;
   --border: rgba(255, 255, 255, 0.08);
   --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  /* Controls vertical alignment of date text in timeline */
+  --timeline-date-offset: 22px;
 }
 
 html[data-theme="light"] {
@@ -27,6 +29,17 @@ html[data-theme="light"] {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Academicons baseline */
+.ai {
+  font-family: "Academicons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -505,6 +518,18 @@ html[data-theme="light"] .timeline__item {
   background: rgba(255, 255, 255, 0.02);
 }
 
+/* Center any logo image inside the date column */
+.timeline__item .timeline__date {
+  position: relative;
+}
+
+/* Default logo/image styling inside date column */
+.timeline__item .timeline__date img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /* Timeline dot/circle */
 .timeline__item::before {
   content: "";
@@ -523,6 +548,38 @@ html[data-theme="light"] .timeline__item {
 .timeline__date {
   color: var(--accent);
   font-weight: 600;
+  /* Align date with the position title top padding */
+  align-self: start;
+  padding-top: var(--timeline-date-offset);
+}
+
+/* When the date column contains a logo/image, center it vertically */
+.timeline__date:has(img),
+.timeline__date--with-logo {
+  align-self: stretch;        /* take full row height */
+  padding-top: 0;             /* base: no padding, handled on first child */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center direct image or wrapper flex box */
+.timeline__date:has(img) > img,
+.timeline__date--with-logo > img {
+  margin: auto 0;             /* vertically center direct image */
+}
+
+.timeline__date:has(img) > div,
+.timeline__date--with-logo > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;    /* center image inside provided wrapper */
+}
+
+/* Ensure the date text aligns with the content title top padding */
+.timeline__date:has(img) > :first-child,
+.timeline__date--with-logo > .date-text {
+  padding-top: var(--timeline-date-offset);
 }
 
 .btn {
@@ -534,6 +591,18 @@ html[data-theme="light"] .timeline__item {
   font-weight: 700;
   border: 1px solid transparent;
   transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+/* Compact button variant for CV/Experience pages */
+.compact-btn {
+  padding: 7px 12px !important;
+  font-size: 13px !important;
+  border-radius: 8px !important;
+  gap: 6px !important;
+}
+
+.compact-btn i {
+  font-size: 14px !important;
 }
 
 .btn:hover {
