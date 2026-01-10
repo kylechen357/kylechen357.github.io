@@ -698,6 +698,7 @@ input:checked + .toggle-slider::before {
 @media (max-width: 768px) {
   body {
     font-size: 15px;
+    padding: 24px 12px;
   }
 
   .nav {
@@ -722,9 +723,13 @@ input:checked + .toggle-slider::before {
     justify-content: center;
   }
 
+  .page {
+    padding: 0 8px;
+  }
+
   .hero-simple {
     gap: 16px;
-    padding: 40px 20px;
+    padding: 40px 12px;
   }
 
   .hero-simple__image {
