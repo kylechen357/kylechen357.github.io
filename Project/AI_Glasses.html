@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
   <link rel="stylesheet" href="../styles.css" />
   <style>
     .project-hero {
@@ -92,18 +93,61 @@
     }
 
     .project-links a {
-      padding: 10px 20px;
-      background: rgba(126, 240, 193, 0.1);
-      border: 1px solid var(--accent);
-      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 16px;
+      background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08));
+      border: 1.5px solid var(--accent);
+      border-radius: 9px;
       color: var(--accent);
       text-decoration: none;
-      transition: all 0.3s ease;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-links a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(126, 240, 193, 0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .project-links a:hover::before {
+      left: 100%;
     }
 
     .project-links a:hover {
-      background: var(--accent);
-      color: var(--bg);
+      background: linear-gradient(135deg, rgba(126, 240, 193, 0.3), rgba(126, 240, 193, 0.15));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(126, 240, 193, 0.3);
+    }
+
+    .project-links a i {
+      font-size: 17px;
+      transition: transform 0.3s ease;
+    }
+
+    .project-links a:hover i {
+      transform: scale(1.1);
+    }
+
+    html[data-theme="light"] .project-links a {
+      background: linear-gradient(135deg, rgba(45, 155, 108, 0.12), rgba(45, 155, 108, 0.06));
+      box-shadow: 0 2px 8px rgba(45, 155, 108, 0.15);
+    }
+
+    html[data-theme="light"] .project-links a:hover {
+      background: linear-gradient(135deg, rgba(45, 155, 108, 0.25), rgba(45, 155, 108, 0.12));
+      box-shadow: 0 6px 20px rgba(45, 155, 108, 0.3);
     }
 
     .back-link {
@@ -158,10 +202,10 @@
 
     <!-- Project Links Section -->
     <div class="project-links" style="display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap; margin: 30px 0; padding: 0 20px; width: 100%;">
-      <a href="../Updating.html" target="_blank">Paper</a>
-      <a href="../Updating.html" target="_blank">Code</a>
-      <a href="../Reference/NCHC/Glasses_PPT.pdf" target="_blank">PPT</a>
-      <a href="../Reference/NCS_Proof.pdf" target="_blank">Proof of Published</a>
+      <a href="../Updating.html" target="_blank"><i class="ti ti-file-text"></i><span>Paper</span></a>
+      <a href="../Updating.html" target="_blank"><i class="ti ti-brand-github"></i><span>Code</span></a>
+      <a href="../Reference/NCHC/Glasses_PPT.pdf" target="_blank"><i class="ti ti-presentation"></i><span>PPT</span></a>
+      <a href="../Reference/NCS_Proof.pdf" target="_blank"><i class="ti ti-certificate"></i><span>Proof of Published</span></a>
     </div>
 
     <section class="project-content" style="max-width: 100%; width: 100%; margin: 0; padding: 40px 20px;">
