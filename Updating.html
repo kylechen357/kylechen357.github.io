@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
   <link rel="stylesheet" href="styles.css?v=4" />
   <style>
     .updating-container {
@@ -84,7 +85,13 @@
     <a href="index.html" class="nav__brand" aria-label="Kyle Chen home">
       <img src="Reference/Kyle-01.png" alt="Kyle Chen" />
     </a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <i class="ri-menu-line"></i>
+    </button>
     <nav class="nav__links" aria-label="Primary">
+      <button class="nav__close" id="closeMenu" aria-label="Close menu">
+        <i class="ri-close-line"></i>
+      </button>
       <a href="about.html">About</a>
       <a href="research.html">Research</a>
       <a href="experience.html">Experience</a>
@@ -127,6 +134,46 @@
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
     });
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav__links');
+    const closeMenu = document.getElementById('closeMenu');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+          icon.classList.remove('ri-menu-line');
+          icon.classList.add('ri-close-line');
+        } else {
+          icon.classList.remove('ri-close-line');
+          icon.classList.add('ri-menu-line');
+        }
+      });
+
+      // Close button handler
+      if (closeMenu) {
+        closeMenu.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+          const icon = hamburger.querySelector('i');
+          icon.classList.remove('ri-close-line');
+          icon.classList.add('ri-menu-line');
+        });
+      }
+
+      // Close menu when clicking a link
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          const icon = hamburger.querySelector('i');
+          icon.classList.remove('ri-close-line');
+          icon.classList.add('ri-menu-line');
+        });
+      });
+    }
   </script>
 </body>
 </html>

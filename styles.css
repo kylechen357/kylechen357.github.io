@@ -750,7 +750,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 120px;
+    right: 72px;
     z-index: 13;
   }
 
@@ -808,6 +808,8 @@ input:checked + .toggle-slider::before {
     top: 50%;
     transform: translateY(-50%);
     z-index: 13;
+    width: 60px;
+    height: 30px;
   }
 
   .page {
