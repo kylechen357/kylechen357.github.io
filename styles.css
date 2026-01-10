@@ -746,7 +746,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 80px; /* adjusted to fit within header */
+    right: 78px; /* adjusted to fit within header */
     z-index: 13;
   }
 
@@ -781,7 +781,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 18px;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 13;
@@ -920,7 +920,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 14px;
+    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
