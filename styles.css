@@ -724,7 +724,7 @@ input:checked + .toggle-slider::before {
   .nav {
     position: static;
     padding: 16px 20px;
-    padding-right: 112px; /* extra space for toggle + menu */
+    padding-right: 96px; /* space for toggle + menu */
     gap: 12px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -742,8 +742,9 @@ input:checked + .toggle-slider::before {
   .nav__hamburger {
     display: block;
     position: absolute;
-    top: 12px;
-    right: 112px; /* sit left of the toggle */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 64px; /* sit left of the toggle */
   }
 
   .nav__links {
@@ -778,7 +779,8 @@ input:checked + .toggle-slider::before {
   .toggle-wrapper {
     position: absolute;
     right: 16px;
-    top: 12px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .page {
@@ -866,7 +868,7 @@ input:checked + .toggle-slider::before {
 
   .nav {
     padding: 12px 16px;
-    padding-right: 128px; /* space for toggle + hamburger */
+    padding-right: 96px; /* space for toggle + hamburger */
     gap: 8px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -915,7 +917,8 @@ input:checked + .toggle-slider::before {
   .toggle-wrapper {
     position: absolute;
     right: 12px;
-    top: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50px;
     height: 25px;
   }
@@ -937,8 +940,9 @@ input:checked + .toggle-slider::before {
   .nav__hamburger {
     display: block;
     position: absolute;
-    top: 8px;
-    right: 128px; /* sits left of toggle */
+    top: 50%;
+    transform: translateY(-50%);
+    right: 64px; /* sits left of toggle */
   }
 
   .hero-simple {
