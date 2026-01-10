@@ -158,6 +158,10 @@ html[data-theme="light"] .nav {
   text-align: center;
 }
 
+.nav__close {
+  display: none;
+}
+
 .toggle-wrapper {
   position: absolute;
   right: 0px;
@@ -746,7 +750,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 78px; /* adjusted to fit within header */
+    right: 72px;
     z-index: 13;
   }
 
@@ -768,6 +772,25 @@ input:checked + .toggle-slider::before {
     border-left: 1px solid var(--border);
   }
 
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1000;
+    transition: color 0.3s ease;
+  }
+
+  .nav__close:hover {
+    color: var(--accent);
+  }
+
   .nav__links.active {
     right: 0;
   }
@@ -781,7 +804,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 12px;
+    right: 6px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 13;
@@ -907,6 +930,25 @@ input:checked + .toggle-slider::before {
     border-left: 1px solid var(--border);
   }
 
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 26px;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 1000;
+    transition: color 0.3s ease;
+  }
+
+  .nav__close:hover {
+    color: var(--accent);
+  }
+
   .nav__links.active {
     right: 0;
   }
@@ -920,7 +962,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 10px;
+    right: 4px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -947,7 +989,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 72px; /* adjusted to fit within header */
+    right: 62px;
     z-index: 13;
   }
 
