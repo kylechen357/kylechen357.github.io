@@ -890,3 +890,19 @@ input:checked + .toggle-slider::before {
     position: static;
   }
 }
+
+/* Publication button hover effects */
+a[href*="arxiv.org"]:hover,
+a[href*="ieeexplore.ieee.org"]:hover,
+a[href*="Updating.html"]:hover {
+  background: rgba(126, 240, 193, 0.25) !important;
+  border-color: var(--accent) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(126, 240, 193, 0.2);
+}
+
+a[href*="arxiv.org"]:active,
+a[href*="ieeexplore.ieee.org"]:active,
+a[href*="Updating.html"]:active {
+  transform: translateY(0px);
+}
