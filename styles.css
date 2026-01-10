@@ -302,6 +302,7 @@ html[data-theme="light"] .hero-simple__quote {
   border: 1px solid var(--border);
   color: var(--accent);
   transition: all 0.3s ease;
+  margin: 0 6px; /* explicit spacing for wider browser support */
 }
 
 html[data-theme="light"] .hero-simple__links a {
@@ -725,7 +726,7 @@ input:checked + .toggle-slider::before {
   .nav {
     position: static;
     padding: 16px 20px;
-    padding-right: 96px; /* space for toggle + menu */
+    padding-right: 170px; /* space for toggle + menu */
     gap: 12px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -745,7 +746,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 136px; /* sit left of the toggle */
+    right: 176px; /* sit left of the toggle */
   }
 
   .nav__links {
@@ -779,7 +780,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 48px;
+    right: 72px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -869,7 +870,7 @@ input:checked + .toggle-slider::before {
 
   .nav {
     padding: 12px 16px;
-    padding-right: 160px; /* even more space for controls */
+    padding-right: 180px; /* even more space for controls */
     gap: 8px;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -917,7 +918,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 44px;
+    right: 64px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
@@ -943,7 +944,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 132px; /* sits left of toggle */
+    right: 168px; /* sits left of toggle */
   }
 
   .hero-simple {
