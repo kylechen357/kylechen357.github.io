@@ -101,6 +101,7 @@ a:hover {
   box-shadow: var(--shadow);
   transition: background-color 300ms ease, border-color 300ms ease;
   gap: 20px;
+  overflow: hidden; /* keep controls inside rounded header */
 }
 
 html[data-theme="light"] .nav {
@@ -778,7 +779,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 16px;
+    right: 24px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -916,7 +917,7 @@ input:checked + .toggle-slider::before {
 
   .toggle-wrapper {
     position: absolute;
-    right: 12px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
