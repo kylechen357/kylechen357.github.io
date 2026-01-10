@@ -750,7 +750,7 @@ input:checked + .toggle-slider::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 45px;
+    right: 90px;
     z-index: 13;
   }
 
