@@ -15,7 +15,7 @@
 <body>
   <header class="nav">
     <a href="index.html" class="nav__brand" aria-label="Kyle Chen home">
-      <img src="Reference/Kyle-01.png" alt="Kyle Chen" />
+      <img src="Reference/KC-01.png" alt="Kyle Chen" />
     </a>
     <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="ri-menu-line"></i>
@@ -155,37 +155,17 @@
         return;
       }
       
-      console.log('Theme script loaded, button found:', themeToggle);
-      
-      function updateToggleButton(theme) {
-        // Visual state handled by CSS
-        console.log('Theme switched to:', theme);
-      }
-      
       // Initialize theme
       const savedTheme = localStorage.getItem('theme') || 'dark';
       html.setAttribute('data-theme', savedTheme);
-      updateToggleButton(savedTheme);
-      console.log('Initial theme set to:', savedTheme);
+      themeToggle.checked = (savedTheme === 'light');
       
       // Toggle handler
-      themeToggle.addEventListener('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        console.log('BUTTON CLICKED!');
-        
-        const currentTheme = html.getAttribute('data-theme') || 'dark';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        console.log('Switching from', currentTheme, 'to', newTheme);
+      themeToggle.addEventListener('change', function() {
+        const newTheme = this.checked ? 'light' : 'dark';
         html.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
-        updateToggleButton(newTheme);
-        
-        console.log('Theme changed! New attribute:', html.getAttribute('data-theme'));
       });
-      
-      console.log('Event listener attached to button');
 
       // Hamburger menu toggle
       const hamburger = document.getElementById('hamburger');

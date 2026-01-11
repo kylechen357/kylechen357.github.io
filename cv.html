@@ -15,7 +15,7 @@
 <body>
   <header class="nav">
     <a href="index.html" class="nav__brand" aria-label="Kyle Chen home">
-      <img src="Reference/Kyle-01.png" alt="Kyle Chen" />
+      <img src="Reference/KC-01.png" alt="Kyle Chen" />
     </a>
     <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="ri-menu-line"></i>
@@ -59,19 +59,12 @@
     
     const savedTheme = localStorage.getItem('theme') || 'dark';
     html.setAttribute('data-theme', savedTheme);
-    updateToggleButton();
+    themeToggle.checked = (savedTheme === 'light');
     
-    function updateToggleButton() {
-      const currentTheme = html.getAttribute('data-theme');
-      themeToggle.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
-    }
-    
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    themeToggle.addEventListener('change', function() {
+      const newTheme = this.checked ? 'light' : 'dark';
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      updateToggleButton();
     });
 
     // Hamburger menu toggle
