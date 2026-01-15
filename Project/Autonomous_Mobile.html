@@ -12,6 +12,52 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="project-styles.css" />
+  <style>
+    .team-photo-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .team-photo-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .team-photo-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    .team-photo-container:hover img {
+      transform: scale(1.02);
+    }
+    
+    /* Dark theme adjustments */
+    [data-theme="dark"] .team-photo-container {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    [data-theme="dark"] .team-photo-container:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Light theme adjustments */
+    [data-theme="light"] .team-photo-container {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    [data-theme="light"] .team-photo-container:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+  </style>
 </head>
 <body>
   <header class="nav">
@@ -62,6 +108,9 @@
 
       <!-- Team Section -->
       <h2 class="section-title"><i class="ti ti-users"></i>Team</h2>
+      <div class="team-photo-container">
+        <img src="../Reference/Car_Group.JPG" alt="Autonomous Mobile Manipulator Team" />
+      </div>
       <div class="team-grid">
         <div class="team-member">
           <h3>Sheng-Kai Chen</h3>
