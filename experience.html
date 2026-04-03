@@ -20,13 +20,14 @@
     <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="ri-menu-line"></i>
     </button>
-    <nav class="nav__links" aria-label="Primary">
+        <nav class="nav__links" aria-label="Primary">
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
       <a href="about.html">About</a>
       <a href="research.html">Research</a>
-      <a href="experience.html">Experience</a>
+      <span class="nav__current" aria-current="page">Experience</span>
+      <a href="work.html">Work</a>
       <a href="cv.html">CV</a>
     </nav>
     <label class="toggle-wrapper">
@@ -116,68 +117,6 @@
             <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University</p>
             <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
               <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Fundamental Computer Programming-Python (CP109)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-briefcase-line" style="font-size: 28px; color: var(--accent);"></i>Internship</h2>
-      <div class="timeline" style="margin-top:18px;">
-        <div class="timeline__item">
-          <div class="timeline__date" style="display: flex; align-items: center; justify-content: space-between;">
-            <span>Jul 2025 — Aug 2025</span>
-            <img id="nchcLogo" src="Reference/NCHC.png" alt="NCHC Logo" style="height: 100px;">
-          </div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Summer Intern - Virtual-Real Integration</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>National Center for High-Performance Computing, Taiwan</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Developed AI agent for remote computer control with AR glasses streaming via RTSP.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Trained UR10 robotic arm models for singularity-aware motion planning.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Publications: Conference paper accepted at TANET 2025 and NCS 2025</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="Reference/NCHC/NCHC_EN.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Intern Proof (EN)</span></a>
-              <a class="compact-btn" href="Reference/NCHC/NCHC_CH.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Intern Proof (CH)</span></a>
-              <a class="compact-btn" href="Reference/NCHC/NCHC_PPT.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-slideshow-line" style="font-size: 17px;"></i><span>PPT</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date" style="display: flex; align-items: center; justify-content: space-between;">
-            <span>Jul 2024 — Aug 2024</span>
-            <img src="Reference/Ta_Chou.png" alt="Ta Chou Logo" style="height: 70px;">
-          </div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Summer Intern - Division of Management</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Ta Chou Industry, Thailand</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Managed IT infrastructure, social media, and provided technical support in Thai.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Repaired machines and designed factory fixtures.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="Reference/Ta_Chou_PPT.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-slideshow-line" style="font-size: 17px;"></i><span>PPT</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date" style="display: flex; align-items: center; justify-content: space-between;">
-            <span>Feb 2024 — Jul 2024</span>
-            <img src="Reference/KPMG.png" alt="KPMG Logo" style="height: 70px;">
-          </div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Intern Consultant - Digital Transformation</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>KPMG Taiwan | T Ambassador Program</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Analyzed government AI policies and corporate digital transformation cases using the KPMG Connected Enterprise framework.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Applied Trusted AI frameworks (LIT, SHAP) to financial data and corporate XAI cases</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="Reference/KPMG/T大使_ENG.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Intern Proof (EN)</span></a>
-              <a class="compact-btn" href="Reference/KPMG/T大使_CH.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Intern Proof (CH)</span></a>
-              <a class="compact-btn" href="Reference/KPMG/KPMG_PPT.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-slideshow-line" style="font-size: 17px;"></i><span>PPT</span></a>
             </div>
           </div>
         </div>
@@ -435,25 +374,14 @@
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
-    const nchcLogo = document.getElementById('nchcLogo');
-    
     const savedTheme = localStorage.getItem('theme') || 'dark';
     html.setAttribute('data-theme', savedTheme);
     themeToggle.checked = (savedTheme === 'light');
-    updateLogo();
-    
-    function updateLogo() {
-      const currentTheme = html.getAttribute('data-theme');
-      if (nchcLogo) {
-        nchcLogo.src = currentTheme === 'dark' ? 'Reference/NCHC_White.png' : 'Reference/NCHC.png';
-      }
-    }
     
     themeToggle.addEventListener('change', function() {
       const newTheme = this.checked ? 'light' : 'dark';
       html.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      updateLogo();
     });
 
     // Hamburger menu toggle

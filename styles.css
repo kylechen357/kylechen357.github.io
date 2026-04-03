@@ -160,6 +160,23 @@ html[data-theme="light"] .nav {
   align-items: center;
 }
 
+.nav__links a,
+.nav__current {
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav__current {
+  color: #9a9a9a;
+  cursor: default;
+  pointer-events: none;
+}
+
+html[data-theme="light"] .nav__current {
+  color: #8b919a;
+}
+
 .nav__close {
   display: none;
 }
@@ -804,7 +821,8 @@ html[data-theme="light"] input:checked + .toggle-slider {
     right: 0;
   }
 
-  .nav__links a {
+  .nav__links a,
+  .nav__current {
     font-size: 18px;
     padding: 12px 0;
     width: 100%;
@@ -964,7 +982,8 @@ html[data-theme="light"] input:checked + .toggle-slider {
     right: 0;
   }
 
-  .nav__links a {
+  .nav__links a,
+  .nav__current {
     font-size: 16px;
     padding: 10px 0;
     width: 100%;
@@ -1168,7 +1187,8 @@ html[data-theme="light"] input:checked + .toggle-slider {
 
 /* Very small phones (360px and below) */
 @media (max-width: 360px) {
-  .nav__links a {
+  .nav__links a,
+  .nav__current {
     font-size: 12px;
     padding: 8px 6px;
   }
