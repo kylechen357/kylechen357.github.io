@@ -6,6 +6,7 @@
     ko: "ko-kr",
     th: "th-th"
   };
+  const LANG_QUERY_KEY = "lang";
   const PATH_LANG_MAP = {
     "en-us": "en",
     "zh-tw": "zh",
@@ -1192,7 +1193,18 @@
   function getInitialLanguage() {
     const fromPath = getLanguageFromPath(window.location.pathname);
     if (fromPath && SUPPORTED.includes(fromPath)) return fromPath;
+
+    const fromQuery = getLanguageFromQuery(window.location.search);
+    if (fromQuery && SUPPORTED.includes(fromQuery)) return fromQuery;
     return "en";
+  }
+
+  function getLanguageFromQuery(search) {
+    const params = new URLSearchParams(search || "");
+    const value = (params.get(LANG_QUERY_KEY) || "").toLowerCase().trim();
+    if (!value) return "";
+    if (SUPPORTED.includes(value)) return value;
+    return PATH_LANG_MAP[value] || "";
   }
 
   function detectSiteBasePath() {
@@ -1255,12 +1267,11 @@
 
     const segment = LANG_PATH_MAP[lang] || LANG_PATH_MAP.en;
     const parts = getPathParts(window.location.pathname);
-    const nextPath =
-      (SITE_BASE_PATH || "") +
-      "/" +
-      segment +
-      (parts.relativeNoLang === "/" ? "" : parts.relativeNoLang);
-    const nextUrl = nextPath + window.location.search + window.location.hash;
+    const nextPath = (SITE_BASE_PATH || "") + (parts.relativeNoLang === "/" ? "" : parts.relativeNoLang);
+    const params = new URLSearchParams(window.location.search || "");
+    params.set(LANG_QUERY_KEY, segment);
+    const query = params.toString();
+    const nextUrl = nextPath + (query ? "?" + query : "") + window.location.hash;
     const currentUrl = window.location.pathname + window.location.search + window.location.hash;
 
     if (nextUrl !== currentUrl) {
@@ -1285,7 +1296,10 @@
       try {
         const resolved = new URL(rawHref, baseUrl.href);
         if (resolved.origin !== origin) return;
-        link.setAttribute("href", resolved.pathname + resolved.search + resolved.hash);
+
+        const relative = stripLanguagePrefix(stripSiteBasePath(resolved.pathname));
+        const normalizedPath = (SITE_BASE_PATH || "") + (relative === "/" ? "" : relative);
+        link.setAttribute("href", normalizedPath + resolved.search + resolved.hash);
       } catch (_err) {
         // ignore invalid href
       }
@@ -1308,13 +1322,11 @@
         if (resolved.origin !== origin) return;
 
         const relative = stripLanguagePrefix(stripSiteBasePath(resolved.pathname));
-        const localizedPath =
-          (SITE_BASE_PATH || "") +
-          "/" +
-          segment +
-          (relative === "/" ? "" : relative);
-
-        link.setAttribute("href", localizedPath + resolved.search + resolved.hash);
+        const localizedPath = (SITE_BASE_PATH || "") + (relative === "/" ? "" : relative);
+        const params = new URLSearchParams(resolved.search || "");
+        params.set(LANG_QUERY_KEY, segment);
+        const query = params.toString();
+        link.setAttribute("href", localizedPath + (query ? "?" + query : "") + resolved.hash);
       } catch (_err) {
         // ignore invalid href
       }
