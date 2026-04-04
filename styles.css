@@ -651,17 +651,31 @@ html[data-theme="light"] .home-experience__item {
   font-size: 13px;
 }
 
+.home-experience__status-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
 .home-experience__status {
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  margin-top: 6px;
+  margin-top: 0;
   padding: 2px 8px;
   border-radius: 999px;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.4px;
   text-transform: uppercase;
+}
+
+.home-experience__status--type {
+  color: #356a58;
+  background: rgba(126, 240, 193, 0.12);
+  border: 1px solid rgba(126, 240, 193, 0.32);
 }
 
 .home-experience__item--present .home-experience__status {
@@ -2120,6 +2134,26 @@ html[data-theme="light"] input:checked + .toggle-slider {
   line-height: 1.2;
   text-align: left;
   white-space: normal;
+}
+
+.timeline--work .timeline__date .timeline__type-pill {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: #1f8b63;
+  border: 1px solid rgba(126, 240, 193, 0.45);
+  background: rgba(126, 240, 193, 0.2);
+}
+
+html[data-theme="light"] .timeline--work .timeline__date .timeline__type-pill {
+  color: #176d4d;
+  border-color: rgba(45, 155, 108, 0.45);
+  background: rgba(45, 155, 108, 0.16);
 }
 
 .timeline--work .timeline__content {
