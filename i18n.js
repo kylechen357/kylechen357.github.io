@@ -1194,9 +1194,6 @@
   function getInitialLanguage() {
     const fromPath = getLanguageFromPath(window.location.pathname);
     if (fromPath && SUPPORTED.includes(fromPath)) return fromPath;
-
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved && SUPPORTED.includes(saved)) return saved;
     return "en";
   }
 
