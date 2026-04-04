@@ -1120,6 +1120,28 @@
     };
 
     let wrapper = nav.querySelector(".lang-menu");
+
+    function placeLanguageMenu() {
+      const navLinks = nav.querySelector(".nav__links");
+      const toggle = nav.querySelector(".toggle-wrapper");
+      const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+      if (isMobile && navLinks) {
+        if (wrapper.parentElement !== navLinks) {
+          navLinks.appendChild(wrapper);
+        }
+        return;
+      }
+
+      if (toggle) {
+        if (wrapper.parentElement !== nav || wrapper.nextElementSibling !== toggle) {
+          nav.insertBefore(wrapper, toggle);
+        }
+      } else if (wrapper.parentElement !== nav) {
+        nav.appendChild(wrapper);
+      }
+    }
+
     if (!wrapper) {
       wrapper = document.createElement("div");
       wrapper.className = "lang-menu";
@@ -1150,16 +1172,17 @@
         optionHtml +
         "</div></details>";
 
-      const toggle = nav.querySelector(".toggle-wrapper");
-      if (toggle) {
-        nav.insertBefore(wrapper, toggle);
-      } else {
-        nav.appendChild(wrapper);
-      }
+      placeLanguageMenu();
     }
 
     // Keep language labels stable (do not translate menu item text).
     wrapper.setAttribute("data-i18n-skip", "");
+    placeLanguageMenu();
+
+    if (!nav.dataset.langMenuResizeBound) {
+      window.addEventListener("resize", placeLanguageMenu);
+      nav.dataset.langMenuResizeBound = "1";
+    }
 
     const picker = wrapper.querySelector(".lang-picker");
     const summary = wrapper.querySelector("#langSummary");

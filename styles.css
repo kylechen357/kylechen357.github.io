@@ -1399,6 +1399,30 @@ html[data-theme="light"] input:checked + .toggle-slider {
 
 /* Tablet devices (768px and below) */
 @media (max-width: 768px) {
+  .nav__links .lang-menu {
+    position: static;
+    right: auto;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav__links .lang-picker {
+    width: 100%;
+  }
+
+  .nav__links .lang-picker summary {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__links .lang-options {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
   .page--fixed-locale .timeline__content > div[style*="flex-wrap: wrap"] {
     flex-wrap: wrap !important;
   }
