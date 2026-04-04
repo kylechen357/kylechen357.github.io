@@ -290,6 +290,21 @@ html[data-theme="light"] .nav__current {
   background: rgba(126, 240, 193, 0.12);
 }
 
+.lang-option.is-current,
+.lang-option:disabled {
+  color: #9aa3ad;
+  background: rgba(148, 163, 184, 0.14);
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+html[data-theme="light"] .lang-option.is-current,
+html[data-theme="light"] .lang-option:disabled {
+  color: #7c8794;
+  background: rgba(148, 163, 184, 0.2);
+}
+
 html[data-theme="light"] .lang-menu select {
   background: rgba(255, 255, 255, 0.75);
 }

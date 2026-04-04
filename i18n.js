@@ -1217,12 +1217,25 @@
         "</span></span>";
     };
 
+    const updateLangOptionState = (activeLang) => {
+      wrapper.querySelectorAll(".lang-option").forEach((btn) => {
+        const lang = btn.getAttribute("data-lang") || "en";
+        const isCurrent = lang === activeLang;
+        btn.disabled = isCurrent;
+        btn.classList.toggle("is-current", isCurrent);
+        btn.setAttribute("aria-current", isCurrent ? "true" : "false");
+      });
+    };
+
     setSummary(currentLang);
+    updateLangOptionState(currentLang);
 
     wrapper.querySelectorAll(".lang-option").forEach((btn) => {
       btn.addEventListener("click", function () {
+        if (this.disabled) return;
         const next = this.getAttribute("data-lang") || "en";
         setSummary(next);
+        updateLangOptionState(next);
         if (picker) picker.removeAttribute("open");
         runWithLoader(() => applyLanguage(next));
       });
