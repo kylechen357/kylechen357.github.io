@@ -246,6 +246,8 @@
       "Tzu-Yu Liu": "劉姿妤",
       "Yan-Di Liu": "劉彥狄",
       "Yu-Ting Chou": "周裕庭",
+      "Ching-Yao Lin": "林敬堯 博士",
+      "Yen-Ting Lin": "林彥廷",
       "Taiwan": "臺灣",
       "Innovative Technology Lab": "創新科技實驗室",
       "Human-Computer Interaction Multimedia Lab": "人機互動多媒體實驗室",
