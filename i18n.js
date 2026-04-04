@@ -548,7 +548,7 @@
 
       "about.eyebrow": "About",
       "about.title": "Who I am",
-      "about.lead": "I'm a graduate student at Yuan Ze University pursuing a M.Sc. in Electrical Engineering. My research focuses on building intelligent, transparent, and safety-aware robotic systems that integrate visual perception, motion planning, and explainable AI.",
+      "about.lead": "I'm a graduated student at Yuan Ze University pursuing a M.Sc. in Electrical Engineering. My research focuses on building intelligent, transparent, and safety-aware robotic systems that integrate visual perception, motion planning, and explainable AI.",
       "about.edu": "Education",
       "about.interests": "Research Interests",
 
@@ -632,7 +632,7 @@
       "index.present": "4/29 起",
       "index.past": "過往",
       "index.intro.title": "探索新想法並落實於實務應用",
-      "index.intro.body": "我是 Kyle，研究重點為 Visual SLAM、機器人操作、可解釋 AI 系統與數位 IC 設計，未來也將投入半導體產業。",
+      "index.intro.body": "我是嵊凱，研究重點為 Visual SLAM、機器人操作、可解釋 AI 系統與數位 IC 設計，未來也將投入半導體產業。",
       "index.chip.robotics": "機器人",
       "index.chip.ai": "AI",
       "index.chip.ic": "數位 IC 設計",
@@ -640,7 +640,7 @@
 
       "about.eyebrow": "關於",
       "about.title": "關於我",
-      "about.lead": "我目前就讀元智大學電機工程研究所。研究聚焦於建構智慧、透明且安全導向的機器人系統，整合視覺感知、運動規劃與可解釋 AI。",
+      "about.lead": "我畢業於元智大學電機工程研究所。研究聚焦於建構智慧、透明且安全導向的機器人系統，整合視覺感知、運動規劃與可解釋 AI。",
       "about.edu": "學歷",
       "about.interests": "研究興趣",
 
@@ -724,7 +724,7 @@
       "index.present": "4/29부터 시작",
       "index.past": "과거",
       "index.intro.title": "새로운 아이디어를 탐구하고 실무에 적용",
-      "index.intro.body": "저는 Kyle이며 Visual SLAM, 로봇 매니퓰레이션, 설명 가능한 AI 시스템, 디지털 IC 설계를 연구합니다. 앞으로 반도체 산업에서 일할 예정입니다.",
+      "index.intro.body": "저는 진승개이며 Visual SLAM, 로봇 매니퓰레이션, 설명 가능한 AI 시스템, 디지털 IC 설계를 연구합니다. 앞으로 반도체 산업에서 일할 예정입니다.",
       "index.chip.robotics": "로보틱스",
       "index.chip.ai": "AI",
       "index.chip.ic": "디지털 IC 설계",
@@ -732,7 +732,7 @@
 
       "about.eyebrow": "소개",
       "about.title": "Who I am",
-      "about.lead": "저는 Yuan Ze University 전기공학 석사 과정 학생입니다. 시각 인지, 모션 플래닝, 설명 가능한 AI를 통합한 지능적이고 투명하며 안전한 로봇 시스템을 연구합니다.",
+      "about.lead": "저는 Yuan Ze University 졸업한 학생입니다. 시각 인지, 모션 플래닝, 설명 가능한 AI를 통합한 지능적이고 투명하며 안전한 로봇 시스템을 연구합니다.",
       "about.edu": "학력",
       "about.interests": "연구 관심 분야",
 
@@ -824,7 +824,7 @@
 
       "about.eyebrow": "เกี่ยวกับ",
       "about.title": "ฉันคือใคร",
-      "about.lead": "ผมเป็นนักศึกษาปริญญาโทที่ Yuan Ze University สาขาวิศวกรรมไฟฟ้า งานวิจัยของผมเน้นการสร้างระบบหุ่นยนต์อัจฉริยะ โปร่งใส และปลอดภัย โดยผสานการรับรู้ภาพ การวางแผนการเคลื่อนที่ และ Explainable AI",
+      "about.lead": "ฉันเป็นนักศึกษาที่สำเร็จการศึกษาจาก Yuan Ze University งานวิจัยของผมเน้นการสร้างระบบหุ่นยนต์อัจฉริยะ โปร่งใส และปลอดภัย โดยผสานการรับรู้ภาพ การวางแผนการเคลื่อนที่ และ Explainable AI",
       "about.edu": "การศึกษา",
       "about.interests": "ความสนใจด้านวิจัย",
 
