@@ -2371,3 +2371,67 @@ a[href*="ieeexplore.ieee.org"]:active,
 a[href*="Updating.html"]:active {
   transform: translateY(0px);
 }
+
+/* Mobile nav polish: rounded panel, depth, and cleaner touch targets */
+@media (max-width: 768px) {
+  .nav__links {
+    top: 10px;
+    height: calc(100vh - 20px);
+    width: min(82vw, 320px);
+    padding: 82px 22px 22px;
+    border-left: 1px solid var(--border);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px 0 0 24px;
+    background:
+      linear-gradient(165deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02)),
+      var(--card);
+    box-shadow: -14px 0 36px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+  }
+
+  .nav__links a,
+  .nav__current {
+    border-radius: 10px;
+    padding: 11px 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.28);
+  }
+
+  .nav__links a:hover {
+    background: rgba(126, 240, 193, 0.12);
+    border-bottom-color: rgba(126, 240, 193, 0.5);
+  }
+
+  .nav__close {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav__links .lang-menu {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(148, 163, 184, 0.25);
+  }
+
+  .nav__links .lang-picker summary {
+    border-radius: 14px;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__links {
+    top: 8px;
+    height: calc(100vh - 16px);
+    width: min(86vw, 300px);
+    border-radius: 22px 0 0 22px;
+    padding: 76px 18px 18px;
+  }
+}
