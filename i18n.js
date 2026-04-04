@@ -1055,6 +1055,8 @@
       const parent = node.parentElement;
       if (!parent) continue;
       if (parent.closest("[data-i18n-skip]")) continue;
+      // Do not let static fallback replacements override explicit key-based translations.
+      if (parent.closest("[data-i18n], [data-i18n-footer]")) continue;
 
       const tag = parent.tagName;
       if (tag === "SCRIPT" || tag === "STYLE" || tag === "NOSCRIPT") continue;
