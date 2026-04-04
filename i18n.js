@@ -731,10 +731,10 @@
       "index.chip.robotics": "로보틱스",
       "index.chip.ai": "AI",
       "index.chip.ic": "디지털 IC 설계",
-      "index.quote": "모든 일에 용기를 가지세요. 그렇지 않으면 이루어지지 않습니다. 최선을 다해 더 높은 목표를 이루겠습니다.",
+      "index.quote": "노력은 배신하지 않아요. 그런데 노력을 사랑하지 않으면 배신당할 수도 있어요.",
 
       "about.eyebrow": "소개",
-      "about.title": "Who I am",
+      "about.title": "나는 누구인가",
       "about.lead": "저는 Yuan Ze University 졸업한 학생입니다. 시각 인지, 모션 플래닝, 설명 가능한 AI를 통합한 지능적이고 투명하며 안전한 로봇 시스템을 연구합니다.",
       "about.edu": "학력",
       "about.interests": "연구 관심 분야",
