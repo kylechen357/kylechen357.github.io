@@ -701,7 +701,7 @@
       "cv.en": "查看英文履歷",
       "cv.zh": "查看中文履歷",
 
-      "footer.designed": "網站設計：Kyle Chen",
+      "footer.designed": "網頁由Kyle Chen設計",
       "footer.rights": "版權所有"
     },
     ko: {
