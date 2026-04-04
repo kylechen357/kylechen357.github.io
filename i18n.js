@@ -663,7 +663,7 @@
       "nav.cv": "履歷",
       "project.back": "← 返回研究頁",
 
-      "index.exp": "產業經驗",
+      "index.exp": "工作經驗",
       "index.tsmc.position": "未來新進設備工程師",
       "index.tsmc.company": "台灣積體電路製造股份有限公司 (台積電)",
       "index.tsmc.division": "蝕刻工程部",
@@ -763,7 +763,7 @@
       "nav.cv": "이력서",
       "project.back": "← 연구로 돌아가기",
 
-      "index.exp": "산업 경험",
+      "index.exp": "직무 경험",
       "index.tsmc.position": "입사 예정 장비 엔지니어",
       "index.tsmc.company": "TSMC",
       "index.tsmc.division": "ETC",
@@ -863,7 +863,7 @@
       "nav.cv": "เรซูเม่",
       "project.back": "← กลับไปหน้าวิจัย",
 
-      "index.exp": "ประสบการณ์อุตสาหกรรม",
+      "index.exp": "ประสบการณ์การทำงาน",
       "index.tsmc.position": "ว่าที่วิศวกรอุปกรณ์",
       "index.tsmc.company": "TSMC",
       "index.tsmc.division": "ETC",
