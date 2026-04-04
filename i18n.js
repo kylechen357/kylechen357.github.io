@@ -1292,6 +1292,35 @@
     });
   }
 
+  function applyLanguageToInternalLinks(lang) {
+    const origin = window.location.origin;
+    const segment = LANG_PATH_MAP[lang] || LANG_PATH_MAP.en;
+    const pagePath = stripLanguagePrefix(window.location.pathname);
+    const baseUrl = new URL((SITE_BASE_PATH || "") + (pagePath.startsWith("/") ? pagePath : "/" + pagePath), origin);
+
+    document.querySelectorAll("a[href]").forEach((link) => {
+      const rawHref = (link.getAttribute("href") || "").trim();
+      if (!rawHref) return;
+      if (/^(https?:|mailto:|tel:|javascript:|#)/i.test(rawHref)) return;
+
+      try {
+        const resolved = new URL(rawHref, baseUrl.href);
+        if (resolved.origin !== origin) return;
+
+        const relative = stripLanguagePrefix(stripSiteBasePath(resolved.pathname));
+        const localizedPath =
+          (SITE_BASE_PATH || "") +
+          "/" +
+          segment +
+          (relative === "/" ? "" : relative);
+
+        link.setAttribute("href", localizedPath + resolved.search + resolved.hash);
+      } catch (_err) {
+        // ignore invalid href
+      }
+    });
+  }
+
   function applyLanguage(lang) {
     const chosen = SUPPORTED.includes(lang) ? lang : "en";
     document.documentElement.setAttribute("lang", chosen === "zh" ? "zh-Hant" : chosen);
@@ -1300,6 +1329,7 @@
     applyDocumentTitleMap(chosen);
     syncEllipsisTitles();
     updateAddressForLanguage(chosen);
+    applyLanguageToInternalLinks(chosen);
   }
 
   function init() {
