@@ -737,6 +737,10 @@ html[data-theme="light"] .home-experience__item {
   flex-direction: column;
 }
 
+.home-card--quote {
+  justify-content: center;
+}
+
 .home-social-grid {
   margin: auto;
   display: flex;
@@ -769,11 +773,12 @@ html[data-theme="light"] .home-experience__item {
 }
 
 .home-quote {
-  margin-top: 0;
+  margin: 0;
   color: var(--accent);
   font-size: 16px;
   font-style: italic;
   line-height: 1.7;
+  text-align: center;
   padding: 14px 16px;
   border-left: 3px solid var(--accent);
   background: rgba(126, 240, 193, 0.05);
