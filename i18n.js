@@ -1,5 +1,4 @@
 (function () {
-  const STORAGE_KEY = "site-language";
   const SUPPORTED = ["en", "zh", "ko", "th"];
   const LANG_PATH_MAP = {
     en: "en-us",
@@ -1183,7 +1182,6 @@
     wrapper.querySelectorAll(".lang-option").forEach((btn) => {
       btn.addEventListener("click", function () {
         const next = this.getAttribute("data-lang") || "en";
-        localStorage.setItem(STORAGE_KEY, next);
         setSummary(next);
         if (picker) picker.removeAttribute("open");
         applyLanguage(next);
