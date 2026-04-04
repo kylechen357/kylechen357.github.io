@@ -70,7 +70,7 @@
             <span data-i18n="work.yzu.date">Jan 2026 - </span>
           </div>
           <div class="timeline__content" style="background: linear-gradient(135deg, rgba(244, 191, 114, 0.12), rgba(126, 240, 193, 0.08)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.25);">
-            <img class="timeline__logo" src="Reference/YZU.png" alt="YZU Logo">
+            <img id="yzuLogo" class="timeline__logo" src="Reference/YZU.png" alt="YZU Logo">
             <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Research Assistant</h3>
             <div class="work-meta">
               <p class="work-meta-line"><i class="ri-building-line"></i><span data-i18n="work.yzu.company">Yuan Ze University</span></p>
@@ -166,6 +166,7 @@
     const html = document.documentElement;
     const nchcLogo = document.getElementById('nchcLogo');
     const kpmgLogo = document.getElementById('kpmgLogo');
+    const yzuLogo = document.getElementById('yzuLogo');
 
     const savedTheme = localStorage.getItem('theme') || 'dark';
     html.setAttribute('data-theme', savedTheme);
@@ -174,8 +175,8 @@
 
     function updateLogo() {
       const currentTheme = html.getAttribute('data-theme');
-      if (YZULogo) {
-        YZULogo.src = currentTheme === 'dark' ? 'Reference/YZU_White.png' : 'Reference/YZU.png';
+      if (yzuLogo) {
+        yzuLogo.src = currentTheme === 'dark' ? 'Reference/YZU_White.png' : 'Reference/YZU.png';
       }
       if (nchcLogo) {
         nchcLogo.src = currentTheme === 'dark' ? 'Reference/NCHC_White.png' : 'Reference/NCHC.png';
