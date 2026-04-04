@@ -1123,6 +1123,7 @@
     if (!wrapper) {
       wrapper = document.createElement("div");
       wrapper.className = "lang-menu";
+      wrapper.setAttribute("data-i18n-skip", "");
       const optionHtml = Object.keys(MENU_CONFIG)
         .map((lang) => {
           const item = MENU_CONFIG[lang];
@@ -1156,6 +1157,9 @@
         nav.appendChild(wrapper);
       }
     }
+
+    // Keep language labels stable (do not translate menu item text).
+    wrapper.setAttribute("data-i18n-skip", "");
 
     const picker = wrapper.querySelector(".lang-picker");
     const summary = wrapper.querySelector("#langSummary");
