@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -72,11 +72,11 @@
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
-      <a href="../about.html">About</a>
-      <a href="../research.html">Research</a>
-      <a href="../experience.html">Experience</a>
-      <a href="../work.html">Work</a>
-      <a href="../cv.html">CV</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
+      <a href="../research.html" data-i18n="nav.research">Research</a>
+      <a href="../experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="../work.html" data-i18n="nav.work">Work</a>
+      <a href="../cv.html" data-i18n="nav.cv">CV</a>
     </nav>
     <label class="toggle-wrapper">
       <input class="toggle-switch" id="themeToggle" type="checkbox" />
@@ -87,9 +87,9 @@
   <main class="page">
     <div class="project-hero">
       <i class="ti ti-cloud-computing project-hero-icon"></i>
-      <a href="../research.html" class="back-link">← Back to Research</a>
-      <h1>Stainless Steel International Standards AI Assistant System</h1>
-      <p class="subtitle">An AWS-based intelligent system designed to assist technical personnel at Walsin Lihwa Corporation with questions related to international standards for stainless steel.</p>
+      <a href="../research.html" class="back-link">â† Back to Research</a>
+      <h1 data-i18n="research.proj.aws_hack.title">Stainless Steel International Standards AI Assistant System</h1>
+      <p class="subtitle" data-i18n="research.proj.aws_hack.body">An AWS-based intelligent system designed to assist technical personnel at Walsin Lihwa Corporation with questions related to international standards for stainless steel.</p>
     </div>
 
 
@@ -135,7 +135,7 @@
 
       <!-- Abstract Section -->
       <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
-      <p style="text-align: justify;">The Stainless Steel International Standards AI Assistant System is a cutting-edge, AWS-based intelligent platform developed for Walsin Lihwa Corporation. The system is designed to assist technical personnel with queries related to international standards for stainless steel, offering solutions in the areas of standard comparisons, professional queries, and document analysis. By leveraging advanced AI technologies, the system adapts responses to match the user’s level of expertise—beginner, intermediate, or expert—ensuring an optimal user experience.
+      <p style="text-align: justify;" data-i18n="project.aws_hack.abstract">The Stainless Steel International Standards AI Assistant System is a cutting-edge, AWS-based intelligent platform developed for Walsin Lihwa Corporation. The system is designed to assist technical personnel with queries related to international standards for stainless steel, offering solutions in the areas of standard comparisons, professional queries, and document analysis. By leveraging advanced AI technologies, the system adapts responses to match the userâ€™s level of expertiseâ€”beginner, intermediate, or expertâ€”ensuring an optimal user experience.
 Key features of the system include:
 Professional Standard Queries: Effortlessly search for detailed information on steel grades, compositions, mechanical properties, and application scopes across multiple international standards such as ASTM, JIS, and EN.
 Multi-Standard Comparisons: Automatically compare various international standards, highlighting key differences and correspondences.
@@ -147,8 +147,10 @@ The system also includes an intuitive web interface and can be deployed using AW
   </main>
 
   <footer class="footer">
-    <p>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>Â© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
+
+  <script src="../i18n.js"></script>
 
   <script>
     const themeToggle = document.getElementById('themeToggle');
@@ -211,3 +213,4 @@ The system also includes an intuitive web interface and can be deployed using AW
   </script>
 </body>
 </html>
+

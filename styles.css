@@ -196,8 +196,106 @@ html[data-theme="light"] .nav__current {
 
 .toggle-wrapper {
   position: absolute;
-  right: 18px;
+  right: 20px;
   flex-shrink: 0;
+}
+
+.lang-menu {
+  position: absolute;
+  right: 124px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-menu select {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", "Segoe UI", sans-serif;
+}
+
+.lang-menu select option {
+  font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Twemoji Mozilla", "Segoe UI", sans-serif;
+}
+
+.lang-picker {
+  position: relative;
+}
+
+.lang-picker summary {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.lang-picker summary::-webkit-details-marker {
+  display: none;
+}
+
+.lang-summary-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-flag {
+  width: 16px;
+  height: 12px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lang-options {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 160px;
+  background: var(--glass-bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 6px;
+  z-index: 20;
+}
+
+.lang-option {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: left;
+}
+
+.lang-option:hover {
+  background: rgba(126, 240, 193, 0.12);
+}
+
+html[data-theme="light"] .lang-menu select {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+html[data-theme="light"] .lang-picker summary {
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .hero-simple {
@@ -978,7 +1076,7 @@ html[data-theme="light"] .timeline__item {
 .timeline__item {
   position: relative;
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: minmax(180px, 230px) 1fr;
   gap: 8px;
   padding: 14px;
   margin-bottom: 30px;
@@ -1027,6 +1125,10 @@ html[data-theme="light"] .timeline__item {
 .timeline__date {
   color: var(--accent);
   font-weight: 600;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   /* Align date with the position title top padding */
   align-self: start;
   padding-top: var(--timeline-date-offset);
@@ -1059,6 +1161,109 @@ html[data-theme="light"] .timeline__item {
 .timeline__date:has(img) > :first-child,
 .timeline__date--with-logo > .date-text {
   padding-top: var(--timeline-date-offset);
+}
+
+/* Keep Experience role title height stable after localization */
+.exp-role-title {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Keep Experience/Work page height consistent across languages */
+.page--fixed-locale .timeline__date:not(:has(img)) {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.page--fixed-locale .timeline__date:has(img) {
+  min-width: 0;
+  overflow: hidden;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 18px;
+}
+
+.page--fixed-locale .timeline__date--with-logo {
+  min-width: 0;
+  overflow: hidden;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 18px;
+}
+
+.page--fixed-locale .timeline__date:has(img) > span {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  flex: 0 1 auto;
+  line-height: 1.35;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.page--fixed-locale .timeline__date--with-logo > span {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+  flex: 0 1 auto;
+  line-height: 1.35;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.page--fixed-locale .timeline__date:has(img) > img {
+  margin: 12px 0 0 0;
+  align-self: center;
+}
+
+.page--fixed-locale .timeline__date--with-logo > img {
+  margin: 12px 0 0 0;
+  align-self: center;
+}
+
+.page--fixed-locale .timeline__content h3,
+.page--fixed-locale .timeline__content > p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.page--fixed-locale .timeline__content > div p {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Prevent page-width shrink in CJK locales and keep action rows stable */
+.page--fixed-locale > .section {
+  width: 100%;
+}
+
+.page--fixed-locale .timeline__content {
+  min-width: 0;
+}
+
+.page--fixed-locale .timeline__content > div[style*="flex-wrap: wrap"] {
+  flex-wrap: nowrap !important;
+  overflow: hidden;
+}
+
+.page--fixed-locale .compact-btn {
+  min-width: 0;
+  max-width: 220px;
+}
+
+.page--fixed-locale .compact-btn span {
+  display: block;
+  min-width: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 @keyframes pageBlockReveal {
@@ -1194,6 +1399,14 @@ html[data-theme="light"] input:checked + .toggle-slider {
 
 /* Tablet devices (768px and below) */
 @media (max-width: 768px) {
+  .page--fixed-locale .timeline__content > div[style*="flex-wrap: wrap"] {
+    flex-wrap: wrap !important;
+  }
+
+  .page--fixed-locale .compact-btn {
+    max-width: 100%;
+  }
+
   body {
     font-size: 15px;
     padding: 24px 12px;
@@ -1277,12 +1490,26 @@ html[data-theme="light"] input:checked + .toggle-slider {
 
   .toggle-wrapper {
     position: absolute;
-    right: 16px;
+    right: 18px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 13;
     width: 60px;
     height: 30px;
+  }
+
+  .lang-menu {
+    right: 112px;
+  }
+
+  .lang-menu select {
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+
+  .lang-picker summary {
+    font-size: 11px;
+    padding: 5px 9px;
   }
 
   .page {
@@ -1439,12 +1666,26 @@ html[data-theme="light"] input:checked + .toggle-slider {
 
   .toggle-wrapper {
     position: absolute;
-    right: 12px;
+    right: 14px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 25px;
     z-index: 13;
+  }
+
+  .lang-menu {
+    right: 86px;
+  }
+
+  .lang-menu select {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .lang-picker summary {
+    font-size: 10px;
+    padding: 4px 8px;
   }
 
   .toggle-slider {

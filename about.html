@@ -24,11 +24,11 @@
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
-      <span class="nav__current" aria-current="page">About</span>
-      <a href="research.html">Research</a>
-      <a href="experience.html">Experience</a>
-      <a href="work.html">Work</a>
-      <a href="cv.html">CV</a>
+      <span class="nav__current" aria-current="page" data-i18n="nav.about">About</span>
+      <a href="research.html" data-i18n="nav.research">Research</a>
+      <a href="experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="work.html" data-i18n="nav.work">Work</a>
+      <a href="cv.html" data-i18n="nav.cv">CV</a>
     </nav>
     <label class="toggle-wrapper">
       <input class="toggle-switch" id="themeToggle" type="checkbox" />
@@ -40,12 +40,12 @@
     <section class="section" style="width: 100%; position: relative;">
       <div style="position: absolute; top: 0; left: 15px; width: 35px; height: 55px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); border-radius: 0 0 4px 4px;"></div>
       <div class="section__header" style="text-align: center; padding-top: 40px;">
-        <p class="eyebrow" style="margin: 0 0 8px 0;">About</p>
-        <h1 style="margin: 0 0 16px 0;">Who I am</h1>
-        <p class="body" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 600px; text-align: center; margin: 0 auto; padding: 0 12px;">I'm a graduate student at Yuan Ze University pursuing a M.Sc. in Electrical Engineering. My research focuses on building intelligent, transparent, and safety-aware robotic systems that integrate visual perception, motion planning, and explainable AI.</p>
+        <p class="eyebrow" style="margin: 0 0 8px 0;" data-i18n="about.eyebrow">About</p>
+        <h1 style="margin: 0 0 16px 0;" data-i18n="about.title">Who I am</h1>
+        <p class="body" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 600px; text-align: center; margin: 0 auto; padding: 0 12px;" data-i18n="about.lead">I'm a graduate student at Yuan Ze University pursuing a M.Sc. in Electrical Engineering. My research focuses on building intelligent, transparent, and safety-aware robotic systems that integrate visual perception, motion planning, and explainable AI.</p>
       </div>
       
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-graduation-cap-line" style="font-size: 28px; color: var(--accent);"></i>Education</h2>
+      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-graduation-cap-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="about.edu">Education</span></h2>
       <div class="about__item" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 20px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2); transition: all 0.3s ease;">
         <div style="display: flex; align-items: start; gap: 12px;">
           <i class="ri-book-open-line" style="font-size: 24px; color: var(--accent); margin-top: 4px; flex-shrink: 0;"></i>
@@ -69,7 +69,7 @@
         </div>
       </div>
       
-      <h2 style="margin-top: 40px; margin-bottom: 28px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-lightbulb-line" style="font-size: 28px; color: var(--accent);"></i>Research Interests</h2>
+      <h2 style="margin-top: 40px; margin-bottom: 28px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-lightbulb-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="about.interests">Research Interests</span></h2>
       <div class="about__grid" style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
         <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
@@ -143,9 +143,10 @@
   </main>
 
   <footer class="footer">
-    <p>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>© 2026 Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     (function() {
       const html = document.documentElement;

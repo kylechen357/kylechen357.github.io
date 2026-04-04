@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -25,11 +25,11 @@
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
-      <a href="../about.html">About</a>
-      <a href="../research.html">Research</a>
-      <a href="../experience.html">Experience</a>
-      <a href="../work.html">Work</a>
-      <a href="../cv.html">CV</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
+      <a href="../research.html" data-i18n="nav.research">Research</a>
+      <a href="../experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="../work.html" data-i18n="nav.work">Work</a>
+      <a href="../cv.html" data-i18n="nav.cv">CV</a>
     </nav>
     <label class="toggle-wrapper">
       <input class="toggle-switch" id="themeToggle" type="checkbox" />
@@ -40,9 +40,9 @@
   <main class="page">
     <div class="project-hero">
       <i class="ti ti-crane project-hero-icon"></i>
-      <a href="../research.html" class="back-link">← Back to Research</a>
-      <h1>Robotic Arm Motion Planning Avoiding Singularity</h1>
-      <p class="subtitle">Developed motion planning algorithms for robotic arms to avoid singularity issues, enhancing stability and precision in complex tasks. Implemented solutions leveraging advanced kinematics and real-time obstacle detection.</p>
+      <a href="../research.html" class="back-link">â† Back to Research</a>
+      <h1 data-i18n="research.proj.ur_arm.title">Robotic Arm Motion Planning Avoiding Singularity</h1>
+      <p class="subtitle" data-i18n="research.proj.ur_arm.body">Developed motion planning algorithms for robotic arms to avoid singularity issues, enhancing stability and precision in complex tasks. Implemented solutions leveraging advanced kinematics and real-time obstacle detection.</p>
     </div>
 
 
@@ -82,7 +82,7 @@
 
       <!-- Abstract Section -->
       <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
-      <p style="text-align: justify;">This research presents a comprehensive approach to singularity 
+      <p style="text-align: justify;" data-i18n="project.ur_arm.abstract">This research presents a comprehensive approach to singularity
 detection and avoidance in UR10 robotic arm path planning 
 through the integration of fuzzy logic safety systems and 
 reinforcement learning algorithms. The proposed system 
@@ -102,8 +102,10 @@ for real-world deployment.</p>
   </main>
 
   <footer class="footer">
-    <p>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>Â© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
+
+  <script src="../i18n.js"></script>
 
   <script>
     const themeToggle = document.getElementById('themeToggle');
@@ -166,3 +168,4 @@ for real-world deployment.</p>
   </script>
 </body>
 </html>
+

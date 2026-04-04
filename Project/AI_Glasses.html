@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -25,11 +25,11 @@
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
-      <a href="../about.html">About</a>
-      <a href="../research.html">Research</a>
-      <a href="../experience.html">Experience</a>
-      <a href="../work.html">Work</a>
-      <a href="../cv.html">CV</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
+      <a href="../research.html" data-i18n="nav.research">Research</a>
+      <a href="../experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="../work.html" data-i18n="nav.work">Work</a>
+      <a href="../cv.html" data-i18n="nav.cv">CV</a>
     </nav>
     <label class="toggle-wrapper">
       <input class="toggle-switch" id="themeToggle" type="checkbox" />
@@ -40,9 +40,9 @@
   <main class="page">
     <div class="project-hero">
       <i class="ti ti-augmented-reality project-hero-icon"></i>
-      <a href="../research.html" class="back-link">← Back to Research</a>
-      <h1>AI-Glasses Embedded with Agentic AI System</h1>
-      <p class="subtitle">Building AI-Glasses embedded with an agentic AI system to enhance user interaction and experience through advanced perception and decision-making capabilities.</p>
+      <a href="../research.html" class="back-link">â† Back to Research</a>
+      <h1 data-i18n="research.proj.ai_glasses.title">AI-Glasses Embedded with Agentic AI System</h1>
+      <p class="subtitle" data-i18n="research.proj.ai_glasses.body">Building AI-Glasses embedded with an agentic AI system to enhance user interaction and experience through advanced perception and decision-making capabilities.</p>
     </div>
 
 
@@ -90,7 +90,7 @@
 
       <!-- Abstract Section -->
       <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
-      <p style="text-align: justify;">
+      <p style="text-align: justify;" data-i18n="project.ai_glasses.abstract">
            This research presents an AI glasses system integrating real-time voice processing, artificial intelligence agents, 
            and cross-network streaming capabilities. The system employs dual-agent architecture where Agent 01 handles Automatic Speech Recognition (ASR) and 
            Agent 02 manages AI processing through local Large Language Models (LLMs), Model Context Protocol (MCP) tools, and Retrieval-Augmented Generation 
@@ -102,8 +102,10 @@
   </main>
 
   <footer class="footer">
-    <p>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>Â© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
+
+  <script src="../i18n.js"></script>
 
   <script>
     const themeToggle = document.getElementById('themeToggle');
@@ -166,3 +168,4 @@
   </script>
 </body>
 </html>
+

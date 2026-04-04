@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
-  <link rel="stylesheet" href="styles.css?v=5" />
+  <link rel="stylesheet" href="styles.css?v=6" />
 </head>
 <body>
   <header class="nav">
@@ -24,11 +24,11 @@
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
-      <a href="about.html">About</a>
-      <a href="research.html">Research</a>
-      <a href="experience.html">Experience</a>
-      <span class="nav__current" aria-current="page">Work</span>
-      <a href="cv.html">CV</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="research.html" data-i18n="nav.research">Research</a>
+      <a href="experience.html" data-i18n="nav.experience">Experience</a>
+      <span class="nav__current" aria-current="page" data-i18n="nav.work">Work</span>
+      <a href="cv.html" data-i18n="nav.cv">CV</a>
     </nav>
     <label class="toggle-wrapper">
       <input class="toggle-switch" id="themeToggle" type="checkbox" />
@@ -36,19 +36,19 @@
     </label>
   </header>
 
-  <main class="page">
+  <main class="page page--fixed-locale">
     <section class="section" style="position: relative;">
       <div style="position: absolute; top: 0; left: 15px; width: 35px; height: 55px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); border-radius: 0 0 4px 4px;"></div>
       <div class="section__header" style="text-align: center; padding-top: 40px;">
-        <p class="eyebrow" style="margin: 0 0 8px 0;">Work</p>
-        <h1 style="margin: 0 0 16px 0;">Work Experience</h1>
-        <p class="body" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 640px; text-align: center; margin: 0 auto; padding: 0 12px;">This page highlights my industry experience including full-time and internship responsibilities.</p>
+        <p class="eyebrow" style="margin: 0 0 8px 0;" data-i18n="work.eyebrow">Work</p>
+        <h1 style="margin: 0 0 16px 0;" data-i18n="work.title">Work Experience</h1>
+        <p class="body" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 640px; text-align: center; margin: 0 auto; padding: 0 12px;" data-i18n="work.lead">This page highlights my industry experience including full-time and internship responsibilities.</p>
       </div>
 
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-briefcase-4-line" style="font-size: 28px; color: var(--accent);"></i>Full-Time Experience</h2>
+      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-briefcase-4-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="work.full">Full-Time Experience</span></h2>
       <div class="timeline" style="margin-top:18px;">
         <div class="timeline__item">
-          <div class="timeline__date" style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="timeline__date timeline__date--with-logo" style="display: flex; align-items: center; justify-content: space-between;">
             <span>Apr 2026 -</span>
             <img src="Reference/TSMC.png" alt="TSMC Logo" style="height: 76px; width: auto; object-fit: contain;">
           </div>
@@ -64,10 +64,10 @@
         </div>
       </div>
 
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-briefcase-line" style="font-size: 28px; color: var(--accent);"></i>Internship Experience</h2>
+      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-briefcase-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="work.intern">Internship Experience</span></h2>
       <div class="timeline" style="margin-top:18px;">
         <div class="timeline__item">
-          <div class="timeline__date" style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="timeline__date timeline__date--with-logo" style="display: flex; align-items: center; justify-content: space-between;">
             <span>Jul 2025 - Aug 2025</span>
             <img id="nchcLogo" src="Reference/NCHC.png" alt="NCHC Logo" style="height: 100px;">
           </div>
@@ -88,7 +88,7 @@
         </div>
 
         <div class="timeline__item">
-          <div class="timeline__date" style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="timeline__date timeline__date--with-logo" style="display: flex; align-items: center; justify-content: space-between;">
             <span>Jul 2024 - Aug 2024</span>
             <img src="Reference/Ta_Chou.png" alt="Ta Chou Logo" style="height: 70px;">
           </div>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="timeline__item">
-          <div class="timeline__date" style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="timeline__date timeline__date--with-logo" style="display: flex; align-items: center; justify-content: space-between;">
             <span>Feb 2024 - Jul 2024</span>
             <img src="Reference/KPMG.png" alt="KPMG Logo" style="height: 70px;">
           </div>
@@ -129,9 +129,10 @@
   </main>
 
   <footer class="footer">
-    <p>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>© 2026 Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;

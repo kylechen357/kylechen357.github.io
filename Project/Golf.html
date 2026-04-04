@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -71,11 +71,11 @@
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
-      <a href="../about.html">About</a>
-      <a href="../research.html">Research</a>
-      <a href="../experience.html">Experience</a>
-      <a href="../work.html">Work</a>
-      <a href="../cv.html">CV</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
+      <a href="../research.html" data-i18n="nav.research">Research</a>
+      <a href="../experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="../work.html" data-i18n="nav.work">Work</a>
+      <a href="../cv.html" data-i18n="nav.cv">CV</a>
     </nav>
     <label class="toggle-wrapper">
       <input class="toggle-switch" id="themeToggle" type="checkbox" />
@@ -86,9 +86,9 @@
   <main class="page">
     <div class="project-hero">
       <i class="ti ti-ball-football project-hero-icon"></i>
-      <a href="../research.html" class="back-link">← Back to Research</a>
-      <h1>Golf Swing Phenomena Analysis</h1>
-      <p class="subtitle">Developed computer vision system for club and posture tracking using OpenCV, YOLO, and MediaPipe. Applied Lagrangian mechanics to model swing dynamics.</p>
+      <a href="../research.html" class="back-link">â† Back to Research</a>
+      <h1 data-i18n="research.proj.golf.title">Golf Swing Phenomena Analysis</h1>
+      <p class="subtitle" data-i18n="research.proj.golf.body">Developed computer vision system for club and posture tracking using OpenCV, YOLO, and MediaPipe. Applied Lagrangian mechanics to model swing dynamics.</p>
     </div>
 
 
@@ -131,10 +131,10 @@
 
       <!-- Abstract Section -->
       <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
-      <p style="text-align: justify;">The rapid development of artificial intelligence in recent
+      <p style="text-align: justify;" data-i18n="project.golf.abstract">The rapid development of artificial intelligence in recent
 years has resulted in increasing application in sports.
-Meanwhile, people’s interest in watching golf tournaments
-has increased. This study aims to detect golfers’ posture,
+Meanwhile, peopleâ€™s interest in watching golf tournaments
+has increased. This study aims to detect golfersâ€™ posture,
 clubs, clubhead, and analyze each swing stage. We detect the
 club position when swinging and draw its trajectory; then, we
 use the double pendulum system and the Lagrangian equation
@@ -149,8 +149,10 @@ players and coaches.</p>
   </main>
 
   <footer class="footer">
-    <p>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>Â© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
+
+  <script src="../i18n.js"></script>
 
   <script>
     const themeToggle = document.getElementById('themeToggle');
@@ -213,3 +215,4 @@ players and coaches.</p>
   </script>
 </body>
 </html>
+

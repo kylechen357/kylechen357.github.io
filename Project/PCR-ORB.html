@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -25,11 +25,11 @@
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
-      <a href="../about.html">About</a>
-      <a href="../research.html">Research</a>
-      <a href="../experience.html">Experience</a>
-      <a href="../work.html">Work</a>
-      <a href="../cv.html">CV</a>
+      <a href="../about.html" data-i18n="nav.about">About</a>
+      <a href="../research.html" data-i18n="nav.research">Research</a>
+      <a href="../experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="../work.html" data-i18n="nav.work">Work</a>
+      <a href="../cv.html" data-i18n="nav.cv">CV</a>
     </nav>
     <label class="toggle-wrapper">
       <input class="toggle-switch" id="themeToggle" type="checkbox" />
@@ -40,9 +40,9 @@
   <main class="page">
     <div class="project-hero">
       <i class="ti ti-3d-cube-sphere project-hero-icon"></i>
-      <a href="../research.html" class="back-link">← Back to Research</a>
-      <h1>Enhanced ORB-SLAM3 with Point-Cloud Refinement</h1>
-      <p class="subtitle">Integrated YOLOv8-based dynamic filtering and CUDA-accelerated point cloud refinement. Achieved 25.9% reduction in ATE RMSE and 30.4% improvement in trajectory accuracy on KITTI dataset.</p>
+      <a href="../research.html" class="back-link">â† Back to Research</a>
+      <h1 data-i18n="research.proj.pcr_orb.title">Enhanced ORB-SLAM3 with Point-Cloud Refinement</h1>
+      <p class="subtitle" data-i18n="research.proj.pcr_orb.body">Integrated YOLOv8-based dynamic filtering and CUDA-accelerated point cloud refinement. Achieved 25.9% reduction in ATE RMSE and 30.4% improvement in trajectory accuracy on KITTI dataset.</p>
     </div>
 
 
@@ -84,7 +84,7 @@
 
       <!-- Abstract Section -->
       <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
-      <p style="text-align: justify;">Visual Simultaneous Localization and Mapping (vSLAM) systems encounter substantial challenges in dynamic environments 
+      <p style="text-align: justify;" data-i18n="project.pcr_orb.abstract">Visual Simultaneous Localization and Mapping (vSLAM) systems encounter substantial challenges in dynamic environments
 where moving objects compromise tracking accuracy and map consistency. This paper introduces PCR-ORB (Point Cloud 
 Refinement ORB), an enhanced ORB-SLAM3 framework that integrates deep learning-based point cloud refinement to 
 mitigate dynamic object interference. Our approach employs YOLOv8 for semantic segmentation combined with CUDA-accelerated processing to achieve real-time performance. The system implements a multi-stage filtering strategy encompassing 
@@ -99,8 +99,10 @@ and opportunities for robust navigation in complex environments.</p>
   </main>
 
   <footer class="footer">
-    <p>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>Â© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
+
+  <script src="../i18n.js"></script>
 
   <script>
     const themeToggle = document.getElementById('themeToggle');
@@ -163,3 +165,4 @@ and opportunities for robust navigation in complex environments.</p>
   </script>
 </body>
 </html>
+
