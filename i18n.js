@@ -563,7 +563,7 @@
       "nav.cv": "CV",
       "project.back": "← Back to Research",
 
-      "index.exp": "Industry Experience",
+      "index.exp": "Work Experience",
       "index.tsmc.position": "Incoming Equipment Engineer",
       "index.tsmc.company": "TSMC",
       "index.tsmc.division": "ETC",
