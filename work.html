@@ -135,7 +135,7 @@
             <span>Feb 2024 - Jul 2024</span>
           </div>
           <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <img class="timeline__logo" src="Reference/KPMG.png" alt="KPMG Logo">
+            <img id="kpmgLogo" class="timeline__logo" src="Reference/KPMG.png" alt="KPMG Logo">
             <h3 style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Intern Consultant</h3>
             <div class="work-meta">
               <p class="work-meta-line"><i class="ri-building-line"></i>KPMG Taiwan | T Ambassador Program</p>
@@ -165,6 +165,7 @@
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
     const nchcLogo = document.getElementById('nchcLogo');
+    const kpmgLogo = document.getElementById('kpmgLogo');
 
     const savedTheme = localStorage.getItem('theme') || 'dark';
     html.setAttribute('data-theme', savedTheme);
@@ -175,6 +176,9 @@
       const currentTheme = html.getAttribute('data-theme');
       if (nchcLogo) {
         nchcLogo.src = currentTheme === 'dark' ? 'Reference/NCHC_White.png' : 'Reference/NCHC.png';
+      }
+      if (kpmgLogo) {
+        kpmgLogo.src = currentTheme === 'dark' ? 'Reference/KPMG_White.png' : 'Reference/KPMG.png';
       }
     }
 
