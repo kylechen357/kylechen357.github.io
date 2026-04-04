@@ -510,6 +510,11 @@ html[data-theme="light"] .home-experience__item {
   top: 9px;
 }
 
+.home-experience__item--past .home-experience__dot {
+  background: #95a0b2;
+  box-shadow: 0 0 0 4px rgba(149, 160, 178, 0.18);
+}
+
 .home-experience__entry {
   display: flex;
   flex-direction: column;
@@ -524,6 +529,31 @@ html[data-theme="light"] .home-experience__item {
 .home-experience__position {
   color: var(--muted);
   font-size: 13px;
+}
+
+.home-experience__status {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-top: 6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.home-experience__item--present .home-experience__status {
+  color: #1f8b63;
+  background: rgba(126, 240, 193, 0.2);
+  border: 1px solid rgba(126, 240, 193, 0.4);
+}
+
+.home-experience__item--past .home-experience__status {
+  color: #64748b;
+  background: rgba(148, 163, 184, 0.16);
+  border: 1px solid rgba(148, 163, 184, 0.3);
 }
 
 .home-stack {
