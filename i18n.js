@@ -169,10 +169,6 @@
       "Sayling Wen Cultural & Educational Foundation": "溫世仁文教基金會",
       "20th Seed Talent Program Graduation Certification": "第 20 屆種子人才培育計畫結業認證",
       "STP":"種子人才培育計畫",
-      "Intern Consultant - Digital Transformation": "數位轉型實習顧問",
-      "Incoming Equipment Engineer - ETC": "未來新進設備工程師－蝕刻工程部",
-      "Summer Intern - Virtual-Real Integration": "暑期實習生－虛實整合",
-      "Summer Intern - Division of Management": "暑期實習生－管理部門",
       "Project Developer & Paper Author": "專案開發與論文作者",
       "Project Developer & Paper Revise": "專案開發與論文修訂",
       "Paper Co-Author": "論文共同作者",
@@ -204,6 +200,9 @@
       "Applied Trusted AI frameworks (LIT, SHAP) to financial data and corporate XAI cases.": "將可信任 AI 框架（LIT、SHAP）應用於金融資料與企業 XAI 案例。",
       "Developed AI agent for remote computer control with AR glasses streaming via RTSP.": "開發可透過 RTSP 串流與 AR 眼鏡進行遠端電腦控制的 AI 代理。",
       "Trained UR10 robotic arm models for singularity-aware motion planning.": "訓練 UR10 機械手臂模型以進行奇異點感知運動規劃。",
+      "Research Assistant": "研究助理",
+      "Assisting with the project of medical system using AI technologies.": "協助以 AI 技術開發醫療系統相關專案。",
+      "Exploring and doing research on new topic of IC Design, AI, and Robotics.": "探索並研究 IC 設計、AI 與機器人等新興主題。",
       "Managed IT infrastructure, social media, and provided technical support in Thai.": "管理 IT 基礎設施與社群媒體，並提供泰語技術支援。",
       "Focus on technical improvement for new process application and system hardware development.": "聚焦新製程導入與系統硬體開發之技術改善。",
       "Publications: Conference paper accepted at TANET 2025 and NCS 2025.": "發表：論文已被 TANET 2025 與 NCS 2025 接收。",
@@ -229,13 +228,19 @@
       "Yuan Ze University, Taiwan": "元智大學，臺灣",
       "Yuan Ze University Student Association": "元智大學學生會",
       "Ministry of Education in Taiwan and Yuan Ze University": "教育部與元智大學",
+      "Incoming Equipment Engineer":"未來新進設備工程師",
+      "ETC":"蝕刻工程部",
       "National Center for High-Performance Computing": "國家高速網路與計算中心",
+      "KPMG Taiwan | T Ambassador Program": "KPMG 台灣｜T 大使計畫",
       "TSMC": "台灣積體電路製造股份有限公司 (台積電)",
+      "Summer Intern": "暑期實習生",
       "National Center for High-Performance Computing, Taiwan": "國家高速網路與計算中心（臺灣）",
       "Ta Chou Industry, Thailand": "大洲工業有限公司  (泰國)",
+      "Division of Management": "管理部",
       "Ta Thong Chinese School": "滿星疊大同中學",
       "Ta Thong Chinese School, Thailand": "滿星疊大同中學，泰國",
       "T Ambassador Program": "T 大使計畫",
+      "Intern Consultant":"顧問實習生",
       "Jyh-Hong Wu": "吳志泓 研究員",
       "Hsiu-Mei Chou": "周秀美 副研究員",
       "Po-Chiang Lin": "林柏江 助理教授",
@@ -255,6 +260,8 @@
       "Taiwan": "臺灣",
       "Innovative Technology Lab": "創新科技實驗室",
       "Human-Computer Interaction Multimedia Lab": "人機互動多媒體實驗室",
+      "Division of Virtual-Real Integration and Digital Twins": "虛實整合與數位孿生組",
+      "Digital Transformation Group, Division of Consulting": "顧問部門數位轉型組",
       "Lab:": "實驗室："
     },
     ko: {
@@ -324,13 +331,13 @@
       "Executive Secretary of Student Executive Center": "학생행정센터 집행비서",
       "International Volunteer": "국제 봉사단원",
       "Tutor of Digital Multiple Language Project": "디지털 다중언어 프로젝트 튜터",
+      "Ministry of Education in Taiwan and": "대만 교육부 및",
       "2023 Google Digital Talent Program": "2023 Google 디지털 인재 프로그램",
       "2023 TalentNXT Program": "2023 TalentNXT 프로그램",
       "20th Seed Talent Program Graduation Certification": "제20기 Seed Talent 프로그램 수료 인증",
-      "Intern Consultant - Digital Transformation": "디지털 전환 인턴 컨설턴트",
-      "Incoming Equipment Engineer - ETC": "장비 엔지니어 - ETC",
-      "Summer Intern - Virtual-Real Integration": "하계 인턴 - 가상현실 통합",
-      "Summer Intern - Division of Management": "하계 인턴 - 경영 부문",
+      "Incoming Equipment Engineer": "입사 예정 장비 엔지니어",
+      "Summer Intern": "하계 인턴",
+      "Intern Consultant": "인턴 컨설턴트",
       "Project Developer & Paper Author": "프로젝트 개발 및 논문 저자",
       "Project Developer & Paper Revise": "프로젝트 개발 및 논문 수정",
       "Paper Co-Author": "논문 공동저자",
@@ -362,6 +369,9 @@
       "Applied Trusted AI frameworks (LIT, SHAP) to financial data and corporate XAI cases.": "금융 데이터와 기업 XAI 사례에 Trusted AI 프레임워크(LIT, SHAP)를 적용함.",
       "Developed AI agent for remote computer control with AR glasses streaming via RTSP.": "RTSP 기반 AR 안경 스트리밍으로 원격 PC 제어를 수행하는 AI 에이전트를 개발함.",
       "Trained UR10 robotic arm models for singularity-aware motion planning.": "특이점 인식 모션 플래닝을 위한 UR10 로봇암 모델을 학습함.",
+      "Research Assistant": "연구 조교",
+      "Assisting with the project of medical system using AI technologies.": "AI 기술을 활용한 의료 시스템 프로젝트를 지원함.",
+      "Exploring and doing research on new topic of IC Design, AI, and Robotics.": "IC 설계, AI, 로보틱스의 새로운 주제를 탐색하고 연구함.",
       "Managed IT infrastructure, social media, and provided technical support in Thai.": "IT 인프라와 소셜 미디어를 관리하고 태국어 기술 지원을 제공함.",
       "Focus on technical improvement for new process application and system hardware development.": "신공정 적용 및 시스템 하드웨어 개발의 기술 개선에 집중함.",
       "Publications: Conference paper accepted at TANET 2025 and NCS 2025.": "논문: TANET 2025 및 NCS 2025 학회 논문 채택.",
@@ -383,6 +393,13 @@
       "Responsible for manufacture equipment improvements.": "제조 장비 개선을 담당함.",
       "Assist to benchmark and formalize production tool roadmap.": "벤치마킹 및 생산 도구 로드맵 수립 지원.",
       "Repaired machines and designed factory fixtures.": "장비 수리 및 공장 지그 설계 수행.",
+      "TSMC": "TSMC",
+      "ETC": "ETC",
+      "National Center for High-Performance Computing, Taiwan": "National Center for High-Performance Computing, 대만",
+      "Division of Management": "경영 부문",
+      "KPMG Taiwan | T Ambassador Program": "KPMG 대만 | T Ambassador Program",
+      "Division of Virtual-Real Integration and Digital Twins": "가상-현실 통합 및 디지털 트윈 부문",
+      "Digital Transformation Group, Division of Consulting": "컨설팅본부 디지털 전환 그룹",
       "Taiwan": "대만",
       "Thailand": "태국",
       "Lab:": "연구실:"
@@ -454,13 +471,13 @@
       "Executive Secretary of Student Executive Center": "เลขานุการบริหารศูนย์บริหารนักศึกษา",
       "International Volunteer": "อาสาสมัครนานาชาติ",
       "Tutor of Digital Multiple Language Project": "ติวเตอร์โครงการดิจิทัลพหุภาษา",
+      "Ministry of Education in Taiwan and": "กระทรวงศึกษาธิการ และ",
       "2023 Google Digital Talent Program": "โครงการ Google Digital Talent ปี 2023",
       "2023 TalentNXT Program": "โครงการ TalentNXT ปี 2023",
       "20th Seed Talent Program Graduation Certification": "ใบรับรองจบหลักสูตร Seed Talent รุ่นที่ 20",
-      "Intern Consultant - Digital Transformation": "ที่ปรึกษาฝึกงานด้านดิจิทัลทรานส์ฟอร์เมชัน",
-      "Incoming Equipment Engineer - ETC": "วิศวกรอุปกรณ์ - ETC",
-      "Summer Intern - Virtual-Real Integration": "นักศึกษาฝึกงานภาคฤดูร้อน - การบูรณาการเสมือนจริง",
-      "Summer Intern - Division of Management": "นักศึกษาฝึกงานภาคฤดูร้อน - ฝ่ายบริหาร",
+      "Incoming Equipment Engineer": "ว่าที่วิศวกรอุปกรณ์",
+      "Summer Intern": "นักศึกษาฝึกงานภาคฤดูร้อน",
+      "Intern Consultant": "ที่ปรึกษาฝึกงาน",
       "Project Developer & Paper Author": "ผู้พัฒนาโครงการและผู้เขียนบทความ",
       "Project Developer & Paper Revise": "ผู้พัฒนาโครงการและปรับแก้บทความ",
       "Paper Co-Author": "ผู้เขียนร่วม",
@@ -492,6 +509,9 @@
       "Applied Trusted AI frameworks (LIT, SHAP) to financial data and corporate XAI cases.": "ประยุกต์ใช้เฟรมเวิร์ก Trusted AI (LIT, SHAP) กับข้อมูลการเงินและกรณี XAI ขององค์กร",
       "Developed AI agent for remote computer control with AR glasses streaming via RTSP.": "พัฒนา AI agent สำหรับควบคุมคอมพิวเตอร์ระยะไกลผ่านการสตรีม RTSP บนแว่น AR",
       "Trained UR10 robotic arm models for singularity-aware motion planning.": "ฝึกโมเดลแขนกล UR10 เพื่อวางแผนการเคลื่อนไหวที่คำนึงถึง singularity",
+      "Research Assistant": "ผู้ช่วยวิจัย",
+      "Assisting with the project of medical system using AI technologies.": "สนับสนุนโครงการพัฒนาระบบการแพทย์โดยใช้เทคโนโลยี AI",
+      "Exploring and doing research on new topic of IC Design, AI, and Robotics.": "สำรวจและวิจัยหัวข้อใหม่ด้านการออกแบบ IC, AI และหุ่นยนต์",
       "Managed IT infrastructure, social media, and provided technical support in Thai.": "ดูแลโครงสร้างพื้นฐาน IT โซเชียลมีเดีย และให้การสนับสนุนทางเทคนิคภาษาไทย",
       "Focus on technical improvement for new process application and system hardware development.": "มุ่งเน้นการปรับปรุงเทคนิคสำหรับการประยุกต์ใช้กระบวนการใหม่และการพัฒนาฮาร์ดแวร์ระบบ",
       "Publications: Conference paper accepted at TANET 2025 and NCS 2025.": "ผลงานตีพิมพ์: บทความได้รับการตอบรับใน TANET 2025 และ NCS 2025",
@@ -513,6 +533,13 @@
       "Responsible for manufacture equipment improvements.": "รับผิดชอบการปรับปรุงอุปกรณ์การผลิต",
       "Assist to benchmark and formalize production tool roadmap.": "ช่วยทำ benchmarking และจัดทำแผนเครื่องมือการผลิต",
       "Repaired machines and designed factory fixtures.": "ซ่อมเครื่องจักรและออกแบบฟิกซ์เจอร์โรงงาน",
+      "TSMC": "TSMC",
+      "ETC": "ETC",
+      "National Center for High-Performance Computing, Taiwan": "National Center for High-Performance Computing, ไต้หวัน",
+      "Division of Management": "ฝ่ายบริหาร",
+      "KPMG Taiwan | T Ambassador Program": "KPMG ไต้หวัน | T Ambassador Program",
+      "Division of Virtual-Real Integration and Digital Twins": "แผนกบูรณาการเสมือนจริงและดิจิทัลทวิน",
+      "Digital Transformation Group, Division of Consulting": "กลุ่มดิจิทัลทรานส์ฟอร์เมชัน ฝ่ายที่ปรึกษา",
       "Ta Chou Industry": "บริษัท ต้าโจว อินดัสทรี",
       "Ta Chou Industry, Thailand": "บริษัท ต้าโจว อินดัสทรี, ประเทศไทย",
       "Ta Thong Chinese School": "โรงเรียนจีนต้าถงวิทยาคม",
@@ -537,10 +564,16 @@
       "project.back": "← Back to Research",
 
       "index.exp": "Industry Experience",
-      "index.tsmc.unit": "ETC",
-      "index.tsmc.role": "Incoming Equipment Engineer",
-      "index.nchc.track": "Virtual-Real Integration and Digital Twins",
-      "index.nchc.role": "Summer Intern",
+      "index.tsmc.position": "Incoming Equipment Engineer",
+      "index.tsmc.company": "TSMC",
+      "index.tsmc.division": "ETC",
+      "index.yzu.position": "Research Assistant",
+      "index.yzu.company": "Yuan Ze University",
+      "index.yzu.division": "AI Medical System Project",
+      "index.nchc.position": "Summer Intern",
+      "index.nchc.company": "National Center for High-Performance Computing, Taiwan",
+      "index.nchc.division": "Division of Virtual-Real Integration and Digital Twins",
+      "index.current": "Present",
       "index.present": "Start From 4/29",
       "index.past": "Past",
       "index.intro.title": "Exploring New Ideas and Bringing Them to Practical Application",
@@ -603,9 +636,11 @@
       "work.eyebrow": "Work",
       "work.title": "Work Experience",
       "work.lead": "This page highlights my industry experience including full-time and internship responsibilities.",
-      "work.full": "Full-Time Experience",
+      "work.full": "Work Experience",
       "work.intern": "Internship Experience",
       "work.tsmc.date": "Apr 2026 - (Start From 4/29)",
+      "work.yzu.date": "Jan 2026 -",
+      "work.yzu.company": "Yuan Ze University",
 
       "cv.eyebrow": "CV",
       "cv.title": "Get the full story",
@@ -629,10 +664,16 @@
       "project.back": "← 返回研究頁",
 
       "index.exp": "產業經驗",
-      "index.tsmc.unit": "蝕刻工程師",
-      "index.tsmc.role": "未來新進設備工程師",
-      "index.nchc.track": "虛實整合與數位孿生",
-      "index.nchc.role": "暑期實習生",
+      "index.tsmc.position": "未來新進設備工程師",
+      "index.tsmc.company": "台灣積體電路製造股份有限公司 (台積電)",
+      "index.tsmc.division": "蝕刻工程部",
+      "index.yzu.position": "研究助理",
+      "index.yzu.company": "元智大學",
+      "index.yzu.division": "AI 醫療系統專案",
+      "index.nchc.position": "暑期實習生",
+      "index.nchc.company": "國家高速網路與計算中心（臺灣）",
+      "index.nchc.division": "虛實整合與數位孿生組",
+      "index.current": "至今",
       "index.present": "4/29 起",
       "index.past": "過往",
       "index.intro.title": "探索新想法並落實於實務應用",
@@ -695,9 +736,11 @@
       "work.eyebrow": "工作",
       "work.title": "工作經驗",
       "work.lead": "本頁整理我的產業經驗，包含正職與實習職務內容。",
-      "work.full": "正職經驗",
+      "work.full": "工作經驗",
       "work.intern": "實習經驗",
       "work.tsmc.date": "民國115年4月 -（4/29 起）",
+      "work.yzu.date": "民國115年1月 -",
+      "work.yzu.company": "元智大學",
 
       "cv.eyebrow": "履歷",
       "cv.title": "完整履歷",
@@ -721,10 +764,16 @@
       "project.back": "← 연구로 돌아가기",
 
       "index.exp": "산업 경험",
-      "index.tsmc.unit": "ETC",
-      "index.tsmc.role": "장비 엔지니어 (신입)",
-      "index.nchc.track": "가상-현실 통합 및 디지털 트윈",
-      "index.nchc.role": "하계 인턴",
+      "index.tsmc.position": "입사 예정 장비 엔지니어",
+      "index.tsmc.company": "TSMC",
+      "index.tsmc.division": "ETC",
+      "index.yzu.position": "연구 조교",
+      "index.yzu.company": "Yuan Ze University",
+      "index.yzu.division": "AI 의료 시스템 프로젝트",
+      "index.nchc.position": "하계 인턴",
+      "index.nchc.company": "National Center for High-Performance Computing, 대만",
+      "index.nchc.division": "가상-현실 통합 및 디지털 트윈 부문",
+      "index.current": "현재",
       "index.present": "4/29부터 시작",
       "index.past": "과거",
       "index.intro.title": "새로운 아이디어를 탐구하고 실무에 적용",
@@ -787,9 +836,11 @@
       "work.eyebrow": "직무",
       "work.title": "직무 경험",
       "work.lead": "이 페이지는 정규직과 인턴십을 포함한 산업 경험을 소개합니다.",
-      "work.full": "정규직 경험",
+      "work.full": "직무 경험",
       "work.intern": "인턴십 경험",
       "work.tsmc.date": "2026년 4월 - (4/29부터 시작)",
+      "work.yzu.date": "2026년 1월 -",
+      "work.yzu.company": "Yuan Ze University",
 
       "cv.eyebrow": "이력서",
       "cv.title": "전체 스토리",
@@ -813,14 +864,20 @@
       "project.back": "← กลับไปหน้าวิจัย",
 
       "index.exp": "ประสบการณ์อุตสาหกรรม",
-      "index.tsmc.unit": "ETC",
-      "index.tsmc.role": "วิศวกรอุปกรณ์ (Incoming)",
-      "index.nchc.track": "การบูรณาการโลกเสมือน-จริงและดิจิทัลทวิน",
-      "index.nchc.role": "นักศึกษาฝึกงานภาคฤดูร้อน",
+      "index.tsmc.position": "ว่าที่วิศวกรอุปกรณ์",
+      "index.tsmc.company": "TSMC",
+      "index.tsmc.division": "ETC",
+      "index.yzu.position": "ผู้ช่วยวิจัย",
+      "index.yzu.company": "Yuan Ze University",
+      "index.yzu.division": "โครงการระบบการแพทย์ด้วย AI",
+      "index.nchc.position": "นักศึกษาฝึกงานภาคฤดูร้อน",
+      "index.nchc.company": "National Center for High-Performance Computing, ไต้หวัน",
+      "index.nchc.division": "แผนกบูรณาการเสมือนจริงและดิจิทัลทวิน",
+      "index.current": "ปัจจุบัน",
       "index.present": "เริ่มตั้งแต่ 4/29",
       "index.past": "อดีต",
       "index.intro.title": "สำรวจแนวคิดใหม่และประยุกต์ใช้จริง",
-      "index.intro.body": "ผมชื่อ Kyle โดยมุ่งเน้นงานวิจัยด้าน Visual SLAM, หุ่นยนต์, Explainable AI และ Digital IC Design และมีแผนทำงานในอุตสาหกรรมเซมิคอนดักเตอร์ในอนาคต",
+      "index.intro.body": "ผมชื่อ เฉิน เซิงไค โดยมุ่งเน้นงานวิจัยด้าน Visual SLAM, หุ่นยนต์, Explainable AI และ Digital IC Design และมีแผนทำงานในอุตสาหกรรมเซมิคอนดักเตอร์ในอนาคต",
       "index.chip.robotics": "หุ่นยนต์",
       "index.chip.ai": "AI",
       "index.chip.ic": "การออกแบบดิจิทัล IC",
@@ -879,9 +936,11 @@
       "work.eyebrow": "งาน",
       "work.title": "ประสบการณ์การทำงาน",
       "work.lead": "หน้านี้สรุปประสบการณ์ในอุตสาหกรรมของผม ทั้งงานประจำและงานฝึกงาน",
-      "work.full": "ประสบการณ์งานประจำ",
+      "work.full": "ประสบการณ์การทำงาน",
       "work.intern": "ประสบการณ์ฝึกงาน",
       "work.tsmc.date": "เมษายน พ.ศ. 2569 - (เริ่มตั้งแต่ 4/29)",
+      "work.yzu.date": "มกราคม พ.ศ. 2569 -",
+      "work.yzu.company": "Yuan Ze University",
 
       "cv.eyebrow": "เรซูเม่",
       "cv.title": "ดูข้อมูลทั้งหมด",
@@ -911,6 +970,13 @@
 
   function escapeRegExp(text) {
     return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function normalizeSpaces(text) {
+    return String(text || "")
+      .replace(/\u00a0/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
   function toMonthNumber(monthText) {
@@ -1075,10 +1141,13 @@
       if (!base.trim()) continue;
 
       const exact = base.trim();
+      const normalizedExact = normalizeSpaces(exact);
       let updated = normalizeMojibake(base);
 
       if (map[exact]) {
         updated = updated.replace(exact, map[exact]);
+      } else if (normalizedExact && map[normalizedExact]) {
+        updated = updated.replace(exact, map[normalizedExact]);
       } else {
         const entries = Object.entries(map).sort((a, b) => b[0].length - a[0].length);
         for (const [from, to] of entries) {
@@ -1089,6 +1158,13 @@
           if (updated.includes(from)) {
             const pattern = new RegExp(escapeRegExp(from), "g");
             updated = updated.replace(pattern, to);
+          } else if (from.includes(" ")) {
+            // Handle text nodes that contain non-breaking spaces or irregular whitespace.
+            const flexiblePattern = new RegExp(
+              escapeRegExp(from).replace(/\s+/g, "(?:\\s|\\u00A0)+"),
+              "g"
+            );
+            updated = updated.replace(flexiblePattern, to);
           }
         }
       }
