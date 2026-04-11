@@ -1241,9 +1241,9 @@ html[data-theme="light"] .about__item {
   }
 
   .skill-mini-card {
-    min-height: unset;
-    aspect-ratio: 1 / 1;
-    padding: 8px 6px;
+    min-height: 80px;
+    aspect-ratio: unset;
+    padding: 10px 8px;
     gap: 6px;
   }
 
