@@ -16,7 +16,7 @@
 <body>
   <header class="nav">
     <a href="../index.html" class="nav__brand" aria-label="Kyle Chen home">
-      <img src="../Reference/KC-01.png" alt="Kyle Chen" />
+      <img src="../Reference/SKC-01.png" alt="Kyle Chen" />
     </a>
     <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="ri-menu-line"></i>
@@ -40,7 +40,7 @@
   <main class="page">
     <div class="project-hero">
       <i class="ti ti-brain project-hero-icon"></i>
-      <a href="../research.html" class="back-link" data-i18n="project.back">← Back to Research</a>
+      <a href="../research.html" class="back-link" data-i18n="project.back">? Back to Research</a>
       <h1 data-i18n="research.proj.explain_arm.title">Explainable System for Inverse Kinematics</h1>
       <p class="subtitle" data-i18n="research.proj.explain_arm.body">Proposed explainable IK framework integrating SHAP and InterpretML. Designed Improved IKNet and Focused IKNet with balanced feature attribution and enhanced obstacle-avoidance stability.</p>
     </div>
@@ -85,27 +85,27 @@
 
       <!-- Abstract Section -->
       <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
-      <p style="text-align: justify;" data-i18n="project.explain_arm.abstract">Deep neural networks have accelerated inverseâ€‘kinematics (IK) inference to the point where lowâ€‘cost manipulators can execute
+      <p style="text-align: justify;" data-i18n="project.explain_arm.abstract">Deep neural networks have accelerated inverse‑kinematics (IK) inference to the point where low‑cost manipulators can execute
 complex trajectories in real time, yet the opaque nature of these models contradicts the transparency and safety requirements 
-emerging in responsibleâ€‘AI regulation. This study proposes an explainabilityâ€‘centered workflow that integrates Shapleyâ€‘value 
-attribution with physicsâ€‘based obstacleâ€‘avoidance evaluation for the ROBOTIS OpenManipulatorâ€‘X. Building upon the 
-original IKNet, two lightweight variantsâ€”Improved IKNet with residual connections and Focused IKNet with 
-positionâ€‘orientation decouplingâ€”are trained on a large, synthetically generated poseâ€“joint dataset. SHAP is employed to 
-derive both global and local importance rankings, while the InterpretML toolkit visualizes partialâ€‘dependence patterns that 
-expose nonâ€‘linear couplings between Cartesian poses and joint angles. To bridge algorithmic insight and robotic safety, each 
-network is embedded in a simulator that subjects the arm to randomized singleâ€‘ and multiâ€‘obstacle scenes; forward kinematics, 
-capsuleâ€‘based collision checks, and trajectory metrics quantify the relationship between attribution balance and physical 
-clearance. Qualitative heatâ€‘maps reveal that architectures distributing importance more evenly across pose dimensions tend to 
+emerging in responsible‑AI regulation. This study proposes an explainability‑centered workflow that integrates Shapley‑value 
+attribution with physics‑based obstacle‑avoidance evaluation for the ROBOTIS OpenManipulator‑X. Building upon the 
+original IKNet, two lightweight variants—Improved IKNet with residual connections and Focused IKNet with 
+position‑orientation decoupling—are trained on a large, synthetically generated pose–joint dataset. SHAP is employed to 
+derive both global and local importance rankings, while the InterpretML toolkit visualizes partial‑dependence patterns that 
+expose non‑linear couplings between Cartesian poses and joint angles. To bridge algorithmic insight and robotic safety, each 
+network is embedded in a simulator that subjects the arm to randomized single‑ and multi‑obstacle scenes; forward kinematics, 
+capsule‑based collision checks, and trajectory metrics quantify the relationship between attribution balance and physical 
+clearance. Qualitative heat‑maps reveal that architectures distributing importance more evenly across pose dimensions tend to 
 maintain wider safety margins without compromising positional accuracy. The combined analysis demonstrates that 
 explainable AI (XAI) techniques can illuminate hidden failure modes, guide architectural refinements, and inform 
-obstacleâ€‘aware deployment strategies for learningâ€‘based IK. The proposed methodology thus contributes a concrete path 
-toward trustworthy, dataâ€‘driven manipulation that aligns with emerging responsibleâ€‘AI standards.</p> 
+obstacle‑aware deployment strategies for learning‑based IK. The proposed methodology thus contributes a concrete path 
+toward trustworthy, data‑driven manipulation that aligns with emerging responsible‑AI standards.</p> 
 
     </section>
   </main>
 
   <footer class="footer">
-    <p data-i18n-footer>Â© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+    <p data-i18n-footer>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
   </footer>
 
   <script src="../i18n.js"></script>
