@@ -47,8 +47,15 @@
       
       <div class="section-cube">
       <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-flask-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="research.projects">Research Projects</span></h2>
-      <div class="cards research-projects-grid" style="margin-top:18px;">
-        <article class="card">
+      <div class="project-filter" style="margin-top: 18px;">
+        <button class="project-filter__chip is-active" type="button" data-filter="undergraduate-capstone">Undergraduate Capstone</button>
+        <button class="project-filter__chip" type="button" data-filter="master-research">Master Research</button>
+        <button class="project-filter__chip" type="button" data-filter="competition">Competition</button>
+        <button class="project-filter__chip" type="button" data-filter="internship">Internship</button>
+        <button class="project-filter__chip" type="button" data-filter="research-assistant">Research Assistant</button>
+      </div>
+      <div class="cards research-projects-grid" style="margin-top:30px;">
+        <article class="card" data-category="internship">
           <div class="card__meta">2025 · Internship</div>
           <h3 data-i18n="research.proj.ai_glasses.title">AI-Glasses Embedded with Agentic AI System</h3>
           <p class="card__body" data-i18n="research.proj.ai_glasses.body">Developing AI glasses with an agentic AI system for smarter perception, interaction, and decision support.</p>
@@ -60,7 +67,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="internship">
           <div class="card__meta">2025 · Internship</div>
           <h3 data-i18n="research.proj.ur_arm.title">Robotic Arm Motion Planning Avoiding Singularity</h3>
           <p class="card__body" data-i18n="research.proj.ur_arm.body">Developed robotic arm motion planning methods that avoid singularities and improve stability in complex tasks.</p>
@@ -72,7 +79,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="competition">
           <div class="card__meta">2025 · Competition</div>
           <h3 data-i18n="research.proj.aws_hack.title">Stainless Steel International Standards AI Assistant System</h3>
           <p class="card__body" data-i18n="research.proj.aws_hack.body">Built an AWS-based AI assistant for stainless steel standards, comparisons, and document analysis for technical staff.</p>
@@ -84,7 +91,7 @@
           </div>
         </article>
         
-        <article class="card">
+        <article class="card" data-category="master-research">
           <div class="card__meta">2025 · Master Research</div>
           <h3 data-i18n="research.proj.explain_arm.title">Explainable System for Inverse Kinematics</h3>
           <p class="card__body" data-i18n="research.proj.explain_arm.body">Proposed an explainable inverse kinematics framework using SHAP and InterpretML for safer obstacle-aware manipulation.</p>
@@ -96,7 +103,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="master-research">
           <div class="card__meta">2025 · Master Research and Graduate Mentor</div>
           <h3 data-i18n="research.proj.iknet.title">iKnet Model Improvements for Low Computing Resource Environments</h3>
           <p class="card__body" data-i18n="research.proj.iknet.body">Rebuilt iKnet models to improve efficiency and accuracy in low-resource computing environments.</p>
@@ -108,7 +115,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="master-research">
           <div class="card__meta">2025 · Master Research and Graduate Mentor</div>
           <h3 data-i18n="research.proj.ggcnn.title">GGCNN Model Improvements for Low Computing Resource Environments</h3>
           <p class="card__body" data-i18n="research.proj.ggcnn.body">Rebuilt GGCNN models to improve efficiency and accuracy in low-resource computing environments.</p>
@@ -120,7 +127,7 @@
           </div>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="master-research">
           <div class="card__meta">2024-2025 · Master Research</div>
           <h3 data-i18n="research.proj.pcr_orb.title">Enhanced ORB-SLAM3 with Point-Cloud Refinement</h3>
           <p class="card__body" data-i18n="research.proj.pcr_orb.body">Enhanced ORB-SLAM3 with dynamic filtering and point-cloud refinement for more accurate trajectory estimation.</p>
@@ -132,7 +139,7 @@
           </div>
         </article>
         
-        <article class="card">
+        <article class="card" data-category="undergraduate-capstone">
           <div class="card__meta">2023 · Undergraduate Capstone</div>
           <h3 data-i18n="research.proj.golf.title">Golf Swing Phenomena Analysis</h3>
           <p class="card__body" data-i18n="research.proj.golf.body">Developed a computer vision system for golf swing tracking and dynamic analysis using OpenCV, YOLO, and MediaPipe.</p>
@@ -144,7 +151,7 @@
           </div>
         </article>
         
-        <article class="card">
+        <article class="card" data-category="undergraduate-capstone">
           <div class="card__meta">2022-2024 · Undergraduate Capstone</div>
           <h3 data-i18n="research.proj.auto_mobile.title">Omni-bearing Autonomous Mobile Manipulator</h3>
           <p class="card__body" data-i18n="research.proj.auto_mobile.body">Built an autonomous mobile manipulator with ROS2, SLAM navigation, and vision-based elevator interaction.</p>
@@ -155,6 +162,11 @@
             </a>
           </div>
         </article>
+      </div>
+      <div class="project-filter-empty" hidden>
+        <div class="project-filter-empty__icon"><i class="ri-folder-open-line"></i></div>
+        <h3>Research Assistant</h3>
+        <p>No projects added in this category yet.</p>
       </div>
       </div>
 
@@ -380,6 +392,38 @@
           icon.classList.add('ri-menu-line');
         });
       });
+    }
+
+    const filterChips = document.querySelectorAll('.project-filter__chip');
+    const projectCards = document.querySelectorAll('.research-projects-grid .card');
+    const projectEmpty = document.querySelector('.project-filter-empty');
+
+    function applyProjectFilter(filter) {
+      let visibleCount = 0;
+
+      projectCards.forEach(card => {
+        const matches = card.dataset.category === filter;
+        card.classList.toggle('is-hidden', !matches);
+        if (matches) visibleCount += 1;
+      });
+
+      if (projectEmpty) {
+        projectEmpty.classList.toggle('is-hidden', visibleCount !== 0);
+      }
+    }
+
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        const filter = this.dataset.filter;
+        filterChips.forEach(item => item.classList.remove('is-active'));
+        this.classList.add('is-active');
+        applyProjectFilter(filter);
+      });
+    });
+
+    const initialChip = document.querySelector('.project-filter__chip.is-active');
+    if (initialChip) {
+      applyProjectFilter(initialChip.dataset.filter);
     }
   </script>
 </body>

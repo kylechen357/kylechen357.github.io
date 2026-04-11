@@ -1296,6 +1296,79 @@ html[data-theme="light"] .skill-mini-card {
   min-height: calc(1.6em * 4);
 }
 
+.project-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.project-filter__chip {
+  appearance: none;
+  border: 1px solid rgba(126, 240, 193, 0.24);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(126, 240, 193, 0.08), rgba(244, 191, 114, 0.06));
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease, background 160ms ease;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+
+.project-filter__chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(126, 240, 193, 0.4);
+}
+
+.project-filter__chip.is-active {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, white), color-mix(in srgb, var(--accent-2) 20%, white));
+  color: #10231f;
+  border-color: transparent;
+  box-shadow: 0 14px 26px rgba(45, 155, 108, 0.18);
+}
+
+.project-filter-empty {
+  margin-top: 18px;
+  padding: 28px 22px;
+  border-radius: 24px;
+  border: 1px dashed rgba(126, 240, 193, 0.28);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(126, 240, 193, 0.06));
+  text-align: center;
+}
+
+.project-filter-empty__icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 14px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.14), rgba(126, 240, 193, 0.12));
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+}
+
+.project-filter-empty__icon i {
+  font-size: 26px;
+}
+
+.project-filter-empty h3 {
+  margin: 0 0 8px;
+}
+
+.project-filter-empty p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.research-projects-grid .card.is-hidden,
+.project-filter-empty.is-hidden {
+  display: none !important;
+}
+
 .card {
   border: 1px solid var(--glass-border);
   border-radius: 24px;
