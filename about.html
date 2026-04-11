@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
   <link rel="stylesheet" href="styles.css?v=4" />
 </head>
@@ -45,6 +46,7 @@
         <p class="body" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 600px; text-align: center; margin: 0 auto; padding: 0 12px;" data-i18n="about.lead">I'm a graduate student at Yuan Ze University pursuing a M.Sc. in Electrical Engineering. My research focuses on building intelligent, transparent, and safety-aware robotic systems that integrate visual perception, motion planning, and explainable AI.</p>
       </div>
       
+      <div class="section-cube">
       <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-graduation-cap-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="about.edu">Education</span></h2>
       <div class="about__item" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 20px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2); transition: all 0.3s ease;">
         <div style="display: flex; align-items: start; gap: 12px;">
@@ -68,76 +70,151 @@
           </div>
         </div>
       </div>
+      </div>
       
+      <div class="section-cube">
       <h2 style="margin-top: 40px; margin-bottom: 28px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-lightbulb-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="about.interests">Research Interests</span></h2>
-      <div class="about__grid" style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-        <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
+      <div class="about-feature-grid">
+        <div class="about__item about-feature-card about-feature-card--ai">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 44px; height: 44px; background: rgba(126, 240, 193, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-              <i class="ri-robot-line" style="font-size: 24px; color: var(--accent);"></i>
+            <div class="about-feature-card__icon">
+              <i class="ri-brain-line"></i>
             </div>
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Artificial Intelligence</h3>
+            <div class="about-feature-card__titlewrap">
+              <span class="about-feature-card__eyebrow">Core Domain</span>
+              <h3 class="about-feature-card__title">Artificial Intelligence</h3>
+            </div>
           </div>
-          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--muted);"><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Deep Learning</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Visual Recognition</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Agentic AI</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Explainable AI</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">LLMs</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">SLMs</span></p>
+          <div class="skill-card-grid">
+            <div class="skill-mini-card"><i class="ri-git-branch-line"></i><span>Deep Learning</span></div>
+            <div class="skill-mini-card"><i class="ri-eye-line"></i><span>Visual Recognition</span></div>
+            <div class="skill-mini-card"><i class="ri-node-tree"></i><span>Agentic AI</span></div>
+            <div class="skill-mini-card"><i class="ri-lightbulb-flash-line"></i><span>Explainable AI</span></div>
+            <div class="skill-mini-card"><i class="ri-chat-3-line"></i><span>LLMs</span></div>
+            <div class="skill-mini-card"><i class="ri-message-2-line"></i><span>SLMs</span></div>
+          </div>
         </div>
-        <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
+        <div class="about__item about-feature-card about-feature-card--robotics">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 44px; height: 44px; background: rgba(126, 240, 193, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-              <i class="ri-robot-line" style="font-size: 24px; color: var(--accent);"></i>
+            <div class="about-feature-card__icon">
+              <i class="ri-robot-2-line"></i>
             </div>
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Robotics</h3>
+            <div class="about-feature-card__titlewrap">
+              <span class="about-feature-card__eyebrow">Applied Domain</span>
+              <h3 class="about-feature-card__title">Robotics</h3>
+            </div>
           </div>
-          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--muted);"><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Robotic Manipulation</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Motion Planning</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">SLAM</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">ROS</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Digital Twin</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Edge Computing</span></p>
+          <div class="skill-card-grid">
+            <div class="skill-mini-card"><i class="ri-hand-heart-line"></i><span>Robotic Manipulation</span></div>
+            <div class="skill-mini-card"><i class="ri-route-line"></i><span>Motion Planning</span></div>
+            <div class="skill-mini-card"><i class="ri-radar-line"></i><span>SLAM</span></div>
+            <div class="skill-mini-card"><i class="ri-links-line"></i><span>ROS</span></div>
+            <div class="skill-mini-card"><i class="ri-layout-grid-line"></i><span>Digital Twin</span></div>
+            <div class="skill-mini-card"><i class="ri-cpu-line"></i><span>Edge Computing</span></div>
+          </div>
         </div>
-        <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
+        <div class="about__item about-feature-card about-feature-card--ic">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 44px; height: 44px; background: rgba(126, 240, 193, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-              <i class="ri-cpu-line" style="font-size: 24px; color: var(--accent);"></i>
+            <div class="about-feature-card__icon">
+              <i class="ri-cpu-line"></i>
             </div>
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600;">IC Design (Learning)</h3>
+            <div class="about-feature-card__titlewrap">
+              <span class="about-feature-card__eyebrow">Emerging Track</span>
+              <h3 class="about-feature-card__title">IC Design (Learning)</h3>
+            </div>
           </div>
-          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--muted);"><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">RISC-V Architecture</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Vivado</span></p>
+          <div class="skill-card-grid">
+            <div class="skill-mini-card"><i class="ri-cpu-line"></i><span>RISC-V Architecture</span></div>
+            <div class="skill-mini-card">
+              <span class="skill-logo-badge skill-logo-badge--xilinx">
+                <img src="Reference/Xilinx_logo.svg" alt="Xilinx" />
+              </span>
+              <span>Vivado</span>
+            </div>
+          </div>
         </div>
       </div>
+      </div>
 
+      <div class="section-cube">
       <h2 style="margin-top: 40px; margin-bottom: 28px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-tools-line" style="font-size: 28px; color: var(--accent);"></i>Research Fields and Skills</h2>
-      <div style="margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-        <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
+      <div class="about-feature-grid">
+        <div class="about__item about-feature-card about-feature-card--research">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 44px; height: 44px; background: rgba(126, 240, 193, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-              <i class="ri-eye-line" style="font-size: 24px; color: var(--accent);"></i>
+            <div class="about-feature-card__icon">
+              <i class="ri-focus-3-line"></i>
             </div>
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Research Areas</h3>
+            <div class="about-feature-card__titlewrap">
+              <span class="about-feature-card__eyebrow">Scope</span>
+              <h3 class="about-feature-card__title">Research Areas</h3>
+            </div>
           </div>
-          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--muted);"><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Visual SLAM</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Robotics</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Edge AI</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Explainable AI</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Digital Twin</span></p>
+          <div class="skill-card-grid">
+            <div class="skill-mini-card"><i class="ri-radar-line"></i><span>Visual SLAM</span></div>
+            <div class="skill-mini-card"><i class="ri-robot-2-line"></i><span>Robotics</span></div>
+            <div class="skill-mini-card"><i class="ri-flashlight-line"></i><span>Edge AI</span></div>
+            <div class="skill-mini-card"><i class="ri-question-answer-line"></i><span>Explainable AI</span></div>
+            <div class="skill-mini-card"><i class="ri-layout-grid-line"></i><span>Digital Twin</span></div>
+          </div>
         </div>
-        <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
+        <div class="about__item about-feature-card about-feature-card--technical">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 44px; height: 44px; background: rgba(126, 240, 193, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-              <i class="ri-code-line" style="font-size: 24px; color: var(--accent);"></i>
+            <div class="about-feature-card__icon">
+              <i class="ri-code-box-line"></i>
             </div>
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Technical Skills</h3>
+            <div class="about-feature-card__titlewrap">
+              <span class="about-feature-card__eyebrow">Toolkit</span>
+              <h3 class="about-feature-card__title">Technical Skills</h3>
+            </div>
           </div>
-          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--muted);"><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Python</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">C/C++</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">PyTorch</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">TensorFlow</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">OpenCV</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">ROS</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">YOLO</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">MediaPipe</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">LIT</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">SHAP</span></p>
+          <div class="skill-card-grid">
+            <div class="skill-mini-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+            <div class="skill-mini-card"><i class="devicon-cplusplus-plain colored"></i><span>C/C++</span></div>
+            <div class="skill-mini-card"><i class="devicon-pytorch-original colored"></i><span>PyTorch</span></div>
+            <div class="skill-mini-card"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+            <div class="skill-mini-card"><i class="devicon-opencv-plain colored"></i><span>OpenCV</span></div>
+            <div class="skill-mini-card"><i class="ri-links-line"></i><span>ROS</span></div>
+            <div class="skill-mini-card"><i class="ri-focus-2-line"></i><span>YOLO</span></div>
+            <div class="skill-mini-card"><i class="ri-apps-2-line"></i><span>MediaPipe</span></div>
+            <div class="skill-mini-card"><i class="ri-flask-line"></i><span>LIT</span></div>
+            <div class="skill-mini-card"><i class="ri-pie-chart-2-line"></i><span>SHAP</span></div>
+          </div>
         </div>
-        <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
+        <div class="about__item about-feature-card about-feature-card--soft">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 44px; height: 44px; background: rgba(126, 240, 193, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-              <i class="ri-team-line" style="font-size: 24px; color: var(--accent);"></i>
+            <div class="about-feature-card__icon">
+              <i class="ri-team-line"></i>
             </div>
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Soft Skills</h3>
+            <div class="about-feature-card__titlewrap">
+              <span class="about-feature-card__eyebrow">Human Side</span>
+              <h3 class="about-feature-card__title">Soft Skills</h3>
+            </div>
           </div>
-          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--muted);"><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Leadership</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Project Management</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Cross-cultural Collaboration</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Technical Writing</span></p>
+          <div class="skill-card-grid">
+            <div class="skill-mini-card"><i class="ri-flag-line"></i><span>Leadership</span></div>
+            <div class="skill-mini-card"><i class="ri-task-line"></i><span>Project Management</span></div>
+            <div class="skill-mini-card"><i class="ri-global-line"></i><span>Cross-cultural Collaboration</span></div>
+            <div class="skill-mini-card"><i class="ri-quill-pen-line"></i><span>Technical Writing</span></div>
+          </div>
         </div>
-        <div class="about__item" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.12), rgba(126, 240, 193, 0.05)); padding: 28px; border-radius: 12px; border: 1.5px solid rgba(126, 240, 193, 0.25); transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(126, 240, 193, 0.08);">
+        <div class="about__item about-feature-card about-feature-card--language">
           <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-            <div style="width: 44px; height: 44px; background: rgba(126, 240, 193, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-              <i class="ri-earth-line" style="font-size: 24px; color: var(--accent);"></i>
+            <div class="about-feature-card__icon">
+              <i class="ri-translate-2"></i>
             </div>
-            <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Language Skills</h3>
+            <div class="about-feature-card__titlewrap">
+              <span class="about-feature-card__eyebrow">Communication</span>
+              <h3 class="about-feature-card__title">Language Skills</h3>
+            </div>
           </div>
-          <p style="margin: 0; font-size: 15px; line-height: 1.8; color: var(--muted);"><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Mandarin</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">English</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Korean</span><span style="display: inline-block; background: rgba(126, 240, 193, 0.15); border: 1px solid rgba(126, 240, 193, 0.4); color: var(--accent); padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: 500; margin: 4px 6px 4px 0;">Thai</span></p>
+          <div class="skill-card-grid">
+            <div class="skill-mini-card"><span class="skill-lang-badge">中</span><span>Mandarin</span></div>
+            <div class="skill-mini-card"><span class="skill-lang-badge">EN</span><span>English</span></div>
+            <div class="skill-mini-card"><span class="skill-lang-badge">한</span><span>Korean</span></div>
+            <div class="skill-mini-card"><span class="skill-lang-badge">ท</span><span>Thai</span></div>
+          </div>
         </div>
+      </div>
       </div>
     </section>
   </main>
