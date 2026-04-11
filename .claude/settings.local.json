@@ -8,7 +8,8 @@
       "Bash(powershell -ExecutionPolicy Bypass -File \"d:/Users/kylec/Desktop/kylechen357.github.io/fix_encoding.ps1\")",
       "Bash(powershell -ExecutionPolicy Bypass -File decode_test.ps1)",
       "Bash(powershell -ExecutionPolicy Bypass -File decode3.ps1)",
-      "Bash(powershell -ExecutionPolicy Bypass -Command ':*)"
+      "Bash(powershell -ExecutionPolicy Bypass -Command ':*)",
+      "Bash(grep -rn \"styles.css\" d:/Users/kylec/Desktop/kylechen357.github.io/*.html d:/Users/kylec/Desktop/kylechen357.github.io/Project/*.html)"
     ]
   }
 }
