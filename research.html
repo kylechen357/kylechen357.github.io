@@ -11,6 +11,78 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
   <link rel="stylesheet" href="styles.css?v=4" />
+  <style>
+    /* Research project cards — uniform size with image */
+    .research-projects-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+
+    .research-projects-grid .proj-card {
+      min-height: unset;
+    }
+
+    .proj-card__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px;
+    }
+
+    .proj-card__content .card__meta {
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+      line-height: 1.3;
+    }
+
+    .proj-card__content h3 {
+      font-size: 15px !important;
+      line-height: 1.35 !important;
+      margin: 0 !important;
+      min-height: unset !important;
+    }
+
+    .proj-card__img {
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .proj-card__img img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      display: block;
+    }
+
+    .proj-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .proj-tag {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(126, 240, 193, 0.1);
+      border: 1px solid rgba(126, 240, 193, 0.28);
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .proj-card__content .card__links {
+      margin-top: auto;
+    }
+
+    html[data-theme="light"] .proj-tag {
+      background: rgba(20, 120, 80, 0.08);
+      border-color: rgba(20, 120, 80, 0.3);
+      color: #0d7a52;
+    }
+  </style>
 </head>
 <body>
   <header class="nav">
@@ -55,111 +127,181 @@
         <button class="project-filter__chip" type="button" data-filter="research-assistant">Research Assistant</button>
       </div>
       <div class="cards research-projects-grid" style="margin-top:30px;">
-        <article class="card" data-category="internship">
-          <div class="card__meta">2025 · Internship</div>
-          <h3 data-i18n="research.proj.ai_glasses.title">AI-Glasses Embedded with Agentic AI System</h3>
-          <p class="card__body" data-i18n="research.proj.ai_glasses.body">Developing AI glasses with an agentic AI system for smarter perception, interaction, and decision support.</p>
-          <div class="card__links">
-            <a href="Project/AI_Glasses.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+        <article class="card proj-card" data-category="internship">
+          <div class="proj-card__content">
+            <div class="card__meta">2025 · Internship</div>
+            <h3 data-i18n="research.proj.ai_glasses.title">AI-Glasses Embedded with Agentic AI System</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/AI_Glasses.png" alt="AI Glasses project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+              <span class="proj-tag">Robotics</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/AI_Glasses.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card" data-category="internship">
-          <div class="card__meta">2025 · Internship</div>
-          <h3 data-i18n="research.proj.ur_arm.title">Robotic Arm Motion Planning Avoiding Singularity</h3>
-          <p class="card__body" data-i18n="research.proj.ur_arm.body">Developed robotic arm motion planning methods that avoid singularities and improve stability in complex tasks.</p>
-          <div class="card__links">
-            <a href="Project/UR.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+        <article class="card proj-card" data-category="internship">
+          <div class="proj-card__content">
+            <div class="card__meta">2025 · Internship</div>
+            <h3 data-i18n="research.proj.ur_arm.title">Robotic Arm Motion Planning Avoiding Singularity</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/UR.png" alt="UR Arm project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+              <span class="proj-tag">Robotics</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/UR.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card" data-category="competition">
-          <div class="card__meta">2025 · Competition</div>
-          <h3 data-i18n="research.proj.aws_hack.title">Stainless Steel International Standards AI Assistant System</h3>
-          <p class="card__body" data-i18n="research.proj.aws_hack.body">Built an AWS-based AI assistant for stainless steel standards, comparisons, and document analysis for technical staff.</p>
-          <div class="card__links">
-            <a href="Project/AWS-Hack.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
-          </div>
-        </article>
-        
-        <article class="card" data-category="master-research">
-          <div class="card__meta">2025 · Master Research</div>
-          <h3 data-i18n="research.proj.explain_arm.title">Explainable System for Inverse Kinematics</h3>
-          <p class="card__body" data-i18n="research.proj.explain_arm.body">Proposed an explainable inverse kinematics framework using SHAP and InterpretML for safer obstacle-aware manipulation.</p>
-          <div class="card__links">
-            <a href="Project/Explain-Arm.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+        <article class="card proj-card" data-category="competition">
+          <div class="proj-card__content">
+            <div class="card__meta">2025 · Competition</div>
+            <h3 data-i18n="research.proj.aws_hack.title">Stainless Steel International Standards AI Assistant System</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/AWS-Hack.png" alt="AWS Hackathon project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/AWS-Hack.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card" data-category="master-research">
-          <div class="card__meta">2025 · Master Research and Graduate Mentor</div>
-          <h3 data-i18n="research.proj.iknet.title">iKnet Model Improvements for Low Computing Resource Environments</h3>
-          <p class="card__body" data-i18n="research.proj.iknet.body">Rebuilt iKnet models to improve efficiency and accuracy in low-resource computing environments.</p>
-          <div class="card__links">
-            <a href="Project/iknet_improve.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+        <article class="card proj-card" data-category="master-research">
+          <div class="proj-card__content">
+            <div class="card__meta">2025 · Master Research</div>
+            <h3 data-i18n="research.proj.explain_arm.title">Explainable System for Inverse Kinematics</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/Explain-Arm.png" alt="Explainable IK project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+              <span class="proj-tag">Robotics</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/Explain-Arm.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card" data-category="master-research">
-          <div class="card__meta">2025 · Master Research and Graduate Mentor</div>
-          <h3 data-i18n="research.proj.ggcnn.title">GGCNN Model Improvements for Low Computing Resource Environments</h3>
-          <p class="card__body" data-i18n="research.proj.ggcnn.body">Rebuilt GGCNN models to improve efficiency and accuracy in low-resource computing environments.</p>
-          <div class="card__links">
-            <a href="Project/ggcnn_improve.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+        <article class="card proj-card" data-category="master-research">
+          <div class="proj-card__content">
+            <div class="card__meta">2025 · Master Research &amp; Mentor</div>
+            <h3 data-i18n="research.proj.iknet.title">iKnet Model Improvements for Low Computing Resource Environments</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/iknet_improve.png" alt="iKnet improvement project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+              <span class="proj-tag">Robotics</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/iknet_improve.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
 
-        <article class="card" data-category="master-research">
-          <div class="card__meta">2024-2025 · Master Research</div>
-          <h3 data-i18n="research.proj.pcr_orb.title">Enhanced ORB-SLAM3 with Point-Cloud Refinement</h3>
-          <p class="card__body" data-i18n="research.proj.pcr_orb.body">Enhanced ORB-SLAM3 with dynamic filtering and point-cloud refinement for more accurate trajectory estimation.</p>
-          <div class="card__links">
-            <a href="Project/PCR-ORB.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+        <article class="card proj-card" data-category="master-research">
+          <div class="proj-card__content">
+            <div class="card__meta">2025 · Master Research &amp; Mentor</div>
+            <h3 data-i18n="research.proj.ggcnn.title">GGCNN Model Improvements for Low Computing Resource Environments</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/ggcnn_improve.png" alt="GGCNN improvement project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+              <span class="proj-tag">Robotics</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/ggcnn_improve.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
-        
-        <article class="card" data-category="undergraduate-capstone">
-          <div class="card__meta">2023 · Undergraduate Capstone</div>
-          <h3 data-i18n="research.proj.golf.title">Golf Swing Phenomena Analysis</h3>
-          <p class="card__body" data-i18n="research.proj.golf.body">Developed a computer vision system for golf swing tracking and dynamic analysis using OpenCV, YOLO, and MediaPipe.</p>
-          <div class="card__links">
-            <a href="Project/Golf.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+
+        <article class="card proj-card" data-category="master-research">
+          <div class="proj-card__content">
+            <div class="card__meta">2024–2025 · Master Research</div>
+            <h3 data-i18n="research.proj.pcr_orb.title">Enhanced ORB-SLAM3 with Point-Cloud Refinement</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/PCR-ORB.png" alt="PCR-ORB project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+              <span class="proj-tag">Robotics</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/PCR-ORB.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
-        
-        <article class="card" data-category="undergraduate-capstone">
-          <div class="card__meta">2022-2024 · Undergraduate Capstone</div>
-          <h3 data-i18n="research.proj.auto_mobile.title">Omni-bearing Autonomous Mobile Manipulator</h3>
-          <p class="card__body" data-i18n="research.proj.auto_mobile.body">Built an autonomous mobile manipulator with ROS2, SLAM navigation, and vision-based elevator interaction.</p>
-          <div class="card__links">
-            <a href="Project/Autonomous_Mobile.html" class="project-btn">
-              <i class="ri-folder-open-line"></i>
-              <span>Project Page</span>
-            </a>
+
+        <article class="card proj-card" data-category="undergraduate-capstone">
+          <div class="proj-card__content">
+            <div class="card__meta">2023 · Undergraduate Capstone</div>
+            <h3 data-i18n="research.proj.golf.title">Golf Swing Phenomena Analysis</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/Golf.png" alt="Golf swing analysis project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/Golf.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card proj-card" data-category="undergraduate-capstone">
+          <div class="proj-card__content">
+            <div class="card__meta">2022–2024 · Undergraduate Capstone</div>
+            <h3 data-i18n="research.proj.auto_mobile.title">Omni-bearing Autonomous Mobile Manipulator</h3>
+            <div class="proj-card__img">
+              <img src="Reference/Proj Image/Autonomous_Mobile.png" alt="Autonomous mobile manipulator project" loading="lazy" />
+            </div>
+            <div class="proj-card__tags">
+              <span class="proj-tag">Artificial Intelligence</span>
+              <span class="proj-tag">Robotics</span>
+            </div>
+            <div class="card__links">
+              <a href="Project/Autonomous_Mobile.html" class="project-btn">
+                <i class="ri-folder-open-line"></i>
+                <span>Project Page</span>
+              </a>
+            </div>
           </div>
         </article>
       </div>
