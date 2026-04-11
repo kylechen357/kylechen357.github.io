@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ':*)",
+      "Bash(node -e ':*)",
+      "Bash(powershell -Command ':*)",
+      "Bash(powershell -Command \"Get-Content 'd:\\\\\\\\Users\\\\\\\\kylec\\\\\\\\Desktop\\\\\\\\kylechen357.github.io\\\\\\\\experience.html' -Encoding UTF8 | Select-String 'Feb 2025'\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"d:/Users/kylec/Desktop/kylechen357.github.io/fix_encoding.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File decode_test.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -File decode3.ps1)",
+      "Bash(powershell -ExecutionPolicy Bypass -Command ':*)"
+    ]
+  }
+}

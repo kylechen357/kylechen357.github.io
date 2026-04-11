@@ -176,6 +176,9 @@ html[data-theme="light"] .nav {
   display: block;
 }
 
+html[data-theme="dark"] .nav-logo--light { display: none; }
+html[data-theme="light"] .nav-logo--dark { display: none; }
+
 .nav__hamburger {
   display: none;
   background: none;
