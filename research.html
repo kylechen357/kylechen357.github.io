@@ -120,11 +120,11 @@
       <div class="section-cube">
       <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-flask-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="research.projects">Research Projects</span></h2>
       <div class="project-filter" style="margin-top: 18px;">
-        <button class="project-filter__chip is-active" type="button" data-filter="undergraduate-capstone">Undergraduate Capstone</button>
-        <button class="project-filter__chip" type="button" data-filter="master-research">Master Research</button>
-        <button class="project-filter__chip" type="button" data-filter="competition">Competition</button>
-        <button class="project-filter__chip" type="button" data-filter="internship">Internship</button>
-        <button class="project-filter__chip" type="button" data-filter="research-assistant">Research Assistant</button>
+        <button class="project-filter__chip is-active" type="button" data-filter="undergraduate-capstone" data-i18n="research.filter.undergraduate">Undergraduate Capstone</button>
+        <button class="project-filter__chip" type="button" data-filter="master-research" data-i18n="research.filter.master">Master Research</button>
+        <button class="project-filter__chip" type="button" data-filter="competition" data-i18n="research.filter.competition">Competition</button>
+        <button class="project-filter__chip" type="button" data-filter="internship" data-i18n="research.filter.internship">Internship</button>
+        <button class="project-filter__chip" type="button" data-filter="research-assistant" data-i18n="research.filter.assistant">Research Assistant</button>
       </div>
       <div class="cards research-projects-grid" style="margin-top:30px;">
         <article class="card proj-card" data-category="internship">
@@ -305,10 +305,10 @@
           </div>
         </article>
       </div>
-      <div class="project-filter-empty" hidden>
+      <div class="project-filter-empty is-hidden">
         <div class="project-filter-empty__icon"><i class="ri-folder-open-line"></i></div>
-        <h3>Research Assistant</h3>
-        <p>No projects added in this category yet.</p>
+        <h3 data-i18n="research.empty.title">Research Assistant</h3>
+        <p data-i18n="research.empty.body">Coming soon...</p>
       </div>
       </div>
 
