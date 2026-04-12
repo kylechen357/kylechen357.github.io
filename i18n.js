@@ -633,6 +633,7 @@
       "nav.experience": "Experience",
       "nav.work": "Work",
       "nav.cv": "CV",
+      "nav.blog": "Kyle's Blog",
       "project.back": "← Back to Research",
 
       "index.exp": "Work Experience",
@@ -744,6 +745,7 @@
       "nav.experience": "經歷",
       "nav.work": "工作",
       "nav.cv": "履歷",
+      "nav.blog": "Kyle 的部落格",
       "project.back": "← 返回研究頁",
 
       "index.exp": "工作經驗",
@@ -855,6 +857,7 @@
       "nav.experience": "경험",
       "nav.work": "직무",
       "nav.cv": "이력서",
+      "nav.blog": "Kyle의 블로그",
       "project.back": "← 연구로 돌아가기",
 
       "index.exp": "직무 경험",
@@ -966,6 +969,7 @@
       "nav.experience": "ประสบการณ์",
       "nav.work": "งาน",
       "nav.cv": "เรซูเม่",
+      "nav.blog": "บล็อกของ Kyle",
       "project.back": "← กลับไปหน้าวิจัย",
 
       "index.exp": "ประสบการณ์การทำงาน",
