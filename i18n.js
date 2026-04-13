@@ -660,13 +660,13 @@
 
       "about.eyebrow": "About",
       "about.title": "Who I am",
-      "about.lead": "I'm a graduate student at Yuan Ze University pursuing a M.Sc. in Electrical Engineering. My research focuses on building intelligent, transparent, and safety-aware robotic systems that integrate visual perception, motion planning, and explainable AI.",
+      "about.lead": "My name is Kyle Chen, and I graduated from Yuan Ze University with a Master's degree in Electrical Engineering. During my studies, I actively participated in research projects, extracurricular activities, and student organizations. These experiences allowed me to develop both technical expertise and strong soft skills. Beyond my academic background, I am passionate about robotics, artificial intelligence, computer vision, and intelligent systems. I enjoy exploring new ideas, learning across different fields, and applying knowledge to practical problems. Through research, teamwork, and leadership experiences, I have learned not only the technical skills from my studies, but also communication, collaboration, and problem-solving skills that continue to shape my growth.",
       "about.edu": "Education",
       "about.interests": "Research Interests",
 
       "research.eyebrow": "Research",
       "research.title": "Work and publications",
-      "research.lead": "My research focuses on visual SLAM, robotic manipulation, and explainable AI systems. Below are my current projects and recent publications.",
+      "research.lead": "My research interests include robotics, artificial intelligence, computer vision, intelligent systems, and integrated circuit design. I am particularly interested in integrating machine learning with real-world robotic applications to improve perception, localization, autonomy, and decision-making. My work explores topics such as robotic perception, visual SLAM, intelligent control, explainable AI, multimodal systems, AI accelerators, and RISC-V-based architectures, with the goal of developing intelligent technologies that can operate effectively and reliably in practical environments.",
       "research.projects": "Research Projects",
       "research.filter.all": "All",
       "research.filter.undergraduate": "Undergraduate Capstone",
@@ -715,7 +715,7 @@
 
       "exp.eyebrow": "Experience",
       "exp.title": "Academic and Other Experience",
-      "exp.lead": "My professional journey spans research, mentoring, and leadership in academia and industry.",
+      "exp.lead": "This page presents my experiences beyond formal work, including academic activities, teaching, leadership, student organizations, volunteer service, talent programs, awards, and certifications. Through these experiences, I have developed not only technical knowledge in robotics, artificial intelligence, computer vision, and integrated circuit design, but also leadership, communication, teamwork, and project management skills. These experiences have allowed me to grow across different fields and have shaped the way I approach challenges, collaboration, and lifelong learning.",
       "exp.academic": "Academic Experience",
       "exp.afterclass": "After-Class Activities Experience",
       "exp.talent": "Talent Program",
@@ -724,7 +724,7 @@
 
       "work.eyebrow": "Work",
       "work.title": "Work Experience",
-      "work.lead": "This page highlights my industry experience including full-time and internship responsibilities.",
+      "work.lead": "This page highlights my professional experience across both industry and academia, including full-time, part-time, and internship roles. Through these experiences, I have worked in areas such as semiconductor engineering, artificial intelligence, robotics, digital transformation, and intelligent systems. From supporting research projects and developing AI-based technologies to participating in industrial and consulting environments, these roles have allowed me to strengthen my technical knowledge, problem-solving ability, communication skills, and understanding of how technology can be applied in real-world situations.",
       "work.full": "Work Experience",
       "work.intern": "Internship Experience",
       "work.tsmc.date": "Apr 2026 - (Start From 4/29)",
@@ -779,13 +779,13 @@
 
       "about.eyebrow": "關於",
       "about.title": "關於我",
-      "about.lead": "我目前就讀元智大學電機工程碩士班。研究聚焦於建構智慧、透明且安全導向的機器人系統，整合視覺感知、運動規劃與可解釋 AI。",
+      "about.lead": "我叫 Kyle Chen，畢業於元智大學電機工程碩士班。在求學期間，我積極參與研究專案、課外活動與學生組織，這些經歷讓我同時培養了技術專業與扎實的軟實力。除了學術背景之外，我也對機器人、人工智慧、電腦視覺與智慧系統充滿熱情。我喜歡探索新想法、跨領域學習，並將知識應用於實際問題。透過研究、團隊合作與領導經驗，我不僅學習到專業技能，也持續提升溝通、協作與解決問題的能力，並成為我持續成長的重要基礎。",
       "about.edu": "學歷",
       "about.interests": "研究興趣",
 
       "research.eyebrow": "研究",
       "research.title": "作品與發表",
-      "research.lead": "我的研究主軸為 Visual SLAM、機器人操作與可解釋 AI 系統。以下為目前研究專案與近期發表。",
+      "research.lead": "我的研究興趣包含機器人、人工智慧、電腦視覺、智慧系統以及積體電路設計。我特別關注將機器學習與真實世界的機器人應用結合，以提升感知、定位、自主性與決策能力。我的工作涵蓋機器人感知、Visual SLAM、智慧控制、可解釋 AI、多模態系統、AI 加速器以及基於 RISC-V 的架構等主題，目標是開發能夠在實際環境中穩定且有效運作的智慧技術。",
       "research.projects": "研究專案",
       "research.filter.undergraduate": "\u5927\u5b78\u90e8\u5c08\u984c",
       "research.filter.master": "\u78a9\u58eb\u7814\u7a76",
@@ -832,7 +832,7 @@
 
       "exp.eyebrow": "經歷",
       "exp.title": "學術與其他經歷",
-      "exp.lead": "我的經歷橫跨研究、指導與學研產領域的領導實務。",
+      "exp.lead": "本頁呈現我在正式工作之外的多元經歷，包含學術活動、教學、領導、學生組織、志工服務、人才計畫、獎項與證照。透過這些經歷，我不僅累積了機器人、人工智慧、電腦視覺與積體電路設計等領域的技術知識，也培養了領導、溝通、團隊合作與專案管理能力。這些經歷讓我在不同領域中持續成長，也形塑了我面對挑戰、合作與終身學習的方式。",
       "exp.academic": "學術經歷",
       "exp.afterclass": "課外活動經歷",
       "exp.talent": "人才培訓計畫",
@@ -841,7 +841,7 @@
 
       "work.eyebrow": "工作",
       "work.title": "工作經驗",
-      "work.lead": "本頁整理我的產業經驗，包含正職與實習職務內容。",
+      "work.lead": "本頁整理我在產業與學術領域的專業經歷，包含正職、兼職與實習角色。透過這些經歷，我參與了半導體工程、人工智慧、機器人、數位轉型與智慧系統等領域的工作。從協助研究專案、開發 AI 應用技術，到參與產業與顧問環境，這些角色讓我持續強化技術知識、問題解決能力、溝通技巧，以及對技術如何在真實世界中落地應用的理解。",
       "work.full": "工作經驗",
       "work.intern": "實習經驗",
       "work.tsmc.date": "民國115年4月 -（4/29 起）",
@@ -896,13 +896,13 @@
 
       "about.eyebrow": "소개",
       "about.title": "나는 누구인가",
-      "about.lead": "저는 Yuan Ze University에서 전기공학 석사 과정을 밟고 있는 대학원생입니다. 시각 인지, 모션 플래닝, 설명 가능한 AI를 통합한 지능적이고 투명하며 안전한 로봇 시스템을 연구합니다.",
+      "about.lead": "저는 Kyle Chen이며, Yuan Ze University에서 전기공학 석사 학위를 받았습니다. 재학 중에는 연구 프로젝트, 교외 활동, 학생 조직에 적극적으로 참여했고, 이러한 경험을 통해 기술적 전문성과 탄탄한 소프트 스킬을 함께 키울 수 있었습니다. 학문적 배경 외에도 로보틱스, 인공지능, 컴퓨터 비전, 지능형 시스템에 큰 열정을 가지고 있습니다. 새로운 아이디어를 탐구하고, 다양한 분야를 넘나들며 배우고, 지식을 실제 문제에 적용하는 과정을 즐깁니다. 연구, 팀워크, 리더십 경험을 통해 전공 지식뿐 아니라 소통, 협업, 문제 해결 역량도 함께 길렀고, 이는 지금도 저의 성장을 이끄는 중요한 기반이 되고 있습니다.",
       "about.edu": "학력",
       "about.interests": "연구 관심 분야",
 
       "research.eyebrow": "연구",
       "research.title": "작업 및 출판",
-      "research.lead": "제 연구는 Visual SLAM, 로봇 매니퓰레이션, 설명 가능한 AI 시스템에 집중되어 있습니다. 아래는 현재 프로젝트와 최근 논문입니다.",
+      "research.lead": "저의 연구 관심 분야는 로보틱스, 인공지능, 컴퓨터 비전, 지능형 시스템, 그리고 집적회로 설계를 포함합니다. 특히 머신러닝을 실제 로봇 응용과 결합하여 인지, 위치추정, 자율성, 의사결정 성능을 향상시키는 데 관심이 많습니다. 제 연구는 로봇 인지, Visual SLAM, 지능형 제어, 설명 가능한 AI, 멀티모달 시스템, AI 가속기, RISC-V 기반 아키텍처 등을 다루며, 실제 환경에서 안정적이고 효과적으로 동작할 수 있는 지능형 기술을 개발하는 것을 목표로 합니다.",
       "research.projects": "연구 프로젝트",
       "research.filter.undergraduate": "\ud559\ubd80 \uc885\ud569\uc124\uacc4",
       "research.filter.master": "\uc11d\uc0ac \uc5f0\uad6c",
@@ -949,7 +949,7 @@
 
       "exp.eyebrow": "경험",
       "exp.title": "학술 및 기타 경험",
-      "exp.lead": "저의 여정은 학계와 산업에서의 연구, 멘토링, 리더십을 포함합니다.",
+      "exp.lead": "이 페이지는 정식 업무 외의 다양한 경험을 소개합니다. 여기에는 학술 활동, 교육, 리더십, 학생 조직, 봉사 활동, 인재 프로그램, 수상, 자격증이 포함됩니다. 이러한 경험을 통해 로보틱스, 인공지능, 컴퓨터 비전, 집적회로 설계 분야의 기술 지식뿐 아니라 리더십, 의사소통, 팀워크, 프로젝트 관리 역량도 함께 키울 수 있었습니다. 서로 다른 분야를 넘나드는 이 경험들은 제가 도전과 협업, 그리고 평생학습을 대하는 방식 자체를 만들어 주었습니다.",
       "exp.academic": "학술 경험",
       "exp.afterclass": "비교과 활동 경험",
       "exp.talent": "인재 프로그램",
@@ -958,7 +958,7 @@
 
       "work.eyebrow": "직무",
       "work.title": "직무 경험",
-      "work.lead": "이 페이지는 정규직과 인턴십을 포함한 산업 경험을 소개합니다.",
+      "work.lead": "이 페이지는 산업과 학계를 아우르는 저의 전문 경험을 소개하며, 정규직, 파트타임, 인턴십 역할을 포함합니다. 이러한 경험을 통해 반도체 공학, 인공지능, 로보틱스, 디지털 전환, 지능형 시스템 등 다양한 분야에서 일해 왔습니다. 연구 프로젝트 지원과 AI 기반 기술 개발부터 산업 및 컨설팅 환경 참여에 이르기까지, 이러한 역할들은 제 기술 지식, 문제 해결 능력, 의사소통 역량, 그리고 기술이 실제 세계에 어떻게 적용되는지에 대한 이해를 더욱 강화해 주었습니다.",
       "work.full": "직무 경험",
       "work.intern": "인턴십 경험",
       "work.tsmc.date": "2026년 4월 - (4/29부터 시작)",
@@ -1013,13 +1013,13 @@
 
       "about.eyebrow": "เกี่ยวกับ",
       "about.title": "ฉันคือใคร",
-      "about.lead": "ฉันเป็นนักศึกษาระดับบัณฑิตศึกษาที่มหาวิทยาลัยหยวนจื้อ กำลังศึกษาระดับปริญญาโทสาขาวิศวกรรมไฟฟ้า งานวิจัยของฉันมุ่งเน้นการสร้างระบบหุ่นยนต์อัจฉริยะ โปร่งใส และคำนึงถึงความปลอดภัย โดยผสานการรับรู้ภาพ การวางแผนการเคลื่อนที่ และ Explainable AI",
+      "about.lead": "ผมชื่อ Kyle Chen และสำเร็จการศึกษาระดับปริญญาโทสาขาวิศวกรรมไฟฟ้าจาก Yuan Ze University ระหว่างการศึกษา ผมได้มีส่วนร่วมอย่างต่อเนื่องในโครงการวิจัย กิจกรรมนอกหลักสูตร และองค์กรนักศึกษา ประสบการณ์เหล่านี้ช่วยให้ผมพัฒนาทั้งความเชี่ยวชาญด้านเทคนิคและทักษะด้านการทำงานร่วมกับผู้อื่น นอกเหนือจากพื้นฐานทางวิชาการ ผมมีความสนใจอย่างมากในด้านหุ่นยนต์ ปัญญาประดิษฐ์ คอมพิวเตอร์วิทัศน์ และระบบอัจฉริยะ ผมชอบสำรวจแนวคิดใหม่ ๆ เรียนรู้ข้ามสาขา และนำความรู้ไปประยุกต์ใช้กับปัญหาในโลกจริง ผ่านประสบการณ์ด้านวิจัย การทำงานเป็นทีม และภาวะผู้นำ ผมได้พัฒนาทั้งทักษะทางวิชาชีพ การสื่อสาร การทำงานร่วมกัน และการแก้ปัญหา ซึ่งยังคงเป็นพื้นฐานสำคัญของการเติบโตของผมจนถึงทุกวันนี้",
       "about.edu": "การศึกษา",
       "about.interests": "ความสนใจด้านวิจัย",
 
       "research.eyebrow": "งานวิจัย",
       "research.title": "ผลงานและสิ่งตีพิมพ์",
-      "research.lead": "งานวิจัยของผมมุ่งเน้น Visual SLAM, หุ่นยนต์ และ Explainable AI ด้านล่างคือโครงการปัจจุบันและผลงานตีพิมพ์ล่าสุด",
+      "research.lead": "ความสนใจด้านการวิจัยของผมครอบคลุมหุ่นยนต์ ปัญญาประดิษฐ์ คอมพิวเตอร์วิทัศน์ ระบบอัจฉริยะ และการออกแบบวงจรรวม ผมสนใจเป็นพิเศษในการผสานแมชชีนเลิร์นนิงเข้ากับงานหุ่นยนต์ในโลกจริง เพื่อยกระดับการรับรู้ การระบุตำแหน่ง ความเป็นอัตโนมัติ และการตัดสินใจ งานของผมครอบคลุมหัวข้อต่าง ๆ เช่น การรับรู้ของหุ่นยนต์ Visual SLAM การควบคุมอัจฉริยะ Explainable AI ระบบหลายรูปแบบ ตัวเร่งความเร็ว AI และสถาปัตยกรรมที่อิงกับ RISC-V โดยมีเป้าหมายเพื่อพัฒนาเทคโนโลยีอัจฉริยะที่สามารถทำงานได้อย่างมีประสิทธิภาพและเชื่อถือได้ในสภาพแวดล้อมจริง",
       "research.projects": "โครงการวิจัย",
       "research.filter.undergraduate": "\u0e42\u0e04\u0e23\u0e07\u0e07\u0e32\u0e19\u0e08\u0e1a\u0e23\u0e30\u0e14\u0e31\u0e1a\u0e1b\u0e23\u0e34\u0e0d\u0e0d\u0e32\u0e15\u0e23\u0e35",
       "research.filter.master": "\u0e07\u0e32\u0e19\u0e27\u0e34\u0e08\u0e31\u0e22\u0e23\u0e30\u0e14\u0e31\u0e1a\u0e1b\u0e23\u0e34\u0e0d\u0e0d\u0e32\u0e42\u0e17",
@@ -1066,7 +1066,7 @@
 
       "exp.eyebrow": "ประสบการณ์",
       "exp.title": "ประสบการณ์ด้านวิชาการและอื่น ๆ",
-      "exp.lead": "เส้นทางของผมครอบคลุมงานวิจัย การให้คำปรึกษา และภาวะผู้นำทั้งในสถาบันการศึกษาและอุตสาหกรรม",
+      "exp.lead": "หน้านี้นำเสนอประสบการณ์ของผมนอกเหนือจากงานอย่างเป็นทางการ ไม่ว่าจะเป็นกิจกรรมทางวิชาการ การสอน ภาวะผู้นำ องค์กรนักศึกษา งานอาสาสมัคร โครงการพัฒนาศักยภาพ รางวัล และใบรับรอง ประสบการณ์เหล่านี้ช่วยให้ผมพัฒนาไม่เพียงแต่ความรู้ทางเทคนิคด้านหุ่นยนต์ ปัญญาประดิษฐ์ คอมพิวเตอร์วิทัศน์ และการออกแบบวงจรรวมเท่านั้น แต่ยังรวมถึงทักษะความเป็นผู้นำ การสื่อสาร การทำงานเป็นทีม และการบริหารโครงการด้วย ประสบการณ์ที่หลากหลายเหล่านี้ทำให้ผมเติบโตข้ามสาขา และหล่อหลอมวิธีที่ผมเผชิญความท้าทาย การทำงานร่วมกัน และการเรียนรู้ตลอดชีวิต",
       "exp.academic": "ประสบการณ์ทางวิชาการ",
       "exp.afterclass": "ประสบการณ์กิจกรรมนอกชั้นเรียน",
       "exp.talent": "โครงการพัฒนาศักยภาพ",
@@ -1075,7 +1075,7 @@
 
       "work.eyebrow": "งาน",
       "work.title": "ประสบการณ์การทำงาน",
-      "work.lead": "หน้านี้สรุปประสบการณ์ในอุตสาหกรรมของผม ทั้งงานประจำและงานฝึกงาน",
+      "work.lead": "หน้านี้สรุปประสบการณ์วิชาชีพของผมทั้งในภาคอุตสาหกรรมและภาควิชาการ ซึ่งรวมถึงบทบาทงานประจำ งานพาร์ตไทม์ และงานฝึกงาน จากประสบการณ์เหล่านี้ ผมได้ทำงานในด้านวิศวกรรมเซมิคอนดักเตอร์ ปัญญาประดิษฐ์ หุ่นยนต์ การเปลี่ยนผ่านสู่ดิจิทัล และระบบอัจฉริยะ ตั้งแต่การสนับสนุนโครงการวิจัยและพัฒนาเทคโนโลยีที่ใช้ AI ไปจนถึงการมีส่วนร่วมในสภาพแวดล้อมด้านอุตสาหกรรมและที่ปรึกษา บทบาทเหล่านี้ช่วยเสริมสร้างความรู้ทางเทคนิค ความสามารถในการแก้ปัญหา ทักษะการสื่อสาร และความเข้าใจว่าควรนำเทคโนโลยีไปประยุกต์ใช้ในโลกจริงอย่างไร",
       "work.full": "ประสบการณ์การทำงาน",
       "work.intern": "ประสบการณ์ฝึกงาน",
       "work.tsmc.date": "เมษายน พ.ศ. 2569 - (เริ่มตั้งแต่ 4/29)",
