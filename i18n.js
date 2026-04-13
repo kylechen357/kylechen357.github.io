@@ -1520,7 +1520,7 @@
 
     const segment = LANG_PATH_MAP[lang] || LANG_PATH_MAP.en;
     const parts = getPathParts(window.location.pathname);
-    const nextPath = (SITE_BASE_PATH || "") + (parts.relativeNoLang === "/" ? "" : parts.relativeNoLang);
+    const nextPath = (SITE_BASE_PATH || "") + (parts.relativeNoLang === "/" ? "/" : parts.relativeNoLang);
     const params = new URLSearchParams(window.location.search || "");
     params.set(LANG_QUERY_KEY, segment);
     const query = params.toString();
@@ -1551,7 +1551,7 @@
         if (resolved.origin !== origin) return;
 
         const relative = stripLanguagePrefix(stripSiteBasePath(resolved.pathname));
-        const normalizedPath = (SITE_BASE_PATH || "") + (relative === "/" ? "" : relative);
+        const normalizedPath = (SITE_BASE_PATH || "") + (relative === "/" ? "/" : relative);
         link.setAttribute("href", normalizedPath + resolved.search + resolved.hash);
       } catch (_err) {
         // ignore invalid href
@@ -1575,7 +1575,7 @@
         if (resolved.origin !== origin) return;
 
         const relative = stripLanguagePrefix(stripSiteBasePath(resolved.pathname));
-        const localizedPath = (SITE_BASE_PATH || "") + (relative === "/" ? "" : relative);
+        const localizedPath = (SITE_BASE_PATH || "") + (relative === "/" ? "/" : relative);
         const params = new URLSearchParams(resolved.search || "");
         params.set(LANG_QUERY_KEY, segment);
         const query = params.toString();

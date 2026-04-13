@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <base href="/Project/" />
+  <link rel="icon" type="image/png" href="../Reference/KC-01.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golf Swing Phenomena Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
+  <link rel="stylesheet" href="../styles.css?v=10" />
+  <link rel="stylesheet" href="project-styles.css" />
+  <style>
+    .team-photo-container {
+      width: 100%;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .team-photo-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+    
+    .team-photo-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    .team-photo-container:hover img {
+      transform: scale(1.02);
+    }
+    
+    /* Dark theme adjustments */
+    [data-theme="dark"] .team-photo-container {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    [data-theme="dark"] .team-photo-container:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Light theme adjustments */
+    [data-theme="light"] .team-photo-container {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+    
+    [data-theme="light"] .team-photo-container:hover {
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a href="/" class="nav__brand" aria-label="Kyle Chen home">
+      <img src="../Reference/SKC-01_White.png" alt="Kyle Chen" class="nav-logo--dark" /><img src="../Reference/SKC-01.png" alt="Kyle Chen" class="nav-logo--light" />
+    </a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <i class="ri-menu-line"></i>
+    </button>
+        <nav class="nav__links" aria-label="Primary">
+      <button class="nav__close" id="closeMenu" aria-label="Close menu">
+        <i class="ri-close-line"></i>
+      </button>
+      <a href="/about" data-i18n="nav.about">About</a>
+      <a href="/research" data-i18n="nav.research">Research</a>
+      <a href="/experience" data-i18n="nav.experience">Experience</a>
+      <a href="/work" data-i18n="nav.work">Work</a>
+      <a href="/cv" data-i18n="nav.cv">CV</a>
+    </nav>
+    <label class="toggle-wrapper">
+      <input class="toggle-switch" id="themeToggle" type="checkbox" />
+      <span class="toggle-slider"></span>
+    </label>
+  </header>
+
+  <main class="page">
+    <div class="project-hero">
+      <i class="ti ti-ball-football project-hero-icon"></i>
+      <a href="/research" class="back-link" data-i18n="project.back">? Back to Research</a>
+      <h1 data-i18n="research.proj.golf.title">Golf Swing Phenomena Analysis</h1>
+      <p class="subtitle" data-i18n="research.proj.golf.body">Developed computer vision system for club and posture tracking using OpenCV, YOLO, and MediaPipe. Applied Lagrangian mechanics to model swing dynamics.</p>
+    </div>
+
+
+    <!-- Project Links Section -->
+    <div class="project-links">
+      <a href="https://ieeexplore.ieee.org/document/10222484" target="_blank"><i class="ti ti-file-text"></i><span>Paper</span></a>
+      <a href="/blog" target="_blank"><i class="ti ti-brand-github"></i><span>Code</span></a>
+      <a href="../Reference/Golf/Golf_PPT.pdf" target="_blank"><i class="ti ti-presentation"></i><span>PPT</span></a>
+      <a href="../Reference/Golf/Golf_Report.pdf" target="_blank"><i class="ti ti-file-description"></i><span>Capstone Report</span></a>
+    </div>
+
+    <section class="project-content">
+      <!-- Advisor Section -->
+      <h2 class="section-title"><i class="ti ti-school"></i>Advisor</h2>
+      <div class="mentor-info">
+        <h3><a href="https://eea.ee.yzu.edu.tw/teacher_detail/hcshih" target="_blank">Huang-Chia Shih</a></h3>
+        <p>Human-Computer Interaction Multimedia Lab</p>
+        <p>Yuan Ze University</p>
+      </div>
+
+      <!-- Team Section -->
+      <h2 class="section-title"><i class="ti ti-users"></i>Team</h2>
+      <div class="team-photo-container">
+        <img src="../Reference/Golf_Group.jpg" alt="Golf Swing Phenomena Analysis Team" />
+      </div>
+      <div class="team-grid">
+        <div class="team-member">
+          <h3>Sheng-Kai Chen</h3>
+          <p>Code Developer & Writing Paper</p>
+        </div>
+        <div class="team-member">
+          <h3>Tzu-Yu Liu</h3>
+          <p>Physics Calculating & Writing Paper</p>
+        </div>
+        <div class="team-member">
+          <h3>Yan-Di Liu</h3>
+          <p>Assemble & Writing Paper</p>
+        </div>
+      </div>
+
+      <!-- Abstract Section -->
+      <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
+      <p style="text-align: justify;" data-i18n="project.golf.abstract">The rapid development of artificial intelligence in recent
+years has resulted in increasing application in sports.
+Meanwhile, people’s interest in watching golf tournaments
+has increased. This study aims to detect golfers’ posture,
+clubs, clubhead, and analyze each swing stage. We detect the
+club position when swinging and draw its trajectory; then, we
+use the double pendulum system and the Lagrangian equation
+to explain the physical phenomena in the swing phase. This
+will not only improve the training quality of players, but also
+enable golfers to use data analytic methods to determine their
+swing problems in real time. The swing speed could also be
+improved by considering the physical characteristics for
+players and coaches.</p> 
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p data-i18n-footer>© <script>document.write(new Date().getFullYear())</script> Designed by Kyle Chen  All Rights Reserved</p>
+  </footer>
+
+  <script src="../i18n.js"></script>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    html.setAttribute('data-theme', savedTheme);
+    updateToggleButton();
+    
+    function updateToggleButton() {
+      const currentTheme = html.getAttribute('data-theme');
+      themeToggle.checked = currentTheme === 'light';
+    }
+    
+    themeToggle.addEventListener('change', function() {
+      const newTheme = this.checked ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav__links');
+    const closeMenu = document.getElementById('closeMenu');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (navLinks.classList.contains('active')) {
+          icon.classList.remove('ri-menu-line');
+          icon.classList.add('ri-close-line');
+        } else {
+          icon.classList.remove('ri-close-line');
+          icon.classList.add('ri-menu-line');
+        }
+      });
+
+      // Close button handler
+      if (closeMenu) {
+        closeMenu.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+          const icon = hamburger.querySelector('i');
+          icon.classList.remove('ri-close-line');
+          icon.classList.add('ri-menu-line');
+        });
+      }
+
+      // Close menu when clicking a link
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          const icon = hamburger.querySelector('i');
+          icon.classList.remove('ri-close-line');
+          icon.classList.add('ri-menu-line');
+        });
+      });
+    }
+  </script>
+</body>
+</html>
+
