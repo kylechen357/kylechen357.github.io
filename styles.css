@@ -2994,7 +2994,7 @@ html[data-theme="light"] .work-meta-line--division {
 /* Publication button hover effects */
 a[href*="arxiv.org"]:hover,
 a[href*="ieeexplore.ieee.org"]:hover,
-a[href*="Updating.html"]:hover,`r`na[href="/blog"]:hover,`r`na[href^="/blog?"]:hover {
+a[href*="Updating.html"]:hover {
   background: rgba(126, 240, 193, 0.25) !important;
   border-color: var(--accent) !important;
   transform: translateY(-2px);
@@ -3003,7 +3003,7 @@ a[href*="Updating.html"]:hover,`r`na[href="/blog"]:hover,`r`na[href^="/blog?"]:h
 
 a[href*="arxiv.org"]:active,
 a[href*="ieeexplore.ieee.org"]:active,
-a[href*="Updating.html"]:active,`r`na[href="/blog"]:active,`r`na[href^="/blog?"]:active {
+a[href*="Updating.html"]:active {
   transform: translateY(0px);
 }
 
