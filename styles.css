@@ -96,6 +96,11 @@ a:hover {
   color: var(--accent);
 }
 
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .page {
   width: 100%;
   max-width: var(--max);
