@@ -183,13 +183,13 @@
     function updateLogo() {
       const currentTheme = html.getAttribute('data-theme');
       if (yzuLogo) {
-        yzuLogo.src = currentTheme === 'dark' ? 'Reference/YZU_White.png' : 'Reference/YZU.png';
+        yzuLogo.src = currentTheme === 'dark' ? '/Reference/YZU_White.png' : '/Reference/YZU.png';
       }
       if (nchcLogo) {
-        nchcLogo.src = currentTheme === 'dark' ? 'Reference/NCHC_White.png' : 'Reference/NCHC.png';
+        nchcLogo.src = currentTheme === 'dark' ? '/Reference/NCHC_White.png' : '/Reference/NCHC.png';
       }
       if (kpmgLogo) {
-        kpmgLogo.src = currentTheme === 'dark' ? 'Reference/KPMG_White.png' : 'Reference/KPMG.png';
+        kpmgLogo.src = currentTheme === 'dark' ? '/Reference/KPMG_White.png' : '/Reference/KPMG.png';
       }
     }
 
