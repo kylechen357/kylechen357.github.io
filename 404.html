@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Reference/KC-01.png" />
+  <title>404 | Page Not Found</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
+  <link rel="stylesheet" href="styles.css?v=11" />
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="nav__brand" aria-label="Kyle Chen home">
+      <img src="Reference/SKC-01_White.png" alt="Kyle Chen" class="nav-logo--dark" /><img src="Reference/SKC-01.png" alt="Kyle Chen" class="nav-logo--light" />
+    </a>
+    <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+      <i class="ri-menu-line"></i>
+    </button>
+    <nav class="nav__links" aria-label="Primary">
+      <button class="nav__close" id="closeMenu" aria-label="Close menu">
+        <i class="ri-close-line"></i>
+      </button>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="research.html" data-i18n="nav.research">Research</a>
+      <a href="experience.html" data-i18n="nav.experience">Experience</a>
+      <a href="work.html" data-i18n="nav.work">Work</a>
+      <a href="cv.html" data-i18n="nav.cv">CV</a>
+      <a href="Updating.html" data-i18n="nav.blog">Kyle's Blog</a>
+    </nav>
+    <label class="toggle-wrapper">
+      <input class="toggle-switch" id="themeToggle" type="checkbox" />
+      <span class="toggle-slider"></span>
+    </label>
+  </header>
+
+  <main class="page page--not-found">
+    <section class="not-found" aria-labelledby="not-found-title">
+      <span class="not-found__eyebrow"><i class="ri-compass-3-line"></i> Page Not Found</span>
+      <h1 class="not-found__title" id="not-found-title">404</h1>
+      <h2 class="not-found__subtitle">This page drifted out of orbit.</h2>
+      <p class="not-found__text">
+        The link may be outdated, the address may be typed incorrectly, or the page may have been moved.
+        You can head back to the homepage and continue exploring the site from there.
+      </p>
+
+      <div class="not-found__actions">
+        <a class="not-found__button not-found__button--primary" href="index.html">
+          <i class="ri-home-5-line"></i>
+          Back to Home
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p data-i18n-footer>&copy; 2026 Designed by Kyle Chen All Rights Reserved</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    (function() {
+      const html = document.documentElement;
+      const themeToggle = document.getElementById('themeToggle');
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+
+      html.setAttribute('data-theme', savedTheme);
+      if (themeToggle) {
+        themeToggle.checked = (savedTheme === 'light');
+        themeToggle.addEventListener('change', function() {
+          const newTheme = this.checked ? 'light' : 'dark';
+          html.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+        });
+      }
+
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.querySelector('.nav__links');
+      const closeMenu = document.getElementById('closeMenu');
+
+      if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          const icon = this.querySelector('i');
+          if (navLinks.classList.contains('active')) {
+            icon.classList.remove('ri-menu-line');
+            icon.classList.add('ri-close-line');
+          } else {
+            icon.classList.remove('ri-close-line');
+            icon.classList.add('ri-menu-line');
+          }
+        });
+
+        if (closeMenu) {
+          closeMenu.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.remove('ri-close-line');
+            icon.classList.add('ri-menu-line');
+          });
+        }
+
+        navLinks.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.remove('ri-close-line');
+            icon.classList.add('ri-menu-line');
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
