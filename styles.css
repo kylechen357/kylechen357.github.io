@@ -1520,6 +1520,8 @@ html[data-theme="light"] .skill-mini-card {
 }
 
 .research-projects-grid .card.is-hidden,
+.publication-item.is-hidden,
+.publication-section.is-hidden,
 .project-filter-empty.is-hidden {
   display: none !important;
 }
