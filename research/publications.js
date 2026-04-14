@@ -47,7 +47,10 @@
     link: "ri-links-line"
   };
 
-  const countOrder = ["in-progress", "accepted", "published", "preprint"];
+  const statusOrderByType = {
+    journal: ["in-progress", "accepted", "published", "preprint"],
+    conference: ["in-progress", "accepted", "published"]
+  };
   const app = document.getElementById("publicationsApp");
   const filterChips = document.querySelectorAll(".publication-filter .project-filter__chip");
   const emptyState = document.querySelector(".publication-filter-empty");
@@ -62,33 +65,34 @@
     return statusLabels[lang] || statusLabels[lang.split("-")[0]] || statusLabels.en;
   }
 
-  function buildStatusCounts(publications) {
+  function buildStatusCounts(publications, type) {
     const counts = new Map();
-    countOrder.forEach((status) => counts.set(status, 0));
+    (statusOrderByType[type] || []).forEach((status) => counts.set(status, 0));
     publications.forEach((publication) => {
       (publication.statuses || []).forEach((status) => {
-        counts.set(status, (counts.get(status) || 0) + 1);
+        if (counts.has(status)) {
+          counts.set(status, (counts.get(status) || 0) + 1);
+        }
       });
     });
     return counts;
   }
 
-  function renderStatusCounts(publications) {
+  function renderStatusCounts(publications, type) {
     const labels = getLanguageMap();
-    const counts = buildStatusCounts(publications);
-    const visibleStatuses = countOrder.filter((status) => counts.get(status) > 0);
-
-    if (!visibleStatuses.length) {
+    const statuses = statusOrderByType[type] || [];
+    if (!statuses.length) {
       return "";
     }
+    const counts = buildStatusCounts(publications, type);
 
     return `
       <div class="publication-status">
         <div class="publication-status__grid">
-          ${visibleStatuses.map((status) => `
+          ${statuses.map((status) => `
             <div class="publication-status__item">
               <span class="publication-status__label">${labels[status]}</span>
-              <span class="publication-status__value">${counts.get(status)}</span>
+              <span class="publication-status__value">${counts.get(status) || 0}</span>
             </div>
           `).join("")}
         </div>
@@ -143,7 +147,7 @@
     return `
       <div class="publication-section" data-pub-section="${type}">
         <h3 style="font-size: 16px; margin-bottom: 12px; ${type === "conference" ? "margin-top: 28px;" : ""}">${labels[type]}</h3>
-        ${renderStatusCounts(publications)}
+        ${renderStatusCounts(publications, type)}
         <ul style="margin-left: 0; list-style: none; padding: 0;" data-i18n-skip>
           ${publications.map((publication, index) => renderItem(publication, index === publications.length - 1)).join("")}
         </ul>
