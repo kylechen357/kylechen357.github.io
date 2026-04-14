@@ -10,8 +10,13 @@
   const formMessage = document.getElementById("formMessage");
   const publicationList = document.getElementById("publicationList");
   const publicationCount = document.getElementById("publicationCount");
+  const listTitle = document.getElementById("listTitle");
   const newButton = document.getElementById("newButton");
   const tokenField = document.getElementById("adminToken");
+  const adminTypeChips = document.querySelectorAll("[data-admin-type]");
+  const conferenceOnlyFields = document.getElementById("conferenceOnlyFields");
+  const journalStatusFieldset = document.getElementById("journalStatusFieldset");
+  const conferenceStatusFieldset = document.getElementById("conferenceStatusFieldset");
 
   const fieldId = document.getElementById("publicationId");
   const fieldTitle = document.getElementById("publicationTitle");
@@ -26,7 +31,12 @@
 
   const storageKey = "publicationAdminToken";
   const config = window.GOOGLE_SCRIPT_CONFIG || {};
+  const statusOptionsByType = {
+    journal: ["in-progress", "accepted", "published", "preprint"],
+    conference: ["in-progress", "accepted", "published"]
+  };
   let publications = [];
+  let activeType = "journal";
 
   function setMessage(element, message, isError) {
     element.textContent = message || "";
@@ -88,10 +98,27 @@
   }
 
   function getSelectedStatuses() {
-    return Array.from(document.querySelectorAll('input[name="status"]:checked')).map((checkbox) => checkbox.value);
+    return Array.from(document.querySelectorAll('input[name="status"]:checked'))
+      .map((checkbox) => checkbox.value)
+      .filter((status) => (statusOptionsByType[activeType] || []).includes(status));
+  }
+
+  function setActiveType(type) {
+    activeType = type === "conference" ? "conference" : "journal";
+    fieldType.value = activeType;
+    adminTypeChips.forEach((chip) => {
+      chip.classList.toggle("is-active", chip.dataset.adminType === activeType);
+    });
+    conferenceOnlyFields.classList.toggle("is-hidden", activeType !== "conference");
+    journalStatusFieldset.classList.toggle("is-hidden", activeType !== "journal");
+    conferenceStatusFieldset.classList.toggle("is-hidden", activeType !== "conference");
+    formTitle.textContent = activeType === "journal" ? "Add Journal Publication" : "Add Conference Publication";
+    listTitle.textContent = activeType === "journal" ? "Current Journal Publications" : "Current Conference Publications";
+    renderList();
   }
 
   function fillForm(publication) {
+    setActiveType(publication?.type || "journal");
     fieldId.value = publication?.id || "";
     fieldTitle.value = publication?.title || "";
     fieldType.value = publication?.type || "journal";
@@ -107,7 +134,9 @@
       checkbox.checked = publication ? (publication.statuses || []).includes(checkbox.value) : false;
     });
 
-    formTitle.textContent = publication ? "Edit Publication" : "Add Publication";
+    formTitle.textContent = publication
+      ? (activeType === "journal" ? "Edit Journal Publication" : "Edit Conference Publication")
+      : (activeType === "journal" ? "Add Journal Publication" : "Add Conference Publication");
   }
 
   function resetForm() {
@@ -115,18 +144,19 @@
     fieldId.value = "";
     fieldOrder.value = 0;
     fieldLinkIcon.value = "link";
-    formTitle.textContent = "Add Publication";
+    setActiveType(activeType);
     setMessage(formMessage, "");
   }
 
   function renderList() {
-    publicationCount.textContent = `${publications.length} item${publications.length === 1 ? "" : "s"}`;
-    if (!publications.length) {
+    const filteredPublications = publications.filter((publication) => publication.type === activeType);
+    publicationCount.textContent = `${filteredPublications.length} item${filteredPublications.length === 1 ? "" : "s"}`;
+    if (!filteredPublications.length) {
       publicationList.innerHTML = '<p class="admin-message">No publications yet.</p>';
       return;
     }
 
-    publicationList.innerHTML = publications.map((publication) => `
+    publicationList.innerHTML = filteredPublications.map((publication) => `
       <article class="admin-item">
         <div class="admin-item__title">${publication.title}</div>
         <div class="admin-item__meta">
@@ -200,6 +230,12 @@
   });
 
   newButton.addEventListener("click", resetForm);
+  adminTypeChips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      setActiveType(chip.dataset.adminType || "journal");
+      resetForm();
+    });
+  });
 
   publicationForm.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -210,15 +246,16 @@
       return;
     }
 
+    const allowedStatuses = statusOptionsByType[activeType] || [];
     const publication = {
       id: fieldId.value.trim(),
       title: fieldTitle.value.trim(),
-      type: fieldType.value,
+      type: activeType,
       authors: fieldAuthors.value.trim(),
       venue: fieldVenue.value.trim(),
-      location: fieldLocation.value.trim(),
+      location: activeType === "conference" ? fieldLocation.value.trim() : "",
       sort_order: Number(fieldOrder.value || 0),
-      statuses: getSelectedStatuses(),
+      statuses: getSelectedStatuses().filter((status) => allowedStatuses.includes(status)),
       link_url: fieldLinkUrl.value.trim(),
       link_label: fieldLinkLabel.value.trim(),
       link_icon: fieldLinkIcon.value
@@ -296,4 +333,5 @@
   });
 
   boot();
+  setActiveType("journal");
 })();

@@ -42,7 +42,13 @@
       <div class="admin-grid">
         <section class="admin-card">
           <div class="admin-card__header">
-            <h2 id="formTitle">Add Publication</h2>
+            <div>
+              <div class="project-filter admin-type-filter">
+                <button class="project-filter__chip is-active" type="button" data-admin-type="journal">Journal</button>
+                <button class="project-filter__chip" type="button" data-admin-type="conference">Conference</button>
+              </div>
+              <h2 id="formTitle">Add Journal Publication</h2>
+            </div>
             <button class="btn" id="newButton" type="button">New</button>
           </div>
           <form id="publicationForm" class="admin-form">
@@ -51,11 +57,7 @@
             <label class="admin-label" for="publicationTitle">Title</label>
             <input id="publicationTitle" required />
 
-            <label class="admin-label" for="publicationType">Type</label>
-            <select id="publicationType">
-              <option value="journal">Journal</option>
-              <option value="conference">Conference</option>
-            </select>
+            <input id="publicationType" type="hidden" value="journal" />
 
             <label class="admin-label" for="publicationAuthors">Authors</label>
             <textarea id="publicationAuthors" rows="3" placeholder="Supports inline HTML like &lt;strong&gt;S.K. Chen&lt;/strong&gt;"></textarea>
@@ -63,18 +65,27 @@
             <label class="admin-label" for="publicationVenue">Venue</label>
             <input id="publicationVenue" />
 
-            <label class="admin-label" for="publicationLocation">Location</label>
-            <input id="publicationLocation" />
+            <div id="conferenceOnlyFields" class="is-hidden">
+              <label class="admin-label" for="publicationLocation">Location</label>
+              <input id="publicationLocation" />
+            </div>
 
             <label class="admin-label" for="publicationOrder">Sort order</label>
             <input id="publicationOrder" type="number" value="0" />
 
-            <fieldset class="admin-fieldset">
+            <fieldset class="admin-fieldset" id="journalStatusFieldset">
               <legend>Status</legend>
               <label><input type="checkbox" name="status" value="in-progress" /> In Progress</label>
               <label><input type="checkbox" name="status" value="accepted" /> Accepted</label>
               <label><input type="checkbox" name="status" value="published" /> Published</label>
               <label><input type="checkbox" name="status" value="preprint" /> Pre-print</label>
+            </fieldset>
+
+            <fieldset class="admin-fieldset is-hidden" id="conferenceStatusFieldset">
+              <legend>Status</legend>
+              <label><input type="checkbox" name="status" value="in-progress" data-status-type="conference" /> In Progress</label>
+              <label><input type="checkbox" name="status" value="accepted" data-status-type="conference" /> Accepted</label>
+              <label><input type="checkbox" name="status" value="published" data-status-type="conference" /> Published</label>
             </fieldset>
 
             <label class="admin-label" for="publicationLinkUrl">Link URL</label>
@@ -99,7 +110,7 @@
 
         <section class="admin-card">
           <div class="admin-card__header">
-            <h2>Current Publications</h2>
+            <h2 id="listTitle">Current Journal Publications</h2>
             <span class="admin-count" id="publicationCount">0 items</span>
           </div>
           <div class="admin-list" id="publicationList"></div>

@@ -37,6 +37,10 @@
   margin-bottom: 24px;
 }
 
+.admin-type-filter {
+  margin-bottom: 14px;
+}
+
 .admin-toolbar__actions,
 .admin-form__actions {
   display: flex;
@@ -140,6 +144,10 @@
 .admin-count {
   color: var(--muted);
   font-size: 13px;
+}
+
+.is-hidden {
+  display: none !important;
 }
 
 @media (max-width: 960px) {
