@@ -231,6 +231,7 @@
       const html = document.documentElement;
       const themeToggle = document.getElementById('themeToggle');
       const aboutLead = null;
+      const aboutUniversityNodes = Array.from(document.querySelectorAll('span[data-i18n-skip]')).filter((node) => node.textContent.trim() === 'Yuan Ze University');
       const thaiAboutLead = 'ฉันเป็นนักศึกษาระดับบัณฑิตศึกษาที่ Yuan Ze University กำลังศึกษาระดับปริญญาโทสาขาวิศวกรรมไฟฟ้า งานวิจัยของฉันมุ่งเน้นการสร้างระบบหุ่นยนต์อัจฉริยะ โปร่งใส และคำนึงถึงความปลอดภัย โดยผสานการรับรู้ภาพ การวางแผนการเคลื่อนที่ และ Explainable AI';
       
       if (!themeToggle) {
@@ -239,8 +240,11 @@
       }
 
       function syncAboutLeadLanguage() {
-        if (!aboutLead) return;
         const lang = (html.getAttribute('lang') || 'en').toLowerCase();
+        aboutUniversityNodes.forEach((node) => {
+          node.textContent = lang.startsWith('zh') ? '元智大學' : 'Yuan Ze University';
+        });
+        if (!aboutLead) return;
         if (lang.startsWith('th')) {
           aboutLead.textContent = thaiAboutLead;
         }
