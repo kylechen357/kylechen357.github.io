@@ -15,7 +15,8 @@ This version works with GitHub Pages and does not require a Python backend.
 2. Create a new Apps Script project attached to that sheet.
 3. Copy [apps-script/Code.gs](/d:/Users/kylec/Desktop/kylechen357.github.io/apps-script/Code.gs) into the Apps Script editor.
 4. In Apps Script, set Script Properties:
-   - `ADMIN_TOKEN`
+   - `ADMIN_USERNAME`
+   - `ADMIN_PASSWORD`
    - `SHEET_NAME`
 5. Deploy the Apps Script project as a Web App:
    - Execute as: `Me`
@@ -23,7 +24,7 @@ This version works with GitHub Pages and does not require a Python backend.
 6. Copy the deployed Web App URL.
 7. Open [google-apps-script-config.js](/d:/Users/kylec/Desktop/kylechen357.github.io/google-apps-script-config.js) and replace `YOUR_DEPLOYMENT_ID`.
 8. Open `/admin/` on your GitHub Pages site.
-9. Enter the admin token you set in Apps Script.
+9. Sign in on `/admin/` with the username and password you set in Apps Script.
 
 ## Sheet columns
 
@@ -44,5 +45,5 @@ The script auto-creates headers if they are missing:
 ## Notes
 
 - Public reads are open so the research page can load publications.
-- Writes require the admin token.
-- The token is entered manually in the admin page and is not committed to the repo.
+- Writes require a valid login session.
+- The username/password are checked by Apps Script and the page stores only a short-lived session token in browser session storage.

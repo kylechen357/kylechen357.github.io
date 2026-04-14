@@ -22,18 +22,17 @@ function doGet(e) {
 
     if (action === "list") {
       payload = { ok: true, publications: listPublications_() };
-    } else if (action === "auth") {
-      authorize_(params.token);
-      payload = { ok: true, authenticated: true };
+    } else if (action === "login") {
+      payload = { ok: true, sessionToken: login_(params.username || "", params.password || "") };
     } else if (action === "upsert") {
-      authorize_(params.token);
+      authorizeSession_(params.sessionToken);
       const publication = JSON.parse(params.publication || "{}");
       payload = { ok: true, publication: upsertPublication_(publication) };
     } else if (action === "delete") {
-      authorize_(params.token);
+      authorizeSession_(params.sessionToken);
       payload = { ok: true, deleted: deletePublication_(params.id || "") };
     } else if (action === "replaceAll") {
-      authorize_(params.token);
+      authorizeSession_(params.sessionToken);
       const publications = JSON.parse(params.publications || "[]");
       payload = { ok: true, count: replaceAllPublications_(publications) };
     } else {
@@ -56,10 +55,32 @@ function respond_(payload, callback) {
     .setMimeType(callback ? ContentService.MimeType.JAVASCRIPT : ContentService.MimeType.JSON);
 }
 
-function authorize_(token) {
-  const expected = PropertiesService.getScriptProperties().getProperty("ADMIN_TOKEN");
-  if (!expected || token !== expected) {
-    throw new Error("Invalid admin token");
+function login_(username, password) {
+  const properties = PropertiesService.getScriptProperties();
+  const expectedUsername = properties.getProperty("ADMIN_USERNAME");
+  const expectedPassword = properties.getProperty("ADMIN_PASSWORD");
+
+  if (!expectedUsername || !expectedPassword) {
+    throw new Error("ADMIN_USERNAME or ADMIN_PASSWORD is not configured");
+  }
+
+  if (username !== expectedUsername || password !== expectedPassword) {
+    throw new Error("Invalid username or password");
+  }
+
+  const sessionToken = Utilities.getUuid() + Utilities.getUuid();
+  CacheService.getScriptCache().put("session_" + sessionToken, "1", 21600);
+  return sessionToken;
+}
+
+function authorizeSession_(sessionToken) {
+  if (!sessionToken) {
+    throw new Error("Missing session");
+  }
+
+  const cached = CacheService.getScriptCache().get("session_" + sessionToken);
+  if (!cached) {
+    throw new Error("Session expired or invalid");
   }
 }
 

@@ -12,7 +12,8 @@
   const publicationCount = document.getElementById("publicationCount");
   const listTitle = document.getElementById("listTitle");
   const newButton = document.getElementById("newButton");
-  const tokenField = document.getElementById("adminToken");
+  const usernameField = document.getElementById("adminUsername");
+  const passwordField = document.getElementById("adminPassword");
   const adminTypeChips = document.querySelectorAll("[data-admin-type]");
   const conferenceOnlyFields = document.getElementById("conferenceOnlyFields");
   const journalStatusFieldset = document.getElementById("journalStatusFieldset");
@@ -29,7 +30,7 @@
   const fieldLinkLabel = document.getElementById("publicationLinkLabel");
   const fieldLinkIcon = document.getElementById("publicationLinkIcon");
 
-  const storageKey = "publicationAdminToken";
+  const storageKey = "publicationAdminSession";
   const config = window.GOOGLE_SCRIPT_CONFIG || {};
   const statusOptionsByType = {
     journal: ["in-progress", "accepted", "published", "preprint"],
@@ -85,15 +86,15 @@
     });
   }
 
-  function getToken() {
+  function getSessionToken() {
     return sessionStorage.getItem(storageKey) || "";
   }
 
-  function setToken(token) {
+  function setSessionToken(token) {
     sessionStorage.setItem(storageKey, token);
   }
 
-  function clearToken() {
+  function clearSessionToken() {
     sessionStorage.removeItem(storageKey);
   }
 
@@ -194,8 +195,8 @@
 
     try {
       await loadPublications();
-      const token = getToken();
-      if (token) {
+      const sessionToken = getSessionToken();
+      if (sessionToken) {
         updateShell(true);
       }
     } catch (error) {
@@ -205,17 +206,19 @@
 
   loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const token = tokenField.value.trim();
-    if (!token) {
-      setMessage(loginMessage, "Enter the admin token.", true);
+    const username = usernameField.value.trim();
+    const password = passwordField.value;
+    if (!username || !password) {
+      setMessage(loginMessage, "Enter your username and password.", true);
       return;
     }
 
-    setMessage(loginMessage, "Checking token...");
+    setMessage(loginMessage, "Signing in...");
     try {
-      await jsonpRequest({ action: "auth", token });
-      setToken(token);
-      tokenField.value = "";
+      const payload = await jsonpRequest({ action: "login", username, password });
+      setSessionToken(payload.sessionToken || "");
+      usernameField.value = "";
+      passwordField.value = "";
       setMessage(loginMessage, "");
       updateShell(true);
     } catch (error) {
@@ -224,7 +227,7 @@
   });
 
   logoutButton.addEventListener("click", () => {
-    clearToken();
+    clearSessionToken();
     resetForm();
     updateShell(false);
   });
@@ -240,9 +243,9 @@
   publicationForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    const token = getToken();
-    if (!token) {
-      setMessage(formMessage, "Please unlock the editor first.", true);
+    const sessionToken = getSessionToken();
+    if (!sessionToken) {
+      setMessage(formMessage, "Please sign in first.", true);
       return;
     }
 
@@ -263,7 +266,7 @@
 
     setMessage(formMessage, "Saving...");
     try {
-      await jsonpRequest({ action: "upsert", token, publication });
+      await jsonpRequest({ action: "upsert", sessionToken, publication });
       await loadPublications();
       resetForm();
       setMessage(formMessage, "Saved.");
@@ -290,9 +293,9 @@
     }
 
     if (button.dataset.action === "delete") {
-      const token = getToken();
-      if (!token) {
-        setMessage(formMessage, "Please unlock the editor first.", true);
+      const sessionToken = getSessionToken();
+      if (!sessionToken) {
+        setMessage(formMessage, "Please sign in first.", true);
         return;
       }
 
@@ -302,7 +305,7 @@
       }
 
       try {
-        await jsonpRequest({ action: "delete", token, id: publication.id });
+        await jsonpRequest({ action: "delete", sessionToken, id: publication.id });
         await loadPublications();
         if (fieldId.value === publication.id) {
           resetForm();
@@ -314,9 +317,9 @@
   });
 
   syncButton.addEventListener("click", async () => {
-    const token = getToken();
-    if (!token) {
-      setMessage(formMessage, "Please unlock the editor first.", true);
+    const sessionToken = getSessionToken();
+    if (!sessionToken) {
+      setMessage(formMessage, "Please sign in first.", true);
       return;
     }
 
@@ -324,7 +327,7 @@
     try {
       const response = await fetch("/data/publications.json", { cache: "no-store" });
       const payload = await response.json();
-      await jsonpRequest({ action: "replaceAll", token, publications: payload.publications || [] });
+      await jsonpRequest({ action: "replaceAll", sessionToken, publications: payload.publications || [] });
       await loadPublications();
       setMessage(formMessage, "Local sample synced to Google Sheets.");
     } catch (error) {

@@ -16,11 +16,13 @@
     <section class="admin-card admin-login" id="loginCard">
       <p class="eyebrow">Backend</p>
       <h1>Publication Manager</h1>
-      <p class="admin-lead">Enter your Google Apps Script admin token, then edit the paper section without touching Git or HTML.</p>
+      <p class="admin-lead">Sign in with your Google Apps Script username and password, then edit the paper section without touching Git or HTML.</p>
       <form id="loginForm" class="admin-form">
-        <label class="admin-label" for="adminToken">Admin token</label>
-        <input id="adminToken" name="adminToken" type="password" autocomplete="off" required />
-        <button class="btn btn--primary" type="submit">Unlock Editor</button>
+        <label class="admin-label" for="adminUsername">Username</label>
+        <input id="adminUsername" name="adminUsername" autocomplete="username" required />
+        <label class="admin-label" for="adminPassword">Password</label>
+        <input id="adminPassword" name="adminPassword" type="password" autocomplete="current-password" required />
+        <button class="btn btn--primary" type="submit">Sign In</button>
         <p class="admin-message" id="loginMessage"></p>
       </form>
     </section>
