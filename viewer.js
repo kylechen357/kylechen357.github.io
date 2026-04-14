@@ -144,9 +144,7 @@
     });
 
     document.addEventListener("contextmenu", function (event) {
-      if (event.target.closest(".protected-media, .viewer-modal__content")) {
-        event.preventDefault();
-      }
+      event.preventDefault();
     });
 
     document.addEventListener("dragstart", function (event) {
