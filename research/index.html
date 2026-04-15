@@ -321,7 +321,237 @@
           <button class="project-filter__chip is-active" type="button" data-pub-filter="journal" data-i18n="research.journal">Journal</button>
           <button class="project-filter__chip" type="button" data-pub-filter="conference" data-i18n="research.conference">Conference</button>
         </div>
-        <div id="publicationsApp"></div>
+        <div class="publication-section" data-pub-section="journal">
+        <h3 style="font-size: 16px; margin-bottom: 12px;" data-i18n="research.journal">Journal</h3>
+        <div class="publication-status">
+          <div class="publication-status__grid">
+            <div class="publication-status__item">
+              <span class="publication-status__label" data-i18n="research.status.in_progress">In Progress</span>
+              <span class="publication-status__value">5</span>
+            </div>
+            <div class="publication-status__item">
+              <span class="publication-status__label" data-i18n="research.status.accepted">Accepted</span>
+              <span class="publication-status__value">0</span>
+            </div>
+            <div class="publication-status__item">
+              <span class="publication-status__label" data-i18n="research.status.published">Published</span>
+              <span class="publication-status__value">1</span>
+            </div>
+            <div class="publication-status__item">
+              <span class="publication-status__label" data-i18n="research.status.preprint">Pre-print</span>
+              <span class="publication-status__value">2</span>
+            </div>
+          </div>
+        </div>
+        <ul style="margin-left: 0; list-style: none; padding: 0;" data-i18n-skip>
+          <li class="publication-item" data-pub-type="journal" data-pub-status="in-progress preprint" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>Explainable Neural Inverse Kinematics for Obstacle-Aware Robotic Manipulation: A Comparative Analysis of IKNet Variants</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, Y.L Tsai, C.C Chang, Y.C. Chen, P.C. Lin</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>Autonomous Robots</em></p>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--progress" data-i18n="research.status.in_progress">In Progress</span>
+                  <span class="publication-tag publication-tag--preprint" data-i18n="research.status.preprint">Pre-print</span>
+                </div>
+              </div>
+              <a href="https://arxiv.org/abs/2512.23312" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-arxiv" style="font-size: 16px;"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="journal" data-pub-status="in-progress preprint" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>PCR-ORB: Enhanced ORB-SLAM3 with Point Cloud Refinement Using Deep Learning-Based Dynamic Object Filtering</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, J.Y. Chao, J.Y Chang, P.L. Wu, P.C Lin</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>Autonomous Robots</em></p>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--progress" data-i18n="research.status.in_progress">In Progress</span>
+                  <span class="publication-tag publication-tag--preprint" data-i18n="research.status.preprint">Pre-print</span>
+                </div>
+              </div>
+              <a href="https://arxiv.org/abs/2512.23318" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-arxiv" style="font-size: 16px;"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="journal" data-pub-status="in-progress" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <p style="margin: 0; font-size: 14px;"><strong>Addressing Cognitive Load and Achievement Gaps in Introductory Computer Science: A Novel 5C-Loop Framework Integrating Layered Learning and Scaffolding</strong></p>
+            <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, Y.D Liu, P.C Lin</p>
+            <p style="margin: 4px 0 0 0; font-size: 13px;"><em>IEEE Transactions on Education</em></p>
+            <div class="publication-tags">
+              <span class="publication-tag publication-tag--progress" data-i18n="research.status.in_progress">In Progress</span>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="journal" data-pub-status="in-progress" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <p style="margin: 0; font-size: 14px;"><strong>Learning-by-Doing and Scaffolding Strategies for Improving Learning Outcomes in EMI Internet of Things Courses</strong></p>
+            <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);">P.C Lin, <strong>S.K. Chen</strong></p>
+            <p style="margin: 4px 0 0 0; font-size: 13px;"><em>IEEE Transactions on Education</em></p>
+            <div class="publication-tags">
+              <span class="publication-tag publication-tag--progress" data-i18n="research.status.in_progress">In Progress</span>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="journal" data-pub-status="in-progress" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <p style="margin: 0; font-size: 14px;"><strong>Layered Learning and Adaptive Progression: A Novel Framework for Enhancing Robotics Education Outcomes</strong></p>
+            <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, P.C Lin</p>
+            <p style="margin: 4px 0 0 0; font-size: 13px;"><em>IEEE Transactions on Education</em></p>
+            <div class="publication-tags">
+              <span class="publication-tag publication-tag--progress" data-i18n="research.status.in_progress">In Progress</span>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="journal" data-pub-status="published" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>Machine-Learning Empowered Propagation Measurement and Modeling for an Amphitheater</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);">S.Y. Lim, C.R. Ong, J.S. Chow, K. Lee, Q.P. Soo, J.H. Deng, J.K. Huang, <strong>S.K. Chen</strong>, Y.D. Liu, Y.C. Liu, H.C. Hsien</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>IEEE Access</em>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--published" data-i18n="research.status.published">Published</span>
+                </div>
+              </div>
+              <a href="https://ieeexplore.ieee.org/document/11396656" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-ieee" style="font-size: 16px;"></i>
+                </span>
+                <span>IEEE</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+        </div>
+        
+        <div class="publication-section" data-pub-section="conference">
+        <h3 style="font-size: 16px; margin-bottom: 12px; margin-top: 28px;" data-i18n="research.conference">Conference</h3>
+        <div class="publication-status">
+          <div class="publication-status__grid">
+            <div class="publication-status__item">
+              <span class="publication-status__label" data-i18n="research.status.in_progress">In Progress</span>
+              <span class="publication-status__value">0</span>
+            </div>
+            <div class="publication-status__item">
+              <span class="publication-status__label" data-i18n="research.status.accepted">Accepted</span>
+              <span class="publication-status__value">0</span>
+            </div>
+            <div class="publication-status__item">
+              <span class="publication-status__label" data-i18n="research.status.published">Published</span>
+              <span class="publication-status__value">5</span>
+            </div>
+          </div>
+        </div>
+        <ul style="margin-left: 0; list-style: none; padding: 0;" data-i18n-skip>
+          <li class="publication-item" data-pub-type="conference" data-pub-status="published" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>Inverse Kinematics Neural Network Models for Improving Inference Efficiency and Memory Usage</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, Y.L Tsai, C.C Chang, Y.C. Chen, P.C. Lin</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>IEEE International Conference on Consumer Electronics-Taiwan (ICCE-TW) 2025</em></p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;">Kaohsiung, Taiwan</p>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--published" data-i18n="research.status.published">Published</span>
+                </div>
+              </div>
+              <a href="https://ieeexplore.ieee.org/document/11208142" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-ieee" style="font-size: 16px;"></i>
+                </span>
+                <span>IEEE</span>
+              </a>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="conference" data-pub-status="published" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">    
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>Efficient Grasp Detection via Knowledge Distillation: A Lightweight Generative Grasping Convolutional Neural Network Framework</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, J.Y. Chao, J.Y Chang, P.L. Wu, P.C Lin</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>International Conference on Control and Robotics (ICCR) 2025</em></p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;">Kyoto, Japan</p>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--published" data-i18n="research.status.published">Published</span>
+                </div>
+              </div>
+              <a href="https://ieeexplore.ieee.org/document/11372086" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-ieee" style="font-size: 16px;"></i>
+                </span>
+                <span>IEEE</span>
+              </a>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="conference" data-pub-status="published" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>An Intelligent AI Glasses System with Multi-Agent Architecture for Real-Time Voice Processing and Task Execution</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, J.H. Wu, C.Y. Lin, Y.T. Lin</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>National Computer Symposium (NCS) 2025</em></p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;">Yilan, Taiwan</p>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--published" data-i18n="research.status.published">Published</span>
+                </div>
+              </div>
+              <a href="http://arxiv.org/abs/2601.06235" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-arxiv" style="font-size: 16px;"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="conference" data-pub-status="published" style="margin-bottom: 20px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>Intelligent Singularity Avoidance in UR10 Robotic Arm Path Planning Using Hybrid Fuzzy Logic and Reinforcement Learning</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, J.H. Wu</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>Taiwan Academic Network Conference (TANET) 2025</em></p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;">Yilan, Taiwan</p>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--published" data-i18n="research.status.published">Published</span>
+                </div>
+              </div>
+              <a href="https://arxiv.org/abs/2601.05836" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-arxiv" style="font-size: 16px;"></i>
+                </span>
+                <span>arXiv</span>
+              </a>
+            </div>
+          </li>
+          
+          <li class="publication-item" data-pub-type="conference" data-pub-status="published" style="margin-bottom: 0px; padding: 12px; background: rgba(126, 240, 193, 0.05); border-left: 3px solid var(--accent); border-radius: 4px;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
+              <div style="flex: 1;">
+                <p style="margin: 0; font-size: 14px;"><strong>Analysis of Physical Phenomena in Golf Swing</strong></p>
+                <p style="margin: 6px 0 0 0; font-size: 13px; color: var(--muted);"><strong>S.K. Chen</strong>, T.Y. Liu, Y.D. Liu, H.C. Shih</p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;"><em>IEEE International Conference on Multimedia and Expo Workshops (ICMEW) 2023</em></p>
+                <p style="margin: 4px 0 0 0; font-size: 13px;">Brisbane, Australia</p>
+                <div class="publication-tags">
+                  <span class="publication-tag publication-tag--published" data-i18n="research.status.published">Published</span>
+                </div>
+            </div>
+              <a href="https://ieeexplore.ieee.org/document/10222484" target="_blank" rel="noreferrer" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; background: rgba(126, 240, 193, 0.15); border: 1px solid var(--accent); color: var(--text); text-decoration: none; border-radius: 20px; font-size: 13px; font-weight: 500; white-space: nowrap; flex-shrink: 0; transition: all 0.3s ease;">
+                <span style="display: flex; align-items: center; justify-content: center;">
+                  <i class="ai ai-ieee" style="font-size: 16px;"></i>
+                </span>
+                <span>IEEE</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+        </div>
         <div class="project-filter-empty publication-filter-empty is-hidden">
           <div class="project-filter-empty__icon"><i class="ri-article-line"></i></div>
           <h3 data-i18n="research.pubs">Publications</h3>
@@ -338,8 +568,6 @@
 
   <script src="/viewer.js"></script>
   <script src="/i18n.js"></script>
-  <script src="/google-apps-script-config.js"></script>
-  <script src="/research/publications.js"></script>
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
@@ -426,6 +654,45 @@
       applyProjectFilter(initialChip.dataset.filter);
     }
 
+    const publicationFilterChips = document.querySelectorAll('.publication-filter .project-filter__chip');
+    const publicationItems = document.querySelectorAll('.publication-item');
+    const publicationSections = document.querySelectorAll('.publication-section');
+    const publicationEmpty = document.querySelector('.publication-filter-empty');
+
+    function applyPublicationFilter(filter) {
+      let visibleCount = 0;
+
+      publicationItems.forEach(item => {
+        const type = item.dataset.pubType || '';
+        const statuses = (item.dataset.pubStatus || '').split(/\s+/).filter(Boolean);
+        const matches = type === filter;
+        item.classList.toggle('is-hidden', !matches);
+        if (matches) visibleCount += 1;
+      });
+
+      publicationSections.forEach(section => {
+        const visibleItems = section.querySelectorAll('.publication-item:not(.is-hidden)').length;
+        section.classList.toggle('is-hidden', visibleItems === 0);
+      });
+
+      if (publicationEmpty) {
+        publicationEmpty.classList.toggle('is-hidden', visibleCount !== 0);
+      }
+    }
+
+    publicationFilterChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        const filter = this.dataset.pubFilter || 'journal';
+        publicationFilterChips.forEach(item => item.classList.remove('is-active'));
+        this.classList.add('is-active');
+        applyPublicationFilter(filter);
+      });
+    });
+
+    const initialPublicationChip = document.querySelector('.publication-filter .project-filter__chip.is-active');
+    if (initialPublicationChip) {
+      applyPublicationFilter(initialPublicationChip.dataset.pubFilter || 'journal');
+    }
   </script>
 </body>
 </html>
