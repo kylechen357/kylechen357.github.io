@@ -1,9 +1,4 @@
 (function () {
-  if (window.location.hostname === "kylechen.top") {
-    window.location.replace("https://www.kylechen.top" + window.location.pathname + window.location.search + window.location.hash);
-    return;
-  }
-
   const pdfPattern = /\.pdf(?:[?#].*)?$/i;
   const imagePattern = /\.(png|jpe?g|webp|gif)(?:[?#].*)?$/i;
 
