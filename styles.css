@@ -270,7 +270,7 @@ html[data-theme="light"] .nav__current {
 
 .blog-warning-dialog__actions {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   gap: 10px;
   margin-top: 22px;
 }
