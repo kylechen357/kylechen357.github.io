@@ -262,10 +262,12 @@ html[data-theme="light"] .nav__current {
 }
 
 .blog-warning-dialog p {
-  margin: 0;
+  margin: 0 auto;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.65;
+  text-align: justify;
+  text-align-last: left;
 }
 
 .blog-warning-dialog__actions {
