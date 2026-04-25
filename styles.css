@@ -241,10 +241,18 @@ html[data-theme="light"] .nav__current {
   box-shadow: var(--shadow);
 }
 
+.blog-warning-dialog[open] {
+  animation: blogDialogIn 220ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
 .blog-warning-dialog::backdrop {
   background: rgba(4, 10, 20, 0.72);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
+}
+
+.blog-warning-dialog[open]::backdrop {
+  animation: blogDialogBackdropIn 220ms ease both;
 }
 
 .blog-warning-dialog__panel {
@@ -307,6 +315,33 @@ html[data-theme="light"] .blog-warning-dialog::backdrop {
 
 html[data-theme="light"] .blog-warning-dialog__button {
   background: rgba(11, 18, 33, 0.04);
+}
+
+@keyframes blogDialogIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes blogDialogBackdropIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-warning-dialog[open],
+  .blog-warning-dialog[open]::backdrop {
+    animation: none;
+  }
 }
 
 .nav__close {
