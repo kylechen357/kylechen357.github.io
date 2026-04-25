@@ -2273,6 +2273,7 @@ html[data-theme="light"] .timeline__item {
   max-width: var(--max);
   text-align: center;
   color: var(--muted);
+  border-top: 1px solid var(--border);
   padding: 32px 20px 12px;
   transition: color 300ms ease;
   margin-top: 32px;
