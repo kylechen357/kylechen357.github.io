@@ -171,7 +171,7 @@ html[data-theme="light"] .nav {
 }
 
 .nav__brand img {
-  height: 24px;
+  height: 32px;
   width: auto;
   display: block;
 }
@@ -2413,7 +2413,7 @@ html[data-theme="light"] input:checked + .toggle-slider {
   }
 
   .nav__brand img {
-    height: 20px;
+    height: 26px;
   }
 
   .nav__hamburger {
@@ -2598,7 +2598,7 @@ html[data-theme="light"] input:checked + .toggle-slider {
   }
 
   .nav__brand img {
-    height: 18px;
+    height: 24px;
   }
 
   .nav__links {
@@ -2871,7 +2871,7 @@ html[data-theme="light"] input:checked + .toggle-slider {
   }
 
   .nav__brand img {
-    height: 16px;
+    height: 22px;
   }
 
   .hero-simple__image {
