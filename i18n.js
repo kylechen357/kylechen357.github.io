@@ -17,6 +17,7 @@
   const ORIGINAL_TEXT = new WeakMap();
   let ORIGINAL_PAGE_TITLE = "";
   let PAGE_LOADER = null;
+  const BLOG_URL = "https://blog.kylechen.top";
 
   const MONTH_MAP = {
     jan: 1,
@@ -634,6 +635,10 @@
       "nav.work": "Work",
       "nav.cv": "CV",
       "nav.blog": "Kyle's Blog",
+      "blog.dialog.title": "Kyle's Blog",
+      "blog.dialog.message": "The website you are trying to visit is totally Chinese. If you still want to browse, press continue. Or press cancel to back to the site.",
+      "blog.dialog.continue": "Continue",
+      "blog.dialog.cancel": "Cancel",
       "project.back": "← Back to Research",
 
       "index.exp": "Work Experience",
@@ -753,6 +758,10 @@
       "nav.work": "工作",
       "nav.cv": "履歷",
       "nav.blog": "Kyle 的部落格",
+      "blog.dialog.title": "Kyle 的部落格",
+      "blog.dialog.message": "您即將前往的網站內容全部為中文。如果您仍然想瀏覽，請按繼續。或按取消回到本站。",
+      "blog.dialog.continue": "繼續",
+      "blog.dialog.cancel": "取消",
       "project.back": "← 返回研究頁",
 
       "index.exp": "工作經驗",
@@ -870,6 +879,10 @@
       "nav.work": "직무",
       "nav.cv": "이력서",
       "nav.blog": "Kyle의 블로그",
+      "blog.dialog.title": "Kyle의 블로그",
+      "blog.dialog.message": "방문하려는 웹사이트는 모두 중국어로 되어 있습니다. 그래도 계속 보려면 계속을 누르세요. 이 사이트로 돌아가려면 취소를 누르세요.",
+      "blog.dialog.continue": "계속",
+      "blog.dialog.cancel": "취소",
       "project.back": "← 연구로 돌아가기",
 
       "index.exp": "직무 경험",
@@ -987,6 +1000,10 @@
       "nav.work": "งาน",
       "nav.cv": "เรซูเม่",
       "nav.blog": "บล็อกของ Kyle",
+      "blog.dialog.title": "บล็อกของ Kyle",
+      "blog.dialog.message": "เว็บไซต์ที่คุณกำลังจะไปเป็นภาษาจีนทั้งหมด หากคุณยังต้องการเข้าชม ให้กดดำเนินการต่อ หรือกดยกเลิกเพื่อกลับมายังเว็บไซต์นี้",
+      "blog.dialog.continue": "ดำเนินการต่อ",
+      "blog.dialog.cancel": "ยกเลิก",
       "project.back": "← กลับไปหน้าวิจัย",
 
       "index.exp": "ประสบการณ์การทำงาน",
@@ -1465,6 +1482,96 @@
     });
   }
 
+  function getActiveLanguage() {
+    const htmlLang = (document.documentElement.getAttribute("lang") || "en").toLowerCase();
+    if (htmlLang.startsWith("zh")) return "zh";
+    return SUPPORTED.includes(htmlLang) ? htmlLang : "en";
+  }
+
+  function closeMobileNav() {
+    const navLinks = document.querySelector(".nav__links");
+    const hamburger = document.getElementById("hamburger");
+    if (navLinks) navLinks.classList.remove("active");
+    if (!hamburger) return;
+    const icon = hamburger.querySelector("i");
+    if (!icon) return;
+    icon.classList.remove("ri-close-line");
+    icon.classList.add("ri-menu-line");
+  }
+
+  function ensureBlogDialog() {
+    let dialog = document.getElementById("blogLanguageDialog");
+    if (dialog) return dialog;
+
+    dialog = document.createElement("dialog");
+    dialog.id = "blogLanguageDialog";
+    dialog.className = "blog-warning-dialog";
+    dialog.innerHTML =
+      '<form method="dialog" class="blog-warning-dialog__panel">' +
+      '<h2 data-i18n="blog.dialog.title">Kyle\'s Blog</h2>' +
+      '<p data-i18n="blog.dialog.message">The website you are trying to visit is totally Chinese. If you still want to browse, press continue. Or press cancel to back to the site.</p>' +
+      '<div class="blog-warning-dialog__actions">' +
+      '<button type="button" class="blog-warning-dialog__button blog-warning-dialog__button--primary" data-blog-continue data-i18n="blog.dialog.continue">Continue</button>' +
+      '<button type="submit" class="blog-warning-dialog__button" data-i18n="blog.dialog.cancel">Cancel</button>' +
+      '</div>' +
+      "</form>";
+
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+
+    const continueButton = dialog.querySelector("[data-blog-continue]");
+    if (continueButton) {
+      continueButton.addEventListener("click", () => {
+        window.location.assign(BLOG_URL);
+      });
+    }
+
+    document.body.appendChild(dialog);
+    setTextByKey(getActiveLanguage());
+    return dialog;
+  }
+
+  function bindBlogDialog() {
+    if (!document.body || document.body.dataset.blogDialogBound === "1") return;
+    document.body.dataset.blogDialogBound = "1";
+
+    document.querySelectorAll('a[data-i18n="nav.blog"]').forEach((link) => {
+      link.setAttribute("href", BLOG_URL);
+    });
+
+    document.addEventListener(
+      "click",
+      (event) => {
+        if (event.defaultPrevented) return;
+        if (event.button !== 0) return;
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+        const target = event.target;
+        if (!target || typeof target.closest !== "function") return;
+        const link = target.closest('a[data-i18n="nav.blog"]');
+        if (!link) return;
+
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        closeMobileNav();
+
+        const lang = getActiveLanguage();
+        const dialog = ensureBlogDialog();
+        if (dialog && typeof dialog.showModal === "function") {
+          setTextByKey(lang);
+          dialog.showModal();
+          return;
+        }
+
+        if (window.confirm(t(lang, "blog.dialog.message"))) {
+          window.location.assign(BLOG_URL);
+        }
+      },
+      true
+    );
+  }
+
   function getInitialLanguage() {
     const fromPath = getLanguageFromPath(window.location.pathname);
     if (fromPath && SUPPORTED.includes(fromPath)) return fromPath;
@@ -1725,13 +1832,14 @@
     ORIGINAL_PAGE_TITLE = document.title || "";
     ensurePageLoaderStyles();
     ensurePageLoader();
-    bindPageTransitionLoader();
     runWithLoader(() => {
       SITE_BASE_PATH = detectSiteBasePath();
       normalizeInternalLinks();
       const lang = getInitialLanguage();
       buildMenu(lang);
       applyLanguage(lang);
+      bindBlogDialog();
+      bindPageTransitionLoader();
     }, 320);
   }
 
