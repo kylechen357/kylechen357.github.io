@@ -410,6 +410,7 @@ html[data-theme="light"] .blog-warning-dialog__button {
 
 .viewer-modal__dialog {
   width: min(1100px, 100%);
+  height: min(88vh, 940px);
   max-height: min(88vh, 940px);
   display: flex;
   flex-direction: column;
@@ -492,7 +493,8 @@ html[data-theme="light"] .viewer-modal__dialog {
   flex: 1;
   min-height: 0;
   border-radius: 18px;
-  overflow: hidden;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
   background: rgba(5, 10, 20, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -508,6 +510,37 @@ html[data-theme="light"] .viewer-modal__dialog {
 .viewer-modal__frame {
   min-height: min(74vh, 780px);
   background: #111827;
+}
+
+.viewer-modal__pdf {
+  min-height: min(74vh, 780px);
+  padding: 18px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  background: #111827;
+}
+
+.viewer-modal__pdf-page {
+  width: fit-content;
+  max-width: 100%;
+  background: #ffffff;
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.28);
+}
+
+.viewer-modal__pdf-page canvas {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+}
+
+.viewer-modal__loading {
+  min-height: min(60vh, 640px);
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .viewer-modal__image-wrap {
@@ -540,6 +573,10 @@ html[data-theme="light"] .viewer-modal__dialog {
   }
 
   .viewer-modal__dialog {
+    width: 100%;
+    height: calc(100vh - 28px);
+    height: calc(100dvh - 28px);
+    max-height: none;
     padding: 14px;
     border-radius: 20px;
   }
@@ -1810,6 +1847,7 @@ html[data-theme="light"] .skill-mini-card {
 .project-filter-empty p {
   margin: 0;
   color: var(--muted);
+  text-align: center !important;
 }
 
 .research-projects-grid .card.is-hidden,

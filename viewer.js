@@ -1,6 +1,9 @@
 (function () {
   const pdfPattern = /\.pdf(?:[?#].*)?$/i;
   const imagePattern = /\.(png|jpe?g|webp|gif)(?:[?#].*)?$/i;
+  const pdfJsUrl = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js";
+  const pdfJsWorkerUrl = "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.worker.min.js";
+  let pdfJsLoadingPromise = null;
 
   function isProtectedAssetLink(anchor) {
     if (!anchor || !anchor.href) {
@@ -46,6 +49,36 @@
     }
   }
 
+  function loadPdfJs() {
+    if (window.pdfjsLib) {
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = pdfJsWorkerUrl;
+      return Promise.resolve(window.pdfjsLib);
+    }
+
+    if (!pdfJsLoadingPromise) {
+      pdfJsLoadingPromise = new Promise(function (resolve, reject) {
+        const script = document.createElement("script");
+        script.src = pdfJsUrl;
+        script.async = true;
+        script.onload = function () {
+          if (!window.pdfjsLib) {
+            reject(new Error("PDF viewer failed to load."));
+            return;
+          }
+
+          window.pdfjsLib.GlobalWorkerOptions.workerSrc = pdfJsWorkerUrl;
+          resolve(window.pdfjsLib);
+        };
+        script.onerror = function () {
+          reject(new Error("PDF viewer failed to load."));
+        };
+        document.head.appendChild(script);
+      });
+    }
+
+    return pdfJsLoadingPromise;
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     const modal = buildViewer();
     const title = modal.querySelector(".viewer-modal__title");
@@ -53,6 +86,7 @@
     const closeButton = modal.querySelector(".viewer-modal__close");
     let lastActiveElement = null;
     let modalOpen = false;
+    let viewerRequestId = 0;
 
     function closeViewer() {
       modal.classList.remove("is-open");
@@ -60,6 +94,7 @@
       document.body.classList.remove("viewer-lock-scroll");
       content.innerHTML = "";
       modalOpen = false;
+      viewerRequestId += 1;
 
       if (lastActiveElement && typeof lastActiveElement.focus === "function") {
         lastActiveElement.focus();
@@ -67,8 +102,72 @@
     }
 
     function openPdf(url, label) {
+      const requestId = ++viewerRequestId;
       title.textContent = label;
-      content.innerHTML = '<iframe class="viewer-modal__frame" referrerpolicy="no-referrer" src="' + url + '#toolbar=0&navpanes=0&scrollbar=0&view=FitH"></iframe>';
+      content.innerHTML = [
+        '<div class="viewer-modal__pdf">',
+        '  <div class="viewer-modal__loading">Loading PDF...</div>',
+        "</div>"
+      ].join("");
+
+      const pdfHost = content.querySelector(".viewer-modal__pdf");
+
+      loadPdfJs()
+        .then(function (pdfjsLib) {
+          return pdfjsLib.getDocument(url).promise;
+        })
+        .then(function (pdf) {
+          if (requestId !== viewerRequestId || !modalOpen) {
+            return;
+          }
+
+          pdfHost.innerHTML = "";
+          const maxWidth = Math.max(260, Math.min(pdfHost.clientWidth - 24, 980));
+
+          let renderChain = Promise.resolve();
+          for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
+            const pageWrap = document.createElement("div");
+            const canvas = document.createElement("canvas");
+
+            pageWrap.className = "viewer-modal__pdf-page";
+            pageWrap.appendChild(canvas);
+            pdfHost.appendChild(pageWrap);
+
+            renderChain = renderChain.then(function () {
+              return pdf.getPage(pageNumber).then(function (page) {
+                if (requestId !== viewerRequestId || !modalOpen) {
+                  return;
+                }
+
+                const baseViewport = page.getViewport({ scale: 1 });
+                const scale = maxWidth / baseViewport.width;
+                const viewport = page.getViewport({ scale: scale });
+                const context = canvas.getContext("2d");
+                const deviceScale = window.devicePixelRatio || 1;
+
+                canvas.width = Math.floor(viewport.width * deviceScale);
+                canvas.height = Math.floor(viewport.height * deviceScale);
+                canvas.style.width = Math.floor(viewport.width) + "px";
+                canvas.style.height = Math.floor(viewport.height) + "px";
+                context.setTransform(deviceScale, 0, 0, deviceScale, 0, 0);
+
+                return page.render({
+                  canvasContext: context,
+                  viewport: viewport
+                }).promise;
+              });
+            });
+          }
+
+          return renderChain;
+        })
+        .catch(function () {
+          if (requestId !== viewerRequestId || !modalOpen) {
+            return;
+          }
+
+          content.innerHTML = '<iframe class="viewer-modal__frame" referrerpolicy="no-referrer" src="' + url + '#toolbar=0&navpanes=0&scrollbar=1&view=FitH"></iframe>';
+        });
     }
 
     function openImage(url, label, alt) {
