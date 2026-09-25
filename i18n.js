@@ -442,8 +442,8 @@
       "Division of Virtual-Real Integration and Digital Twins": "가상-현실 통합 및 디지털 트윈 부문",
       "Digital Transformation Group, Division of Consulting": "컨설팅본부 디지털 전환 그룹",
       "Yuan Ze University, Taiwan": "원제대학교, 대만",
-      "Innovative Technology Lab": "혁신기술연구실",
-      "Human-Computer Interaction Multimedia Lab": "인간-컴퓨터 상호작용 멀티미디어 연구실",
+      "Innovative Technology Lab": "Innovative Technology Lab",
+      "Human-Computer Interaction Multimedia Lab": "Human-Computer Interaction Multimedia Lab",
       "Taiwan": "대만",
       "Thailand": "태국",
       "Lab:": "연구실:"
@@ -603,8 +603,8 @@
       "Ta Thong Chinese School": "โรงเรียนจีนต้าถงวิทยาคม",
       "Ta Thong Chinese School, Thailand": "โรงเรียนจีนต้าถงวิทยาคม, ประเทศไทย",
       "Yuan Ze University, Taiwan": "มหาวิทยาลัยหยวนจื้อ, ไต้หวัน",
-      "Innovative Technology Lab": "ห้องปฏิบัติการเทคโนโลยีนวัตกรรม",
-      "Human-Computer Interaction Multimedia Lab": "ห้องปฏิบัติการปฏิสัมพันธ์มนุษย์-คอมพิวเตอร์และมัลติมีเดีย",
+      "Innovative Technology Lab": "Innovative Technology Lab",
+      "Human-Computer Interaction Multimedia Lab": "Human-Computer Interaction Multimedia Lab",
       "Taiwan": "ไต้หวัน",
       "Thailand": "ประเทศไทย",
       "Lab:": "ห้องปฏิบัติการ:"
