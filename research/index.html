@@ -326,19 +326,19 @@
           <div class="publication-status__grid">
             <div class="publication-status__item">
               <span class="publication-status__label" data-i18n="research.status.in_progress">In Progress</span>
-              <span class="publication-status__value">5</span>
+              <span class="publication-status__value" data-pub-count="in-progress">—</span>
             </div>
             <div class="publication-status__item">
               <span class="publication-status__label" data-i18n="research.status.accepted">Accepted</span>
-              <span class="publication-status__value">0</span>
+              <span class="publication-status__value" data-pub-count="accepted">—</span>
             </div>
             <div class="publication-status__item">
               <span class="publication-status__label" data-i18n="research.status.published">Published</span>
-              <span class="publication-status__value">1</span>
+              <span class="publication-status__value" data-pub-count="published">—</span>
             </div>
             <div class="publication-status__item">
               <span class="publication-status__label" data-i18n="research.status.preprint">Pre-print</span>
-              <span class="publication-status__value">2</span>
+              <span class="publication-status__value" data-pub-count="preprint">—</span>
             </div>
           </div>
         </div>
@@ -436,15 +436,15 @@
           <div class="publication-status__grid">
             <div class="publication-status__item">
               <span class="publication-status__label" data-i18n="research.status.in_progress">In Progress</span>
-              <span class="publication-status__value">0</span>
+              <span class="publication-status__value" data-pub-count="in-progress">—</span>
             </div>
             <div class="publication-status__item">
               <span class="publication-status__label" data-i18n="research.status.accepted">Accepted</span>
-              <span class="publication-status__value">0</span>
+              <span class="publication-status__value" data-pub-count="accepted">—</span>
             </div>
             <div class="publication-status__item">
               <span class="publication-status__label" data-i18n="research.status.published">Published</span>
-              <span class="publication-status__value">6</span>
+              <span class="publication-status__value" data-pub-count="published">—</span>
             </div>
           </div>
         </div>
@@ -677,12 +677,23 @@
     const publicationSections = document.querySelectorAll('.publication-section');
     const publicationEmpty = document.querySelector('.publication-filter-empty');
 
+    // Keep each section's totals in sync with its papers' data-pub-status values.
+    // Space-separated statuses (e.g. "in-progress preprint") count in each category.
+    publicationSections.forEach(section => {
+      const items = Array.from(section.querySelectorAll('.publication-item'));
+      section.querySelectorAll('[data-pub-count]').forEach(counter => {
+        const count = items.filter(item =>
+          (item.dataset.pubStatus || '').split(/\s+/).includes(counter.dataset.pubCount)
+        ).length;
+        counter.textContent = count;
+      });
+    });
+
     function applyPublicationFilter(filter) {
       let visibleCount = 0;
 
       publicationItems.forEach(item => {
         const type = item.dataset.pubType || '';
-        const statuses = (item.dataset.pubStatus || '').split(/\s+/).filter(Boolean);
         const matches = type === filter;
         item.classList.toggle('is-hidden', !matches);
         if (matches) visibleCount += 1;
