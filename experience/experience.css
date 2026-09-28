@@ -222,6 +222,18 @@
 .exp-provider { border: 1px solid var(--border); border-radius: 10px; min-width: 0; }
 .exp-provider > summary { min-height: 56px; padding: 12px 16px; color: var(--text); font-size: 15px; font-weight: 600; }
 .exp-provider > summary::after { color: var(--accent); }
+.exp-provider__logo {
+  display: block;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  padding: 5px;
+  box-sizing: border-box;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 7px;
+}
 .exp-provider__count { margin-left: auto; color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
 .exp-provider[open] { background: var(--bg); }
 .exp-provider ul { list-style: none; padding: 0 16px 12px; margin: 0; }
