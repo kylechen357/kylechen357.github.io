@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
   <link rel="stylesheet" href="/styles.css?v=10" />
+  <link rel="stylesheet" href="/experience/experience.css?v=5" />
+  <script src="/section-effects.js?v=1" defer></script>
 </head>
 <body>
   <header class="nav">
@@ -20,7 +22,7 @@
     <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
       <i class="ri-menu-line"></i>
     </button>
-        <nav class="nav__links" aria-label="Primary">
+    <nav class="nav__links" aria-label="Primary">
       <button class="nav__close" id="closeMenu" aria-label="Close menu">
         <i class="ri-close-line"></i>
       </button>
@@ -38,349 +40,330 @@
   </header>
 
   <main class="page page--fixed-locale page--experience">
-    <section class="section" style="position: relative;">
-      <div style="position: absolute; top: 0; left: 15px; width: 35px; height: 55px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); border-radius: 0 0 4px 4px;"></div>
-      <div class="section__header" style="text-align: center; padding-top: 40px;">
-        <p class="eyebrow" style="margin: 0 0 8px 0;" data-i18n="exp.eyebrow">Experience</p>
-        <h1 style="margin: 0 0 16px 0;" data-i18n="exp.title">Academic and Other Experience</h1>
-        <p class="body" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 600px; text-align: center; margin: 0 auto; padding: 0 12px;" data-i18n="exp.lead">This page presents my experiences beyond formal work, including academic activities, teaching, leadership, student organizations, volunteer service, talent programs, awards, and certifications. Through these experiences, I have developed not only technical knowledge in robotics, artificial intelligence, computer vision, and integrated circuit design, but also leadership, communication, teamwork, and project management skills. These experiences have allowed me to grow across different fields and have shaped the way I approach challenges, collaboration, and lifelong learning.</p>
-      </div>
-      
-      <div class="section-cube">
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-book-open-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="exp.academic">Academic Experience</span></h2>
-      <div class="timeline timeline--work" style="margin-top:18px;">
-        <div class="timeline__item">
-          <div class="timeline__date">Feb 2025 — Jul 2025</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Teaching Assistant</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Robotics (EEB593)</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Robot Operating System (EEB335/ME382)</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Robotic Navigation and Exploration (AI504)</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Introduction to Computer Vision and Image Processing (EEB215)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__date">Dec 2024 — Jun 2025</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Laboratory Management & Education Research Assistant</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Assisted advisor in lab hardware management, competition organization, and coordination of research on robotics education.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Supported data analysis, course design, and academic writing for studies on learning outcomes and scaffolding strategies.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Prepared three submissions to IEEE Transactions on Education.</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Dec 2024 — Jun 2025</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Graduate Mentor</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Supervised two undergraduate projects on robotic arm modeling and digital twin applications.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Resulted in publications at ICCE-TW 2025 and ICCR 2025</p>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Sep 2023 — Feb 2024</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Teaching Assistant</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Introduction to Computer Science (EI105/EEB108)</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Data Structures (EI219)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__date">Feb 2023 — Jul 2023</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Teaching Assistant</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Fundamental Computer Programming-C (CP119)</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Digital System Design with Lab (EEB318)</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline__item">
-          <div class="timeline__date">Sep 2022 — Jan 2023</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Teaching Assistant</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-bookmark-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Fundamental Computer Programming-Python (CP109)</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      
-      <div class="section-cube">
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-team-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="exp.afterclass">After-Class Activities Experience</span></h2>
-      <div class="timeline timeline--work" style="margin-top:18px;">
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Dec 2023 — Dec 2024</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Member of Preparatory Committee for 2024 ROC Nationwide Celebration of Youth Day</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>China Youth Corps</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Assisting of holding youth day event.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Promoting the event.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/Youth.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Proof of Member</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Jun 2023 — Jul 2023</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">International Volunteer</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Ta Thong Chinese School, Thailand</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Teaching English and holding events with Chinese cultures.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Teaching coding and IT skills.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/Da_Tong.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Proof of Volunteer</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Aug 2022 — Dec 2022</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Tutor of Digital Multiple Language Project</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Ministry of Education in Taiwan and Yuan Ze University</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Making 14 weeks tutoring plans.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Teaching English to kids in remote areas.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/Language_Program.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Proof of Participating</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Jul 2022 — Jun 2023</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Chairman of Student Council</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University Student Association</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Manage student council and being the chair in each meeting.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Supervising the student executive center and review the budget of whole association.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/Chairman_Council.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Proof of Chairman</span></a>
-              <a class="compact-btn" href="/Reference/Member_Council.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Proof of Member</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Jul 2021 — Jun 2022</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">Executive Secretary of Student Executive Center</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Yuan Ze University Student Association</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Assisting president of managing whole association.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Reviewing the procedure of holding events.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/Secretary_SA.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Proof of Carde</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      
-      <div class="section-cube">
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-star-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="exp.talent">Talent Program</span></h2>
-      <div class="timeline timeline--work" style="margin-top:18px;">
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Sep 2023 — Dec 2023</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">2023 TalentNXT Program</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Sayling Wen Cultural & Educational Foundation</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Learn the skills of being sales, product manager and manufactory.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Learn how to communicate and corporate with others.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/TalentNXT.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Certification of Complete</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Mar 2023 — Aug 2023</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">20th Seed Talent Program Graduation Certification</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>STP</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Complete the project of Bafang Yunji and Taiwan Care Charity Foundation CSR Project.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Learn the skills of business thinking.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/STP.pdf" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Certification of Complete</span></a>
-            </div>
-          </div>
-        </div>
-        
-        <div class="timeline__item">
-          <div class="timeline__date">Mar 2023 — Jun 2023</div>
-          <div class="timeline__content" style="background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 16px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2);">
-            <h3 class="exp-role-title" style="margin-top: 0; margin-bottom: 8px; color: var(--text); font-size: 18px;">2023 Google Digital Talent Program</h3>
-            <p style="margin: 6px 0; color: var(--accent); font-weight: 600; font-size: 14px;"><i class="ri-building-line" style="font-size: 16px; margin-right: 6px; vertical-align: middle;"></i>Google Taiwan</p>
-            <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(126, 240, 193, 0.15);">
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Learn the skills of Google Cloud.</p>
-              <p style="margin: 8px 0; color: var(--text); font-size: 14px; line-height: 1.6;"><i class="ri-check-line" style="font-size: 15px; color: var(--accent); margin-right: 8px;"></i>Participating in related work.</p>
-            </div>
-            <div style="display: flex; gap: 12px; margin-top: 12px; flex-wrap: wrap;">
-              <a class="compact-btn" href="/Reference/Google_Program.png" target="_blank" style="display: inline-flex; align-items: center; gap: 7px; padding: 9px 16px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.15), rgba(126, 240, 193, 0.08)); border: 1.5px solid var(--accent); border-radius: 9px; color: var(--accent); text-decoration: none; white-space: nowrap; font-size: 14px; font-weight: 600; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 2px 8px rgba(126, 240, 193, 0.15);"><i class="ri-file-check-line" style="font-size: 17px;"></i><span>Certification of Complete</span></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      
-      <div class="section-cube">
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-trophy-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="exp.award">Award</span></h2>
-      <div class="showcase-grid" style="margin-top: 18px;">
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><i class="ri-trophy-line"></i></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">
-                <a class="showcase-card__title-link" href="/Reference/Outstanding.pdf" target="_blank" rel="noreferrer">
-                  <span>Outstanding Graduate Award</span>
-                  <i class="ri-external-link-line"></i>
-                </a>
-              </h3>
-              <p class="showcase-card__meta" data-award-org="yzu"></p>
-            </div>
-          </div>
-        </article>
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><i class="ri-sparkling-line"></i></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">
-                <a class="showcase-card__title-link" href="/Reference/Elite.pdf" target="_blank" rel="noreferrer">
-                  <span>Young College Elite of 2023</span>
-                  <i class="ri-external-link-line"></i>
-                </a>
-              </h3>
-              <p class="showcase-card__meta">China Youth Corps, Taiwan</p>
-            </div>
-          </div>
-        </article>
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><i class="ri-medal-line"></i></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">
-                <a class="showcase-card__title-link" href="/Reference/2022_Robot.pdf" target="_blank" rel="noreferrer">
-                  <span>Third Place of 2022 YZU Maker Competition Robot Fighting</span>
-                  <i class="ri-external-link-line"></i>
-                </a>
-              </h3>
-              <p class="showcase-card__meta" data-award-org="yzu"></p>
-            </div>
-          </div>
-        </article>
-      </div>
-      </div>
-      
-      <div class="section-cube">
-      <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-file-check-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="exp.cert">Certification</span></h2>
-      <div class="showcase-grid" style="margin-top: 18px;">
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><i class="ri-microsoft-fill"></i></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">Microsoft</h3>
-              <div class="showcase-badges">
-                <a class="showcase-badge" href="/Reference/MTA證書.pdf" target="_blank" rel="noreferrer"><i class="ri-file-check-line"></i><span>98-381</span></a>
-                <a class="showcase-badge" href="/Reference/AZ-900.pdf" target="_blank" rel="noreferrer"><i class="ri-file-check-line"></i><span>AZ-900</span></a>
-                <a class="showcase-badge" href="/Reference/AI-900.pdf" target="_blank" rel="noreferrer"><i class="ri-file-check-line"></i><span>AI-900</span></a>
+    <section class="section">
+      <div class="exp-ribbon" aria-hidden="true"></div>
+      <header class="section__header exp-intro">
+        <p class="eyebrow" data-i18n="exp.eyebrow">Experience</p>
+        <h1 data-i18n="exp.title">Academic and Other Experience</h1>
+        <p class="body" data-i18n="exp.organized.lead">Academic, teaching, leadership and community experiences.</p>
+      </header>
+      <section class="section-cube exp-section" id="academic" aria-labelledby="academic-title">
+        <h2 class="exp-section__title" id="academic-title"><i class="ri-book-open-line" aria-hidden="true"></i><span data-i18n="exp.organized.academic">Academic &amp; Teaching</span></h2>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2022_2025">2022–2025</p>
+          <div class="exp-entry__body">
+            <h3>Teaching Assistant</h3>
+            <p class="exp-entry__org">Yuan Ze University</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.teaching.summary">9 courses across Robotics, AI, Computer Science and Computer Engineering</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.courses">View courses</span></summary>
+              <div class="exp-details__body exp-course-grid">
+                <div class="exp-course-group">
+                  <h4>Feb 2025 — Jul 2025</h4>
+                  <ul class="exp-detail-list">
+                    <li>Robotics (EEB593)</li>
+                    <li>Robot Operating System (EEB335/ME382)</li>
+                    <li>Robotic Navigation and Exploration (AI504)</li>
+                    <li>Introduction to Computer Vision and Image Processing (EEB215)</li>
+                  </ul>
+                </div>
+                <div class="exp-course-group">
+                  <h4>Sep 2023 — Feb 2024</h4>
+                  <ul class="exp-detail-list">
+                    <li>Introduction to Computer Science (EI105/EEB108)</li>
+                    <li>Data Structures (EI219)</li>
+                  </ul>
+                </div>
+                <div class="exp-course-group">
+                  <h4>Feb 2023 — Jul 2023</h4>
+                  <ul class="exp-detail-list">
+                    <li>Fundamental Computer Programming-C (CP119)</li>
+                    <li>Digital System Design with Lab (EEB318)</li>
+                  </ul>
+                </div>
+                <div class="exp-course-group">
+                  <h4>Sep 2022 — Jan 2023</h4>
+                  <ul class="exp-detail-list">
+                    <li>Fundamental Computer Programming-Python (CP109)</li>
+                  </ul>
+                </div>
               </div>
-            </div>
+            </details>
           </div>
         </article>
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><i class="ri-google-fill"></i></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">Google</h3>
-              <div class="showcase-badges">
-                <a class="showcase-badge" href="/Reference/GCCF.pdf" target="_blank" rel="noreferrer"><i class="ri-cloud-line"></i><span>Google Cloud Computing Foundations</span></a>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2024_2025">2024–2025</p>
+          <div class="exp-entry__body">
+            <h3 data-i18n="exp.organized.research.title">Education Research Assistant</h3>
+            <p class="exp-entry__org">Yuan Ze University</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.research.summary">Education research · Lab management</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Dec 2024 — Jun 2025</p>
+                <ul class="exp-detail-list">
+                  <li>Assisted advisor in lab hardware management, competition organization, and coordination of research on robotics education.</li>
+                  <li>Supported data analysis, course design, and academic writing for studies on learning outcomes and scaffolding strategies.</li>
+                  <li>Prepared three submissions to IEEE Transactions on Education.</li>
+                </ul>
               </div>
-            </div>
+            </details>
           </div>
         </article>
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><img src="https://static.cdnlogo.com/logos/t/59/tsmc.svg" alt="TSMC Logo" /></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">TSMC</h3>
-              <div class="showcase-badges">
-                <a class="showcase-badge" href="/Reference/TSMC_DIF.pdf" target="_blank" rel="noreferrer"><i class="ri-file-check-line"></i><span>DIF Machine Fundamental Course</span></a>
-                <a class="showcase-badge" href="/Reference/TSMC_Semi.pdf" target="_blank" rel="noreferrer"><i class="ri-file-check-line"></i><span>TSMC Semiconductor Curriculum</span></a>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2024_2025">2024–2025</p>
+          <div class="exp-entry__body">
+            <h3>Graduate Mentor</h3>
+            <p class="exp-entry__org">Yuan Ze University</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.mentor.summary">2 undergraduate research teams · Robotics &amp; digital twins</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Dec 2024 — Jun 2025</p>
+                <ul class="exp-detail-list">
+                  <li>Supervised two undergraduate projects on robotic arm modeling and digital twin applications.</li>
+                  <li>Resulted in publications at ICCE-TW 2025 and ICCR 2025</li>
+                </ul>
               </div>
-            </div>
+            </details>
           </div>
         </article>
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><img src="https://static.cdnlogo.com/logos/i/92/ibm.png" alt="IBM Logo" /></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">IBM</h3>
-              <div class="showcase-badges">
-                <a class="showcase-badge" href="/Reference/IBM_Python.pdf" target="_blank" rel="noreferrer"><i class="ri-code-line"></i><span>Python for Data Science</span></a>
+      </section>
+      <section class="section-cube exp-section" id="leadership" aria-labelledby="leadership-title">
+        <h2 class="exp-section__title" id="leadership-title"><i class="ri-team-line" aria-hidden="true"></i><span data-i18n="exp.organized.leadership">Leadership</span></h2>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2022_2023">2022–2023</p>
+          <div class="exp-entry__body">
+            <h3 data-i18n="exp.organized.chair.title">Chairman, Student Council</h3>
+            <p class="exp-entry__org">Yuan Ze University Student Association</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.chair.summary">Student governance · Budget oversight</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Jul 2022 — Jun 2023</p>
+                <ul class="exp-detail-list">
+                  <li>Manage student council and being the chair in each meeting.</li>
+                  <li>Supervising the student executive center and review the budget of whole association.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/Chairman_Council.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.chair">Chairmanship certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                  <a class="exp-document" href="/Reference/Member_Council.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.member">Membership certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
               </div>
-            </div>
+            </details>
           </div>
         </article>
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><img src="https://static.cdnlogo.com/logos/n/71/nvidia.svg" alt="NVIDIA Logo" /></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">NVIDIA</h3>
-              <div class="showcase-badges">
-                <a class="showcase-badge" href="/Reference/Start_Nano.pdf" target="_blank" rel="noreferrer"><i class="ri-robot-line"></i><span>Getting Started with AI on Jetson Nano</span></a>
-                <a class="showcase-badge" href="/Reference/AI_Nano.pdf" target="_blank" rel="noreferrer"><i class="ri-video-line"></i><span>Building Video AI Applications at the Edge</span></a>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2021_2022">2021–2022</p>
+          <div class="exp-entry__body">
+            <h3 data-i18n="exp.organized.secretary.title">Executive Secretary</h3>
+            <p class="exp-entry__org" data-i18n="exp.organized.secretary.org">Student Executive Center · Yuan Ze University</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.secretary.summary">Association operations · Event coordination</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Jul 2021 — Jun 2022</p>
+                <ul class="exp-detail-list">
+                  <li>Assisting president of managing whole association.</li>
+                  <li>Reviewing the procedure of holding events.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/Secretary_SA.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.role">Role certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
               </div>
-            </div>
+            </details>
           </div>
         </article>
-        <article class="showcase-card">
-          <div class="showcase-card__top">
-            <div class="showcase-card__icon"><i class="ri-amazon-line"></i></div>
-            <div class="showcase-card__body">
-              <h3 class="showcase-card__title">AWS</h3>
-              <div class="showcase-badges">
-                <a class="showcase-badge" href="/Reference/AWS_GAI.png" target="_blank" rel="noreferrer"><i class="ri-magic-line"></i><span>AWS Generative AI: Tech Skills</span></a>
+      </section>
+      <section class="section-cube exp-section" id="community" aria-labelledby="community-title">
+        <h2 class="exp-section__title" id="community-title"><i class="ri-earth-line" aria-hidden="true"></i><span data-i18n="exp.organized.community">Community &amp; International</span></h2>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2023">2023</p>
+          <div class="exp-entry__body">
+            <h3 data-i18n="exp.organized.volunteer.title">International Volunteer · Thailand</h3>
+            <p class="exp-entry__org">Ta Thong Chinese School, Thailand</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.volunteer.summary">English, coding and cultural exchange</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Jun 2023 — Jul 2023</p>
+                <ul class="exp-detail-list">
+                  <li>Teaching English and holding events with Chinese cultures.</li>
+                  <li>Teaching coding and IT skills.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/Da_Tong.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.volunteer">Volunteer certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
               </div>
-            </div>
+            </details>
           </div>
         </article>
-      </div>
-      </div>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2022">2022</p>
+          <div class="exp-entry__body">
+            <h3 data-i18n="exp.organized.digital.title">Digital Multiple Language Project</h3>
+            <p class="exp-entry__org">Ministry of Education in Taiwan and Yuan Ze University</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.digital.summary">14-week tutoring program for children in remote areas</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Aug 2022 — Dec 2022</p>
+                <ul class="exp-detail-list">
+                  <li>Making 14 weeks tutoring plans.</li>
+                  <li>Teaching English to kids in remote areas.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/Language_Program.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.participation">Participation certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+        <article class="exp-entry">
+          <p class="exp-entry__date" data-i18n="exp.organized.period.2023_2024">2023–2024</p>
+          <div class="exp-entry__body">
+            <h3 data-i18n="exp.organized.youth.title">ROC Nationwide Youth Day</h3>
+            <p class="exp-entry__org">China Youth Corps</p>
+            <p class="exp-entry__summary" data-i18n="exp.organized.youth.summary">Preparatory committee · Event planning &amp; promotion</p>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Dec 2023 — Dec 2024</p>
+                <ul class="exp-detail-list">
+                  <li>Assisting of holding youth day event.</li>
+                  <li>Promoting the event.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/Youth.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.member">Membership certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </article>
+      </section>
+      <section class="section-cube exp-section" id="development" aria-labelledby="development-title">
+        <h2 class="exp-section__title" id="development-title"><i class="ri-star-line" aria-hidden="true"></i><span data-i18n="exp.organized.development">Professional Development</span></h2>
+        <div class="exp-programs">
+          <article class="exp-program">
+            <p class="exp-entry__date" data-i18n="exp.organized.period.2023">2023</p>
+            <h3 data-i18n="exp.organized.program.talentnxt">TalentNXT</h3>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Sep 2023 — Dec 2023</p>
+                <p class="exp-entry__org">Sayling Wen Cultural &amp; Educational Foundation</p>
+                <ul class="exp-detail-list">
+                  <li>Learn the skills of being sales, product manager and manufactory.</li>
+                  <li>Learn how to communicate and corporate with others.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/TalentNXT.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.completion">Completion certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article class="exp-program">
+            <p class="exp-entry__date" data-i18n="exp.organized.period.2023">2023</p>
+            <h3 data-i18n="exp.organized.program.seed">Seed Talent Program</h3>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Mar 2023 — Aug 2023</p>
+                <p class="exp-entry__org">STP</p>
+                <ul class="exp-detail-list">
+                  <li>Complete the project of Bafang Yunji and Taiwan Care Charity Foundation CSR Project.</li>
+                  <li>Learn the skills of business thinking.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/STP.pdf" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.completion">Completion certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </details>
+          </article>
+          <article class="exp-program">
+            <p class="exp-entry__date" data-i18n="exp.organized.period.2023">2023</p>
+            <h3 data-i18n="exp.organized.program.google">Google Digital Talent</h3>
+            <details class="exp-details">
+              <summary><span data-i18n="exp.organized.details">View details</span></summary>
+              <div class="exp-details__body">
+                <p class="exp-detail-date">Mar 2023 — Jun 2023</p>
+                <p class="exp-entry__org">Google Taiwan</p>
+                <ul class="exp-detail-list">
+                  <li>Learn the skills of Google Cloud.</li>
+                  <li>Participating in related work.</li>
+                </ul>
+                <div class="exp-documents">
+                  <a class="exp-document" href="/Reference/Google_Program.png" target="_blank" rel="noreferrer"><span data-i18n="exp.organized.document.completion">Completion certificate</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+      <section class="section-cube exp-section" aria-labelledby="awards-title">
+        <h2 class="exp-section__title" id="awards-title"><i class="ri-trophy-line" aria-hidden="true"></i><span data-i18n="exp.organized.awards">Selected Awards</span></h2>
+        <div class="exp-awards">
+          <a class="exp-award" href="/Reference/Outstanding.pdf" target="_blank" rel="noreferrer"><span class="exp-award__name"><span data-i18n="exp.organized.award.outstanding">Outstanding Graduate Award</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span><span class="exp-award__meta"><span>Yuan Ze University</span></span></a>
+          <a class="exp-award" href="/Reference/Elite.pdf" target="_blank" rel="noreferrer"><span class="exp-award__name"><span data-i18n="exp.organized.award.elite">Young College Elite</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span><span class="exp-award__meta"><span data-i18n="exp.organized.period.2023">2023</span></span></a>
+          <a class="exp-award" href="/Reference/2022_Robot.pdf" target="_blank" rel="noreferrer"><span class="exp-award__name"><span data-i18n="exp.organized.award.maker">YZU Maker Competition — 3rd Place</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></span><span class="exp-award__meta"><span data-i18n="exp.organized.period.2022">2022</span></span></a>
+        </div>
+      </section>
+      <section class="section-cube exp-section" aria-labelledby="certifications-title">
+        <h2 class="exp-section__title" id="certifications-title"><i class="ri-file-check-line" aria-hidden="true"></i><span data-i18n="exp.organized.certifications">Certifications</span></h2>
+        <p class="exp-section__hint" data-i18n="exp.organized.credentials">Select a provider to view credentials.</p>
+        <div class="exp-certificates">
+          <details class="exp-provider">
+            <summary><span data-i18n-skip>Microsoft</span><span class="exp-provider__count" aria-hidden="true">3</span></summary>
+            <ul>
+              <li>
+              <a class="exp-document" href="/Reference/MTA證書.pdf" target="_blank" rel="noreferrer"><span>98-381</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+              <li>
+              <a class="exp-document" href="/Reference/AZ-900.pdf" target="_blank" rel="noreferrer"><span>AZ-900</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+              <li>
+              <a class="exp-document" href="/Reference/AI-900.pdf" target="_blank" rel="noreferrer"><span>AI-900</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+            </ul>
+          </details>
+          <details class="exp-provider">
+            <summary><span data-i18n-skip>NVIDIA</span><span class="exp-provider__count" aria-hidden="true">2</span></summary>
+            <ul>
+              <li>
+              <a class="exp-document" href="/Reference/Start_Nano.pdf" target="_blank" rel="noreferrer"><span>Getting Started with AI on Jetson Nano</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+              <li>
+              <a class="exp-document" href="/Reference/AI_Nano.pdf" target="_blank" rel="noreferrer"><span>Building Video AI Applications at the Edge</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+            </ul>
+          </details>
+          <details class="exp-provider">
+            <summary><span data-i18n-skip>Google</span><span class="exp-provider__count" aria-hidden="true">1</span></summary>
+            <ul>
+              <li>
+              <a class="exp-document" href="/Reference/GCCF.pdf" target="_blank" rel="noreferrer"><span>Google Cloud Computing Foundations</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+            </ul>
+          </details>
+          <details class="exp-provider">
+            <summary><span data-i18n-skip>TSMC</span><span class="exp-provider__count" aria-hidden="true">2</span></summary>
+            <ul>
+              <li>
+              <a class="exp-document" href="/Reference/TSMC_DIF.pdf" target="_blank" rel="noreferrer"><span>DIF Machine Fundamental Course</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+              <li>
+              <a class="exp-document" href="/Reference/TSMC_Semi.pdf" target="_blank" rel="noreferrer"><span>TSMC Semiconductor Curriculum</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+            </ul>
+          </details>
+          <details class="exp-provider">
+            <summary><span data-i18n-skip>IBM</span><span class="exp-provider__count" aria-hidden="true">1</span></summary>
+            <ul>
+              <li>
+              <a class="exp-document" href="/Reference/IBM_Python.pdf" target="_blank" rel="noreferrer"><span>Python for Data Science</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+            </ul>
+          </details>
+          <details class="exp-provider">
+            <summary><span data-i18n-skip>AWS</span><span class="exp-provider__count" aria-hidden="true">1</span></summary>
+            <ul>
+              <li>
+              <a class="exp-document" href="/Reference/AWS_GAI.png" target="_blank" rel="noreferrer"><span>AWS Generative AI: Tech Skills</span><i class="ri-arrow-right-up-line" aria-hidden="true"></i></a></li>
+            </ul>
+          </details>
+        </div>
+      </section>
     </section>
   </main>
 
@@ -389,7 +372,7 @@
   </footer>
 
   <script src="/viewer.js"></script>
-  <script src="/i18n.js"></script>
+  <script src="/i18n.js?v=5"></script>
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
@@ -403,24 +386,6 @@
       localStorage.setItem('theme', newTheme);
     });
 
-    const awardOrgLabels = {
-      en: 'Taiwan',
-      zh: '臺灣',
-      ko: '대만',
-      th: 'ไต้หวัน'
-    };
-
-    function syncAwardOrganizations() {
-      const lang = (html.getAttribute('lang') || 'en').toLowerCase();
-      const country = awardOrgLabels[lang] || awardOrgLabels[lang.split('-')[0]] || awardOrgLabels.en;
-
-      document.querySelectorAll('[data-award-org="yzu"]').forEach((el) => {
-        el.innerHTML = '<span data-i18n-skip>Yuan Ze University</span>, ' + country;
-      });
-    }
-
-    syncAwardOrganizations();
-    new MutationObserver(syncAwardOrganizations).observe(html, { attributes: true, attributeFilter: ['lang'] });
 
     // Hamburger menu toggle
     const hamburger = document.getElementById('hamburger');

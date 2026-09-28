@@ -1,6 +1,6 @@
 /* Progressive enhancement: the complete page stays visible without JavaScript. */
 (() => {
-  const sections = document.querySelectorAll('.work-section');
+  const sections = document.querySelectorAll('.work-section, .exp-section');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const spotlightAllowed = window.matchMedia('(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
   const animations = new Set();
@@ -27,7 +27,7 @@
     }, { threshold: 0.12 });
 
     sections.forEach(section => {
-      section.querySelectorAll('.work-section__title, .work-entry').forEach((item, index) => {
+      section.querySelectorAll('.work-section__title, .work-entry, .exp-section__title, .exp-entry, .exp-program, .exp-award, .exp-provider').forEach((item, index) => {
         item.dataset.revealDelay = String(Math.min(index, 3) * 80);
         observer.observe(item);
       });
