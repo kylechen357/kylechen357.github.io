@@ -1095,9 +1095,9 @@
       "work.lead": "หน้านี้สรุปประสบการณ์วิชาชีพของผมทั้งในภาคอุตสาหกรรมและภาควิชาการ ซึ่งรวมถึงบทบาทงานประจำ งานพาร์ตไทม์ และงานฝึกงาน จากประสบการณ์เหล่านี้ ผมได้ทำงานในด้านวิศวกรรมเซมิคอนดักเตอร์ ปัญญาประดิษฐ์ หุ่นยนต์ การเปลี่ยนผ่านสู่ดิจิทัล และระบบอัจฉริยะ ตั้งแต่การสนับสนุนโครงการวิจัยและพัฒนาเทคโนโลยีที่ใช้ AI ไปจนถึงการมีส่วนร่วมในสภาพแวดล้อมด้านอุตสาหกรรมและที่ปรึกษา บทบาทเหล่านี้ช่วยเสริมสร้างความรู้ทางเทคนิค ความสามารถในการแก้ปัญหา ทักษะการสื่อสาร และความเข้าใจว่าควรนำเทคโนโลยีไปประยุกต์ใช้ในโลกจริงอย่างไร",
       "work.full": "ประสบการณ์การทำงาน",
       "work.intern": "ประสบการณ์ฝึกงาน",
-      "work.tsmc.date": "เมษายน พ.ศ. 2569 - ปัจจุบัน",
+      "work.tsmc.date": "เม.ย. พ.ศ. 2569 - ปัจจุบัน",
       "work.tsmc.type": "เต็มเวลา",
-      "work.yzu.date": "มกราคม พ.ศ. 2569 -",
+      "work.yzu.date": "ม.ค. พ.ศ. 2569 -",
       "work.yzu.type": "พาร์ตไทม์",
       "work.yzu.company": "Yuan Ze University",
 
@@ -1175,7 +1175,7 @@
       return new Intl.DateTimeFormat("ko-KR", { year: "numeric", month: "long" }).format(date);
     }
     if (lang === "th") {
-      const monthName = new Intl.DateTimeFormat("th-TH", { month: "long" }).format(date);
+      const monthName = new Intl.DateTimeFormat("th-TH", { month: "short", timeZone: "UTC" }).format(date);
       return monthName + " พ.ศ. " + String(y + 543);
     }
     return new Intl.DateTimeFormat("en-US", { year: "numeric", month: "short" }).format(date);
