@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" />
   <link rel="stylesheet" href="/styles.css?v=10" />
+  <link rel="stylesheet" href="/inner-pages.css?v=1" />
 </head>
 <body>
   <header class="nav">
@@ -38,18 +39,19 @@
     </label>
   </header>
 
-  <main class="page">
+  <main class="page page--tidy page--about">
     <section class="section" style="width: 100%; position: relative;">
       <div style="position: absolute; top: 0; left: 15px; width: 35px; height: 55px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); border-radius: 0 0 4px 4px;"></div>
       <div class="section__header" style="text-align: center; padding-top: 40px;">
         <p class="eyebrow" style="margin: 0 0 8px 0;" data-i18n="about.eyebrow">About</p>
         <h1 style="margin: 0 0 16px 0;" data-i18n="about.title">Who I am</h1>
-        <p class="body" id="aboutLead" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 600px; text-align: center; margin: 0 auto; padding: 0 12px;" data-i18n="about.lead">My name is Kyle Chen, and I graduated from Yuan Ze University with a Master’s degree in Electrical Engineering. During my studies, I actively participated in research projects, extracurricular activities, and student organizations. These experiences allowed me to develop both technical expertise and strong soft skills. Beyond my academic background, I am passionate about robotics, artificial intelligence, computer vision, and intelligent systems. I enjoy exploring new ideas, learning across different fields, and applying knowledge to practical problems. Through research, teamwork, and leadership experiences, I have learned not only the technical skills from my studies, but also communication, collaboration, and problem-solving skills that continue to shape my growth.</p>
+        <p class="body" data-i18n="about.tidy.lead">Electrical engineering, robotics and AI — education, interests and skills.</p>
+        <details class="page-overview"><summary data-i18n="page.overview">Read overview</summary><p class="body" id="aboutLead" style="margin: 0; font-size: 16px; line-height: 1.6; max-width: 600px; text-align: center; margin: 0 auto; padding: 0 12px;" data-i18n="about.lead">My name is Kyle Chen, and I graduated from Yuan Ze University with a Master’s degree in Electrical Engineering. During my studies, I actively participated in research projects, extracurricular activities, and student organizations. These experiences allowed me to develop both technical expertise and strong soft skills. Beyond my academic background, I am passionate about robotics, artificial intelligence, computer vision, and intelligent systems. I enjoy exploring new ideas, learning across different fields, and applying knowledge to practical problems. Through research, teamwork, and leadership experiences, I have learned not only the technical skills from my studies, but also communication, collaboration, and problem-solving skills that continue to shape my growth.</p></details>
       </div>
       
       <div class="section-cube">
       <h2 style="margin-top: 32px; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; font-size: 24px; font-weight: 700; color: var(--text); padding-bottom: 12px; border-bottom: 2px solid var(--accent);"><i class="ri-graduation-cap-line" style="font-size: 28px; color: var(--accent);"></i><span data-i18n="about.edu">Education</span></h2>
-      <div class="about__item" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 20px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2); transition: all 0.3s ease;">
+      <div class="about__item education-row" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 20px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2); transition: all 0.3s ease;">
         <div style="display: flex; align-items: start; gap: 12px;">
           <i class="ri-book-open-line" style="font-size: 24px; color: var(--accent); margin-top: 4px; flex-shrink: 0;"></i>
           <div style="flex: 1;">
@@ -61,7 +63,7 @@
         </div>
       </div>
       
-      <div class="about__item" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 20px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2); transition: all 0.3s ease;">
+      <div class="about__item education-row" style="margin-bottom: 24px; background: linear-gradient(135deg, rgba(126, 240, 193, 0.08), rgba(126, 240, 193, 0.04)); padding: 20px; border-radius: 10px; border: 1px solid rgba(126, 240, 193, 0.2); transition: all 0.3s ease;">
         <div style="display: flex; align-items: start; gap: 12px;">
           <i class="ri-book-open-line" style="font-size: 24px; color: var(--accent); margin-top: 4px; flex-shrink: 0;"></i>
           <div style="flex: 1;">
@@ -225,7 +227,7 @@
   </footer>
 
   <script src="/viewer.js"></script>
-  <script src="/i18n.js?v=2"></script>
+  <script src="/i18n.js?v=9"></script>
   <script>
     (function() {
       const html = document.documentElement;

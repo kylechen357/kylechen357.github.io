@@ -626,6 +626,9 @@
   const DICT = {
     en: {
       "lang.menu": "EN",
+      "about.tidy.lead": "Electrical engineering, robotics and AI — education, interests and skills.",
+      "research.tidy.lead": "Research projects and publications in robotics, AI and intelligent systems.",
+      "page.overview": "Read overview",
       "index.name.bold": "Kyle Chen",
       "index.name.sub": "Sheng-Kai Chen",
       "index.name.alt": "진승개、เฉิน เซิงไค、陳嵊凱",
@@ -807,6 +810,9 @@
     },
     zh: {
       "lang.menu": "中文",
+      "about.tidy.lead": "電機工程、機器人與人工智慧：學歷、研究興趣與專業技能。",
+      "research.tidy.lead": "機器人、人工智慧與智慧系統的研究專案及學術論文。",
+      "page.overview": "閱讀完整介紹",
       "index.name.bold": "陳嵊凱",
       "index.name.sub": "Sheng-Kai Chen (Kyle Chen)",
       "index.name.alt": "진승개、เฉิน เซิงไค",
@@ -986,6 +992,9 @@
     },
     ko: {
       "lang.menu": "한국어",
+      "about.tidy.lead": "전기공학, 로보틱스 및 AI 분야의 학력, 관심 분야와 역량.",
+      "research.tidy.lead": "로보틱스, AI 및 지능형 시스템 분야의 연구 프로젝트와 논문.",
+      "page.overview": "전체 소개 보기",
       "index.name.bold": "진승개",
       "index.name.sub": "Sheng-Kai Chen (Kyle Chen)",
       "index.name.alt": "陳嵊凱、เฉิน เซิงไค",
@@ -1166,6 +1175,9 @@
     },
     th: {
       "lang.menu": "ไทย",
+      "about.tidy.lead": "การศึกษา ความสนใจ และทักษะด้านวิศวกรรมไฟฟ้า หุ่นยนต์ และ AI",
+      "research.tidy.lead": "โครงการวิจัยและสิ่งพิมพ์ด้านหุ่นยนต์ AI และระบบอัจฉริยะ",
+      "page.overview": "อ่านภาพรวม",
       "index.name.bold": "เฉิน เซิงไค",
       "index.name.sub": "Sheng-Kai Chen (Kyle Chen)",
       "index.name.alt": "陳嵊凱、진승개",

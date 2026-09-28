@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" />
   <link rel="stylesheet" href="/styles.css?v=10" />
   <link rel="stylesheet" href="/Project/project-styles.css" />
+  <link rel="stylesheet" href="/inner-pages.css?v=1" />
 </head>
 <body>
   <header class="nav">
@@ -38,10 +39,10 @@
     </label>
   </header>
 
-  <main class="page">
+  <main class="page page--tidy page--project">
     <div class="project-hero">
       <i class="ti ti-crane project-hero-icon"></i>
-      <a href="/research/" class="back-link" data-i18n="project.back">? Back to Research</a>
+      <a href="/research/" class="back-link" data-i18n="project.back">← Back to Research</a>
       <h1 data-i18n="research.proj.ur_arm.title">Robotic Arm Motion Planning Avoiding Singularity</h1>
       <p class="subtitle" data-i18n="research.proj.ur_arm.body">Developed motion planning algorithms for robotic arms to avoid singularity issues, enhancing stability and precision in complex tasks. Implemented solutions leveraging advanced kinematics and real-time obstacle detection.</p>
     </div>
@@ -56,50 +57,50 @@
     </div>
 
     <!-- Project Video Section -->
-    <div style="max-width: 900px; width: 100%; margin: 40px auto; padding: 0 20px;">
+    <div class="project-media">
       <video controls autoplay muted loop>
           <source src="/Reference/NCHC/UR_Video.webm" type="video/webm">
           Your browser does not support the video tag.
         </video>
     </div>
 
-    <section class="project-content">
-      <!-- Advisor Section -->
-      <h2 class="section-title"><i class="ti ti-school"></i>Mentor</h2>
+    <div class="project-content">
+<section class="project-panel" aria-labelledby="project-section-1">
+<h2 id="project-section-1" class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
+      <p style="text-align: justify;" data-i18n="project.ur_arm.abstract">This research presents a comprehensive approach to singularity
+detection and avoidance in UR10 robotic arm path planning
+through the integration of fuzzy logic safety systems and
+reinforcement learning algorithms. The proposed system
+addresses critical challenges in robotic manipulation where
+singularities can cause loss of control and potential equipment
+damage. Our hybrid approach combines real-time singularity
+detection using manipulability measures, condition number
+analysis, and fuzzy logic decision-making with a stable
+reinforcement learning framework for adaptive path planning.
+Experimental results demonstrate a 90% success rate in
+reaching target positions while maintaining safe distances from
+singular configurations. The system integrates PyBullet
+simulation for training data collection and URSim connectivity
+for real-world deployment.</p>
+</section>
+<section class="project-panel" aria-labelledby="project-section-2">
+<h2 id="project-section-2" class="section-title"><i class="ti ti-school"></i>Mentor</h2>
       <div class="mentor-info">
         <h3>Hsiu-Mei Chou</h3>
         <p>Division of Virtual-Real Integration</p>
         <p>National Center for High-Performance Computing</p>
       </div>
-
-      <!-- Team Section -->
-      <h2 class="section-title"><i class="ti ti-users"></i>Team</h2>
+</section>
+<section class="project-panel" aria-labelledby="project-section-3">
+<h2 id="project-section-3" class="section-title"><i class="ti ti-users"></i>Team</h2>
       <div class="team-grid">
         <div class="team-member">
           <h3>Sheng-Kai Chen</h3>
           <p>Project Developer & Paper Author</p>
         </div>
       </div>
-
-      <!-- Abstract Section -->
-      <h2 class="section-title"><i class="ti ti-file-description"></i>Abstract</h2>
-      <p style="text-align: justify;" data-i18n="project.ur_arm.abstract">This research presents a comprehensive approach to singularity
-detection and avoidance in UR10 robotic arm path planning 
-through the integration of fuzzy logic safety systems and 
-reinforcement learning algorithms. The proposed system 
-addresses critical challenges in robotic manipulation where 
-singularities can cause loss of control and potential equipment 
-damage. Our hybrid approach combines real-time singularity 
-detection using manipulability measures, condition number 
-analysis, and fuzzy logic decision-making with a stable 
-reinforcement learning framework for adaptive path planning. 
-Experimental results demonstrate a 90% success rate in 
-reaching target positions while maintaining safe distances from 
-singular configurations. The system integrates PyBullet 
-simulation for training data collection and URSim connectivity 
-for real-world deployment.</p> 
-
-    </section>
+</section>
+    </div>
   </main>
 
   <footer class="footer">
@@ -107,21 +108,21 @@ for real-world deployment.</p>
   </footer>
 
   <script src="/viewer.js"></script>
-  <script src="/i18n.js"></script>
+  <script src="/i18n.js?v=9"></script>
 
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const html = document.documentElement;
-    
+
     const savedTheme = localStorage.getItem('theme') || 'dark';
     html.setAttribute('data-theme', savedTheme);
     updateToggleButton();
-    
+
     function updateToggleButton() {
       const currentTheme = html.getAttribute('data-theme');
       themeToggle.checked = currentTheme === 'light';
     }
-    
+
     themeToggle.addEventListener('change', function() {
       const newTheme = this.checked ? 'light' : 'dark';
       html.setAttribute('data-theme', newTheme);
@@ -132,7 +133,7 @@ for real-world deployment.</p>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('.nav__links');
     const closeMenu = document.getElementById('closeMenu');
-    
+
     if (hamburger && navLinks) {
       hamburger.addEventListener('click', function() {
         navLinks.classList.toggle('active');
